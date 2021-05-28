@@ -73,8 +73,9 @@
     <input type="password" id="inputPassword1" name="password1" class="form-control mb-3" placeholder="Retype password" required>
     <div class="form-group mx-sm-3 mb-2" role="group">
         <button class="btn btn-lg btn-primary btn-block" type="submit">Create account</button>
-        <a class="btn" href="/login">Log in</a>
     </div>
+    <a class="btn" href="/login">Log in</a>
+    <a class="btn" href="/main"style="font-size: 14px">Back to main</a>
 </form>
 </body>
 </html>

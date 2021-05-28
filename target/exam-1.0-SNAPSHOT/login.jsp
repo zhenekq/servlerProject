@@ -70,6 +70,7 @@
         <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
     </div>
     <a class="btn" href="/registration">Create account</a>
+    <a class="btn" href="/main"style="font-size: 14px">Back to main</a>
 </form>
 </body>
 </html>
