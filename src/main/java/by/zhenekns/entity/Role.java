@@ -1,5 +1,5 @@
 package by.zhenekns.entity;
 
 public enum Role {
-    ADMIN, USER;
+    ADMIN, DEVELOPER, MANAGER, CUSTOMER, USER;
 }

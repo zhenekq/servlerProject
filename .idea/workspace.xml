@@ -7,28 +7,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bcdf4f8-750a-447a-8f35-872c5aacb208" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/zhenekns/dao/DAOFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/zhenekns/dao/database/DatabaseDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/zhenekns/dao/database/MysqlDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/zhenekns/dao/user/SQLUserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/zhenekns/dao/user/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/zhenekns/utils/Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c592bc33-e7b2-4722-8fd2-0a37a6a15ce6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c592bc33-e7b2-4722-8fd2-0a37a6a15ce6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/webapp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/zhenekns/dao/database/ConnectionPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/zhenekns/dao/database/DatabaseDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/zhenekns/dao/database/DatabaseProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/zhenekns/dao/user/UserDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/zhenekns/exception/WrongPropertiesException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/zhenekns/service/command/post/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/zhenekns/service/command/post/CommandName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/zhenekns/service/command/post/CommandProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/zhenekns/service/command/post/event/AuthorizationCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/zhenekns/service/command/post/event/ErrorCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/zhenekns/service/command/post/event/RegistrationCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/zhenekns/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/zhenekns/controller/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/zhenekns/controller/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/zhenekns/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/zhenekns/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/zhenekns/controller/RegistrationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/zhenekns/dao/DAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/zhenekns/dao/DAOFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/zhenekns/dao/database/DatabaseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/zhenekns/dao/database/DatabaseDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/zhenekns/dao/database/MysqlDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/zhenekns/dao/user/SQLUserDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/zhenekns/dao/user/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/zhenekns/dao/user/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/zhenekns/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/zhenekns/entity/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/zhenekns/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/zhenekns/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/zhenekns/utils/Utils.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/zhenekns/controller/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/zhenekns/controller/RegistrationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/registration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/zhenekns/controller/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/zhenekns/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/zhenekns/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/zhenekns/controller/RegistrationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/zhenekns/dao/DAOFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/zhenekns/dao/DAOFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/zhenekns/dao/database/DatabaseDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/zhenekns/dao/database/DatabaseDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/zhenekns/dao/database/MysqlDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/zhenekns/dao/user/SQLUserDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/zhenekns/dao/user/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/zhenekns/dao/user/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/zhenekns/entity/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/zhenekns/entity/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/zhenekns/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/zhenekns/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/zhenekns/utils/Utils.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/zhenekns/controller/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/zhenekns/controller/RegistrationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/zhenekns/controller/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/zhenekns/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/zhenekns/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/zhenekns/controller/RegistrationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/zhenekns/dao/DAOFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/zhenekns/dao/DAOFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/zhenekns/dao/database/DatabaseDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/zhenekns/dao/database/DatabaseDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/zhenekns/dao/database/MysqlDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/zhenekns/dao/user/SQLUserDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/zhenekns/dao/user/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/zhenekns/dao/user/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/zhenekns/entity/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/zhenekns/entity/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/zhenekns/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/zhenekns/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/zhenekns/utils/Utils.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/registration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/main.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/registration.jsp" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,11 +115,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
-        <option value="Jsp File" />
         <option value="FxmlFile" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -105,6 +144,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -121,12 +161,15 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp\WEB-INF\lib" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp" />
-      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\java\by\zhenekns\controller" />
+      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\resources" />
+      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri" />
+      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src" />
+      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp\WEB-INF\lib" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -142,9 +185,48 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.66">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.zhenekns.Main" />
+      <module name="Colibri_JDBC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.zhenekns.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Colibri_JDBC" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.zhenekns.Test" />
+      <module name="Colibri_JDBC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.zhenekns.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestConnectionPool" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.zhenekns.TestConnectionPool" />
+      <module name="Colibri_JDBC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.zhenekns.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -223,10 +305,16 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Main (1)" />
+      <item itemvalue="Application.TestConnectionPool" />
+      <item itemvalue="Application.Test" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.66" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.TestConnectionPool" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -235,12 +323,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e623974f" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -263,6 +346,15 @@
       <workItem from="1621536525848" duration="2557000" />
       <workItem from="1621582830844" duration="3602000" />
       <workItem from="1621940268590" duration="30000" />
+      <workItem from="1622210309649" duration="73000" />
+      <workItem from="1622223050991" duration="29000" />
+      <workItem from="1622807668833" duration="30796000" />
+      <workItem from="1623332293495" duration="57000" />
+      <workItem from="1623430097094" duration="11679000" />
+      <workItem from="1623864168504" duration="832000" />
+      <workItem from="1624187060823" duration="7546000" />
+      <workItem from="1624473836356" duration="8345000" />
+      <workItem from="1624877322262" duration="14761000" />
     </task>
     <servers />
   </component>

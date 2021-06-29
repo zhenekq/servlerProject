@@ -1,8 +1,11 @@
 package by.zhenekns.dao.user;
 
+import by.zhenekns.entity.Role;
 import by.zhenekns.entity.User;
 
 public interface UserDAO {
-    void registration(User user);
-    void login(User user);
+    User getUserById(int id);
+    User getUserByUsernamePassword(String username, String password);
+    Role getRoleByUsernamePassword(String username, String password);
+    boolean isUserExists(String username, String password);
 }

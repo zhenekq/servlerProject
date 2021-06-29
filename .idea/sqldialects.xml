@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/src/main/java/by/zhenekns/controller/RegistrationController.java" dialect="MySQL" />
-    <file url="file://$PROJECT_DIR$/src/main/java/by/zhenekns/utils/Utils.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/by/zhenekns/dao/database/ConnectionPool.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/by/zhenekns/dao/database/DatabaseDAOImpl.java" dialect="MySQL" />
   </component>
 </project>

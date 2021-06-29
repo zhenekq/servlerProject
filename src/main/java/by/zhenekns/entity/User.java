@@ -26,6 +26,13 @@ public class User {
         this.nickname = nickname;
     }
 
+    public User(String email, String password, String nickname, Role role) {
+        this.email = email;
+        this.password = password;
+        this.nickname = nickname;
+        this.role = role;
+    }
+
     public Long getId() {
         return id;
     }
@@ -58,8 +65,8 @@ public class User {
         this.nickname = nickname;
     }
 
-    public Role getRole() {
-        return role;
+    public String getRole() {
+        return role.toString();
     }
 
     public void setRole(Role role) {
