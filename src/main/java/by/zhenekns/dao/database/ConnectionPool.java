@@ -43,10 +43,10 @@ public class ConnectionPool {
         } catch (IOException e) {
             e.printStackTrace();
         }*/
-        this.url = DatabaseProperties.URL;
-        this.username = DatabaseProperties.USERNAME;
-        this.password = DatabaseProperties.PASSWORD;
-        this.driverName = DatabaseProperties.DRIVER;
+        this.url = DatabaseProperties.getURL();
+        this.username = DatabaseProperties.getUSERNAME();
+        this.password = DatabaseProperties.getPASSWORD();
+        this.driverName = DatabaseProperties.getDRIVER();
     }
 
     public static ConnectionPool getConnectionPool() {

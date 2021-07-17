@@ -21,7 +21,8 @@
         <a class="p-2 text-dark" href="#">Contacts</a>
         <a class="p-2 text-dark" href="#">Support</a>
     </nav>
-    <a class="btn btn-outline-primary" href="/login">Sign up</a>
+
+    <a class="btn btn-outline-primary" href="?command=authorization_page">Sign up</a>
 </div>
 <main role="main">
     <section class="jumbotron text-center" style="background: #fff">

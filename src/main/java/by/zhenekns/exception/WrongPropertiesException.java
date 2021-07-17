@@ -2,11 +2,18 @@ package by.zhenekns.exception;
 
 public class WrongPropertiesException extends Exception {
 
-    public WrongPropertiesException(){
-        super();
+    public WrongPropertiesException() {
     }
 
-    public WrongPropertiesException(String message){
+    public WrongPropertiesException(String message) {
         super(message);
+    }
+
+    public WrongPropertiesException(String message, Throwable exception){
+        super(message, exception);
+    }
+
+    public WrongPropertiesException(Throwable cause){
+        super(cause);
     }
 }

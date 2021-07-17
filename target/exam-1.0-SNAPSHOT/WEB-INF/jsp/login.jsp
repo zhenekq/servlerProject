@@ -58,20 +58,20 @@
     <link href="https://getbootstrap.com/docs/4.5/examples/sign-in/signin.css" rel="stylesheet">
 </head>
 <body class="text-center">
-<form class="form-signin" method="post" action="main">
+<form class="form-signin" method="post" action="controller">
     <img class="mb-4" src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72"
          height="72">
     <h1 class="h3 mb-3 font-weight-normal">Log in</h1>
     <input type="hidden" name="command" value="authorization">
     <label for="inputPassword" class="sr-only">Password</label>
-    <input type="text" id="inputNickname" name="nickname" class="form-control mb-3" placeholder="Nickname" required>
+    <input type="text" id="inputNickname" name="username" class="form-control mb-3" placeholder="Nickname" required>
     <label for="inputPassword" class="sr-only">Password</label>
     <input type="password" id="inputPassword" name="password" class="form-control mb-3" placeholder="Password" required>
     <div class="form-group mx-sm-3 mb-2" role="group">
         <input type="submit" class="btn btn-lg btn-primary btn-block" value="Log in">
     </div>
-    <a class="btn" href="/registration">Create account</a>
-    <a class="btn" href="/main" style="font-size: 14px">Back to main</a>
+    <a class="btn" href="?command=registration_page">Create account</a>
+    <a class="btn" href="?command=main_page" style="font-size: 14px">Back to main</a>
 </form>
 </body>
 </html>

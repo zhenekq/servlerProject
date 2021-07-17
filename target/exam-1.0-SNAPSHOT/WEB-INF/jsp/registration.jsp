@@ -58,7 +58,7 @@
     <link href="https://getbootstrap.com/docs/4.5/examples/sign-in/signin.css" rel="stylesheet">
 </head>
 <body class="text-center">
-<form class="form-signin" method="post" action="main">
+<form class="form-signin" method="post" action="controller">
     <input type="hidden" name="command" value="registration">
     <img class="mb-4" src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72"
          height="72">
@@ -78,8 +78,8 @@
     <div class="form-group mx-sm-3 mb-2" role="group">
         <input type="submit" class="btn btn-lg btn-primary btn-block" value="Create account">
     </div>
-    <a class="btn" href="/login">Log in</a>
-    <a class="btn" href="/main" style="font-size: 14px">Back to main</a>
+    <a class="btn" href="?command=authorization_page">Log in</a>
+    <a class="btn" href="?command=main_page" style="font-size: 14px">Back to main</a>
 </form>
 </body>
 </html>

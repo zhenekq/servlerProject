@@ -6,5 +6,6 @@ public interface DatabaseDAO {
 
     void add(User user);
 
-    void delete(User user);
+    boolean isUserExists(User user);
+
 }
