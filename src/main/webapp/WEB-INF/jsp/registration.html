@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+  <main class="main">
+    <div class="registration">
+      <div class="reg-content">
+        <h1 class="reg-title">Registration</h1>
+        <ul class="reg-list list-reset">
+          <li class="list-item">
+            <div class="registration-wrapper">
+              <form class="reg-form" action="servlet" method="POST">
+                <input class="reg-name reg-item" type="name" placeholder="Name">
+              </form>
+              <form class="reg-form" action="servlet" method="POST">
+                <input class="reg-mail reg-item" type="email" placeholder="Email">
+              </form>
+              <form class="reg-form" action="servlet" method="POST">
+                <input class="reg-password reg-item" type="password" placeholder="Password">
+              </form>
+            </div>
+          </li>
+          <li class="list-item">
+            <form class="reg-radio" action="servlet" method="POST">
+              <div class="form_radio_group">
+                <div class="form_radio_group-item">
+                  <input id="radio-1" type="radio" name="radio" value="1">
+                  <label for="radio-1">Developer</label>
+                </div>
+                <div class="form_radio_group-item">
+                  <input id="radio-2" type="radio" name="radio" value="2">
+                  <label for="radio-2">Customer</label>
+                </div>
+                <div class="form_radio_group-item">
+                  <input id="radio-3" type="radio" name="radio" value="3">
+                  <label for="radio-3">Manager</label>
+                </div>
+              </div>
+            </form>
+          </li>
+        </ul>
+        <a href="#" class="reg-link"><button class="reg-button btn-reset">Registrate</button></a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
