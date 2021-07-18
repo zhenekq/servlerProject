@@ -11,22 +11,22 @@
     <div class="registration">
       <div class="reg-content">
         <h1 class="reg-title">Registration</h1>
+        <form class="reg-radio" action="servlet" method="POST">
         <ul class="reg-list list-reset">
           <li class="list-item">
             <div class="registration-wrapper">
-              <form class="reg-form" action="servlet" method="POST">
+              <div class="reg-form">
                 <input class="reg-name reg-item" type="name" placeholder="Name">
-              </form>
-              <form class="reg-form" action="servlet" method="POST">
+              </div>
+              <div class="reg-form">
                 <input class="reg-mail reg-item" type="email" placeholder="Email">
-              </form>
-              <form class="reg-form" action="servlet" method="POST">
+              </div>
+              <div class="reg-form">
                 <input class="reg-password reg-item" type="password" placeholder="Password">
-              </form>
+              </div>
             </div>
           </li>
           <li class="list-item">
-            <form class="reg-radio" action="servlet" method="POST">
               <div class="form_radio_group">
                 <div class="form_radio_group-item">
                   <input id="radio-1" type="radio" name="radio" value="1">
@@ -41,10 +41,12 @@
                   <label for="radio-3">Manager</label>
                 </div>
               </div>
-            </form>
           </li>
         </ul>
-        <a href="#" class="reg-link"><button class="reg-button btn-reset">Registrate</button></a>
+        <div class="reg-link">
+          <input class="reg-button btn-reset" type="submit" value="Registrate">
+        </div>
+        </form>
       </div>
     </div>
   </main>
