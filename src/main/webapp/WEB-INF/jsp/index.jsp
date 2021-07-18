@@ -93,7 +93,7 @@
     <footer class="footer">
       <div class="left-header">
         <div class="header-logo">
-          <svg class="logo" enable-background="new 0 0 24 24" height="50" viewBox="0 0 24 24" width="50"
+          <svg class="footer-logo" enable-background="new 0 0 24 24" height="50" viewBox="0 0 24 24" width="50"
             xmlns="http://www.w3.org/2000/svg">
             <path
               d="m8.843 12.651c-1.392 0-2.521 1.129-2.521 2.521v6.306c0 1.392 1.129 2.521 2.521 2.521s2.521-1.129 2.521-2.521v-6.306c-.001-1.392-1.13-2.521-2.521-2.521z" />
@@ -113,16 +113,11 @@
               d="m21.479 12.649h-6.318c-1.393 0-2.523 1.13-2.523 2.523s1.13 2.523 2.523 2.523h6.318c1.393 0 2.523-1.13 2.523-2.523s-1.13-2.523-2.523-2.523z" />
           </svg>
         </div>
-        <ul class="header-list list-reset">
-          <li class="headerLinks-item"><a href="#" class="link-header">link</a></li>
-          <li class="headerLinks-item"><a href="#" class="link-header">link</a></li>
-          <li class="headerLinks-item"><a href="#" class="link-header">link</a></li>
-          <li class="headerLinks-item"><a href="#" class="link-header">link</a></li>
-        </ul>
+        <p class="footer-subtitle">©Yauheny Vozny - 2021</p>
       </div>
       <div class="right-header">
-        <button class="login header-btn btn-reset"><a class="header-btn-link">Login</a></button>
-        <button class="sign-up header-btn btn-reset"><a class="header-btn-link">Sign-up</a></button>
+        <button class="footer-login header-btn btn-reset"><a class="header-btn-link">Login</a></button>
+        <button class="footer-sign-up header-btn btn-reset"><a class="header-btn-link">Sign-up</a></button>
       </div>
     </footer>
 </body>
