@@ -1,85 +1,59 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: user
-  Date: 16.05.2021
-  Time: 21:27
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.1.1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
-
-    <!-- Bootstrap core CSS -->
-    <link href="https://getbootstrap.com/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/apple-touch-icon.png"
-          sizes="180x180">
-    <link rel="icon" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32"
-          type="image/png">
-    <link rel="icon" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16"
-          type="image/png">
-    <link rel="manifest" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/manifest.json">
-    <link rel="mask-icon" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/safari-pinned-tab.svg"
-          color="#563d7c">
-    <link rel="icon" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/favicon.ico">
-    <meta name="msapplication-config" content="https://getbootstrap.com/docs/4.5/assets/img/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#563d7c">
-
-
+    <link rel="stylesheet" href="style/registration.css">
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
+        <%@include file="style/registration.css"%>
     </style>
-    <!-- Custom styles for this template -->
-    <link href="https://getbootstrap.com/docs/4.5/examples/sign-in/signin.css" rel="stylesheet">
 </head>
-<body class="text-center">
-<form class="form-signin" method="post" action="controller">
-    <input type="hidden" name="command" value="registration">
-    <img class="mb-4" src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72"
-         height="72">
-    <h1 class="h3 mb-3 font-weight-normal">Registration</h1>
-    <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" id="inputEmail" name="email" class="form-control mb-3" placeholder="Email address" required
-           autofocus>
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="text" id="inputNickname" name="nickname" class="form-control mb-3" placeholder="Nickname" required>
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" name="password" class="form-control mb-3" placeholder="Password" required>
-    <select class="form-select" size="3" aria-label="size 3 select example">
-        <option value="1">Manager</option>
-        <option value="2">Customer</option>
-        <option value="3">Developer</option>
-    </select>
-    <div class="form-group mx-sm-3 mb-2" role="group">
-        <input type="submit" class="btn btn-lg btn-primary btn-block" value="Create account">
+<body>
+<main class="main">
+    <div class="registration">
+        <div class="reg-content">
+            <h1 class="reg-title">Registration</h1>
+            <form class="reg-radio" action="servlet" method="POST">
+                <ul class="reg-list list-reset">
+                    <li class="list-item">
+                      <input type="hidden" name="command" value="registration">
+                        <div class="registration-wrapper">
+                            <div class="reg-form">
+                                <input class="reg-name reg-item" type="name" name="username" placeholder="Name">
+                            </div>
+                            <div class="reg-form">
+                                <input class="reg-mail reg-item" type="email" name="email" placeholder="Email">
+                            </div>
+                            <div class="reg-form">
+                                <input class="reg-password reg-item" type="password" name="password" placeholder="Password">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-item">
+                        <div class="form_radio_group">
+                            <div class="form_radio_group-item">
+                                <input id="radio-1" type="radio" name="radio" value="Developer">
+                                <label for="radio-1">Developer</label>
+                            </div>
+                            <div class="form_radio_group-item">
+                                <input id="radio-2" type="radio" name="radio" value="Customer">
+                                <label for="radio-2">Customer</label>
+                            </div>
+                            <div class="form_radio_group-item">
+                                <input id="radio-3" type="radio" name="radio" value="Manager">
+                                <label for="radio-3">Manager</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="reg-link">
+                    <input class="reg-button btn-reset" type="submit" value="Registrate">
+                </div>
+            </form>
+        </div>
     </div>
-    <a class="btn" href="?command=authorization_page">Log in</a>
-    <a class="btn" href="?command=main_page" style="font-size: 14px">Back to main</a>
-</form>
+</main>
 </body>
 </html>

@@ -15,13 +15,22 @@
     
     <servlet>
         <servlet-name>main</servlet-name>
-        <servlet-class>by.zhenekns.controller.MainController</servlet-class>
+        <servlet-class>by.epamtc.zhenekns.dev.controller.MainController</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>main</servlet-name>
-        <url-pattern>/controller</url-pattern>
+        <url-pattern>/servlet</url-pattern>
     </servlet-mapping>
 
+   <!-- <filter>
+        <filter-name>auth</filter-name>
+        <filter-class>by.epamtc.zhenekns.dev.filter.AuthFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>auth</filter-name>
+        <url-pattern>/servlet</url-pattern>
+    </filter-mapping>-->
 
 </web-app>

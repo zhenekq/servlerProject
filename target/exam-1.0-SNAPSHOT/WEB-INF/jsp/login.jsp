@@ -58,7 +58,7 @@
     <link href="https://getbootstrap.com/docs/4.5/examples/sign-in/signin.css" rel="stylesheet">
 </head>
 <body class="text-center">
-<form class="form-signin" method="post" action="controller">
+<form class="form-signin" method="post" action="servlet">
     <img class="mb-4" src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72"
          height="72">
     <h1 class="h3 mb-3 font-weight-normal">Log in</h1>
