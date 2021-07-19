@@ -12,6 +12,6 @@
     <title>Index</title>
 </head>
 <body>
-<c:redirect url="/controller?command=main_page"/>
+<c:redirect url="/servlet?command=main_page"/>
 </body>
 </html>
