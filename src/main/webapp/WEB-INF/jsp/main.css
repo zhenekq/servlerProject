@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --font: "Poppins", sans-serif;
+  --black: #333;
+  --yellow: #fdc62d;
+  --white: #fff;
+  --grey: #666;
+}
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.link-reset {
+  font-family: var(--font);
+  text-decoration: none;
+  transition: 0.5s;
+}
+.header {
+  background-color: var(--black);
+  padding: 20px 0;
+}
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left-header {
+  display: flex;
+  align-items: center;
+}
+.header-logo {
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+}
+.header-logo path {
+  fill: var(--yellow);
+}
+.header-list {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.link-header {
+  font-size: 18px;
+  color: var(--white);
+}
+.link-header:hover {
+  color: var(--yellow);
+  transition: 0.9s;
+}
+.right-header {
+  display: flex;
+}
+.username {
+  margin: 0;
+  padding: 0 20px;
+  font-family: var(--font);
+  font-size: 17px;
+  color: var(--yellow);
+}
+.user-role-title {
+  padding: 0 5px;
+  margin: 0;
+  font-family: var(--font);
+  font-size: 17px;
+  color: var(--white);
+}
+.user-role {
+  font-family: var(--font);
+  font-size: 17px;
+  color: var(--white);
+  margin: 0;
+}
+.section {
+  margin-right: 20px;
+  height: 30px;
+  width: 30px;
+}
+.menu__toggle {
+  display: block;
+  margin: 0;
+  height: 30px;
+  width: 30px;
+  opacity: 0;
+  z-index: 2;
+}
+.menu-btn {
+  display: block;
+  position: relative;
+  top: -30px;
+  height: 30px;
+  width: 30px;
+  background-color: var(--white);
+  border-radius: 100%;
+  z-index: 1;
+}
+.menu-btn .span,
+.menu-btn .span::before,
+.menu-btn .span::after {
+  margin-top: -1px;
+  margin-left: -8px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 16px;
+  height: 2px;
+  background-color: #333;
+}
+.menu-btn .span::before,
+.menu-btn .span::after {
+  content: "";
+  display: block;
+  transition: 0.5s;
+}
+.menu-btn .span::before {
+  transform: translateY(-5px);
+}
+.menu-btn .span::after {
+  transform: translateY(5px);
+}
+.menu__box {
+  display: block;
+  visibility: hidden;
+  width: 150px;
+  height: 70px;
+  margin: 0;
+  padding: 20px 0;
+  list-style: none;
+  text-align: center;
+  background-color: #eceff1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+}
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.menu__item:hover {
+  background-color: #cfd8dc;
+}
+.menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+.main {
+  height: 100vh;
+  background-image: url(items/1616028019_38-p-sero-zheltii-fon-44.jpg);
+  opacity: 0.9;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.main-bg-box {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.438);
+}
+.main-order-list {
+  padding-top: 50px;
+  width: 600px;
+  margin: 0 auto;
+}
+.order-item {
+  height: auto;
+  display: block;
+  width: 600px;
+  background-color: var(--black);
+  border-radius: 6px;
+}
+.order-box {
+  padding: 15px 20px;
+}
+.order-title-box {
+  justify-content: space-between;
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+.order-title {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--white);
+  font-size: 20px;
+}
+.order-price {
+  display: block;
+  margin: 0;
+  font-family: var(--font);
+  color: var(--yellow);
+  font-size: 20px;
+}
+.order-dscr {
+  display: block;
+  margin: 0;
+  font-family: var(--font);
+  color: var(--white);
+  font-size: 18px;
+}
+.order-box.active,
+.order-box:hover,
+.order-box:focus {
+  outline: none;
+}
+.order-info {
+  display: none;
+  background: #000;
+  height: 400px;
+  width: 600px;
+}
+.order-info.show {
+  display: block;
+}
+.order-btn {
+  width: 600px;
+}

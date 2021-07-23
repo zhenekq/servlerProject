@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --font: "Poppins", sans-serif;
+  --black: #333;
+  --yellow: #fdc62d;
+  --white: #fff;
+  --grey: #666;
+}
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.btn-reset:focus {
+  outline: none;
+}
+.link-reset {
+  cursor: pointer;
+  font-family: var(--font);
+  text-decoration: none;
+  transition: 0.5s;
+}
+.main {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  background-image: url(items/1616028019_38-p-sero-zheltii-fon-44.jpg);
+  opacity: 0.9;
+  height: 1000px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.bg-box {
+  position: absolute;
+  width: 100%;
+  height: 1000px;
+  background-color: rgba(0, 0, 0, 0.438);
+}
+
+.info {
+  position: relative;
+  top: 40px;
+  margin: 0 auto;
+  width: 700px;
+  height: 560px;
+  background-color: var(--black);
+  box-shadow: 50px 50px 50px rgba(0, 0, 0, 0.616);
+  border-radius: 10px;
+}
+.info-content {
+  padding: 40px;
+  height: 460px;
+}
+.info-form {
+  display: flex;
+}
+.user-data {
+  margin-left: 15px;
+  width: 545px;
+  height: 400px;
+}
+.data-input::placeholder {
+  font-family: var(--font);
+  font-size: 15px;
+  color: var(--white);
+}
+.readonly-box {
+  display: flex;
+  align-items: center;
+}
+.subtitle {
+  font-family: var(--font);
+  font-size: 16px;
+  color: var(--grey);
+}
+.readonly-subtitle {
+  margin: 0;
+  padding: 5px 0;
+}
+.data-input {
+  margin: 0 10px;
+}
+.place-data {
+  margin-top: 10px;
+  width: 350px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.select-css {
+  display: block;
+  float: left;
+  font-size: 16px;
+  font-family: var(--font);
+  color: var(--black);
+  padding: 2px 10px;
+  width: 110px;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 6px;
+  appearance: inherit;
+  background-color: var(--yellow);
+  background-image: url("/items/down-arrow-of-angle.png");
+  background-repeat: no-repeat, repeat;
+  background-position: right 10px top 50%, 0 0;
+  background-size: 10px auto, 100%;
+}
+.select-css::-ms-expand {
+  display: none;
+}
+.select-css:hover {
+  opacity: 0.8;
+  transition: 0.5s;
+}
+.select-css:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 1px 1px var(--grey);
+  color: var(--grey);
+  outline: none;
+}
+.select-css option {
+  font-weight: normal;
+  background-color: var(--grey);
+  color: var(--black);
+}
+/*.select-css option:focus {
+  background-color: var(--white);
+}*/
+*[dir="rtl"] .select-css,
+:root:lang(ar) .select-css,
+:root:lang(iw) .select-css {
+  background-position: left 0.7em top 50%, 0 0;
+  padding: 0.6em 0.8em 0.5em 1.4em;
+}
+.place-subtitle {
+  display: block;
+  margin: 0;
+  padding-bottom: 10px;
+  float: left;
+}
+.more-info {
+  display: flex;
+  width: 350px;
+}
+.more-input-box {
+  display: grid;
+  gap: 10px;
+}
+.more-input {
+  font-family: var(--font);
+  font-size: 15px;
+  color: var(--white);
+  border-bottom: 1px solid var(--grey);
+}
+.more-input::placeholder {
+  font-family: var(--font);
+  color: var(--white);
+}
+.more-subtitle:first-child {
+  padding-top: 20px;
+}
+.more-subtitle {
+  width: 181px;
+  margin: 0;
+  padding: 10px 0;
+}
+.more-date {
+  width: 181px;
+  display: block;
+}
+input[type="date"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  background-image: url("/items/down-arrow.svg");
+  background-size: 15px;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  -webkit-appearance: none;
+  background-image: url("/items/down-arrow.svg");
+  background-size: 15px;
+}
+.textarea {
+  font-family: var(--font);
+  color: var(--white);
+  background-color: transparent;
+  border: 1px solid var(--grey);
+  border-radius: 6px;
+  position: relative;
+  width: 300px;
+  top: 50px;
+  left: 25px;
+  outline: none;
+  resize: none;
+}
+.save-input {
+  margin-top: 17px;
+}
+.submit-input {
+  background-color: var(--yellow);
+  color: var(var(--black));
+  font-family: var(--font);
+  font-size: 15px;
+  width: 80px;
+  height: 30px;
+  border-radius: 6px;
+}
+.skip-title {
+  margin-left: 25px;
+  text-decoration: underline;
+}
