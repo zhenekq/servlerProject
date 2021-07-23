@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,6 +52,8 @@
                 <div class="reg-link">
                     <input class="reg-button btn-reset" type="submit" value="Registrate">
                 </div>
+                <a class="reg-accaunt" href="?command=authorization_page">I already have an account</a>
+                <p class="message_error"><c:out value="${error_message}"/> </p>
             </form>
         </div>
     </div>

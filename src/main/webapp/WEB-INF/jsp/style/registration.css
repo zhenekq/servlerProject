@@ -130,7 +130,7 @@ a {
 }
 .reg-accaunt {
   position: relative;
-  top: 55px;
+  top: 40px;
   display: block;
   margin: 0 auto;
   width: 200px;
@@ -145,7 +145,7 @@ a {
 }
 .reg-link {
   position: relative;
-  top: 35px;
+  top: 30px;
   display: block;
   margin: 0 auto;
   height: 53px;
@@ -166,4 +166,13 @@ a {
 .reg-button:hover {
   transition: 0.9s;
   opacity: 0.7;
+}
+.message_error{
+  position: relative;
+  top: 60px;
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  font-family: var(--font);
+  color: var(--yellow);
 }

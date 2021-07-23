@@ -1,5 +1,6 @@
 package by.epamtc.zhenekns.dev.service.command.event.get;
 
+import by.epamtc.zhenekns.dev.entity.User;
 import by.epamtc.zhenekns.dev.service.command.Command;
 import by.epamtc.zhenekns.dev.service.command.CommandPage;
 
@@ -13,7 +14,7 @@ public class MainCommandPage implements Command {
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher(CommandPage.MAIN_PAGE_JSP);
-        requestDispatcher.forward(request,response);
+        request.setAttribute("user", User.getInstance());
+        request.getRequestDispatcher(CommandPage.MAIN_PAGE_JSP).forward(request,response);
     }
 }

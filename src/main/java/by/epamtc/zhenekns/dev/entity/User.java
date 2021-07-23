@@ -1,6 +1,8 @@
 package by.epamtc.zhenekns.dev.entity;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
 
     private int id;
     private String email;
@@ -17,10 +19,10 @@ public class User {
         return instance;
     }
 
-    private User() {
+    public User() {
     }
 
-    public User(String username, String email){
+    public User(String username, String email) {
         this.email = email;
         this.nickname = username;
     }
@@ -86,6 +88,31 @@ public class User {
         this.role = role;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this)
+            return true;
+        if (obj == null || obj.getClass() != this.getClass())
+            return false;
+        User user = (User) obj;
+        return id == user.id &&
+                (email == user.email || (email != null && email.equals(user.getEmail()))) &&
+                (password == user.password || (password != null && password.equals(user.getPassword()))) &&
+                (nickname == user.nickname || (nickname != null && nickname.equals(user.getNickname()))) &&
+                (role == user.role || (role != null && role.toString().equals(user.getRole())));
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + id;
+        result = prime * result + ((email == null) ? 0 : email.hashCode());
+        result = prime * result + ((password == null) ? 0 : password.hashCode());
+        result = prime * result + ((nickname == null) ? 0 : nickname.hashCode());
+        result = prime * result + ((role == null) ? 0 : role.hashCode());
+        return result;
+    }
 
     @Override
     public String toString() {

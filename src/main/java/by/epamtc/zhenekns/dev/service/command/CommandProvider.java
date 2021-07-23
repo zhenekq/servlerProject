@@ -1,9 +1,7 @@
 package by.epamtc.zhenekns.dev.service.command;
 
-import by.epamtc.zhenekns.dev.service.command.event.get.ErrorCommand;
-import by.epamtc.zhenekns.dev.service.command.event.get.MainCommandPage;
-import by.epamtc.zhenekns.dev.service.command.event.get.AuthorizationCommandPage;
-import by.epamtc.zhenekns.dev.service.command.event.get.RegistrationCommandPage;
+import by.epamtc.zhenekns.dev.service.command.event.get.*;
+import by.epamtc.zhenekns.dev.service.command.event.post.AdditionalInfoCommand;
 import by.epamtc.zhenekns.dev.service.command.event.post.AuthorizationCommand;
 import by.epamtc.zhenekns.dev.service.command.event.post.RegistrationCommand;
 
@@ -18,12 +16,15 @@ public class CommandProvider {
         //post
         commands.put(CommandName.AUTHORIZATION, new AuthorizationCommand());
         commands.put(CommandName.REGISTRATION, new RegistrationCommand());
+        commands.put(CommandName.ADDITIONAL_INFO, new AdditionalInfoCommand());
 
         //get
         commands.put(CommandName.NO_SUCH_COMMAND, new ErrorCommand());
         commands.put(CommandName.MAIN_PAGE, new MainCommandPage());
         commands.put(CommandName.AUTHORIZATION_PAGE, new AuthorizationCommandPage());
         commands.put(CommandName.REGISTRATION_PAGE, new RegistrationCommandPage());
+        commands.put(CommandName.ADDITIONAL_INFO_PAGE, new AdditionalInfoCommandPage());
+
     }
 
     public static CommandProvider getInstance() {

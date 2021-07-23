@@ -1,6 +1,5 @@
 package by.epamtc.zhenekns.dev.service.command.event.post;
 
-import by.epamtc.zhenekns.dev.dao.DAOFactory;
 import by.epamtc.zhenekns.dev.dao.user.UserDAO;
 import by.epamtc.zhenekns.dev.dao.user.UserDAOImpl;
 import by.epamtc.zhenekns.dev.entity.Role;
@@ -28,24 +27,29 @@ public class RegistrationCommand implements Command {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String roleUser = request.getParameter("radio");
+        UserDAOImpl userService1 = new UserDAOImpl();
+        int userId = userService1.getLastId() + 1;
+        if(roleUser == null){
+            request.setAttribute("error_message", "Choose the role please!");
+            request.getRequestDispatcher(CommandPage.REGISTRATION_PAGE_JSP).forward(request, response);
+            return;
+        }
         Role role = Role.valueOf(roleUser.toUpperCase());
-        System.out.println(roleUser);
-        System.out.println(email);
-        System.out.println(username);
-        System.out.println(password);
-        System.out.println(userService.checkUser(username,email));
-        if(!userService.checkUser(username, email)) {
+        if (!userService.checkUser(username, email)) {
+            user.setId(userId);
             user.setEmail(email);
             user.setNickname(username);
             user.setPassword(password);
             user.setRole(role);
             System.out.println(user);
             userDAO.addUser(user);
-            request.getRequestDispatcher(CommandPage.MAIN_PAGE_JSP).forward(request,response);
+            request.getRequestDispatcher(CommandPage.MAIN_PAGE_JSP).forward(request, response);
+        } else if(userService.checkUser(username, email)){
+            request.setAttribute("error_message", "User exists, try to login please!");
+            request.getRequestDispatcher(CommandPage.REGISTRATION_PAGE_JSP).forward(request, response);
         }else{
-            request.getRequestDispatcher(CommandPage.REGISTRATION_PAGE_JSP).forward(request,response);
+            request.setAttribute("error_message", "Fill all fields please!");
+            request.getRequestDispatcher(CommandPage.REGISTRATION_PAGE_JSP).forward(request, response);
         }
-        //databaseDAO.add(user);
-
     }
 }

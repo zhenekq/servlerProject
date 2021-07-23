@@ -22,18 +22,16 @@ public class AuthorizationCommand implements Command {
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        System.out.println("THERE");
-        String username = request.getParameter("username");
+        String email = request.getParameter("email");
         String password = request.getParameter("password");
         HttpSession session = request.getSession();
-        if (userService.getUserByEmailPassword(username, password) != null) {
-            System.out.println("IDENT");
-            session.setAttribute(SessionAttributes.SESSION_USERNAME, username);
-            session.setAttribute(SessionAttributes.SESSION_ROLE, user.getRole());
-            session.setAttribute(SessionAttributes.SESSION_PASSWORD, password);
+        if (userService.getUserByEmailPassword(email, password) != null) {
+            user = userService.getUserByEmailPassword(email,password);
+            System.out.println(user);
+            request.getSession().setAttribute("user", user);
             request.getRequestDispatcher(CommandPage.MAIN_PAGE_JSP).forward(request, response);
         } else {
-            System.out.println("NO");
+            request.setAttribute("error_message_login", "User not found, check your input data please!");
             request.getRequestDispatcher(CommandPage.AUTHORIZATION_PAGE_JSP).forward(request, response);
         }
     }

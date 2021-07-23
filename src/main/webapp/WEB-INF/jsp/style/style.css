@@ -74,12 +74,20 @@ a {
   color: var(--white);
   border: 1px solid var(--white);
 }
+
+.login a{
+  color: white;
+}
+
 .sign-up {
   background-color: var(--yellow);
   color: var(--black);
 }
+
+
 .header-btn-link {
-  width: 70px;
+  width: 110px;
+  height: 45px;
 }
 .main {
   height: 1520px;
@@ -195,4 +203,13 @@ a {
 .footer-sign-up {
   background-color: var(--grey);
   color: var(--black);
+}
+
+.info-text span{
+  color: var(--yellow);
+}
+
+.away{
+  margin-left: 690px;
+  margin-top: 20px;
 }

@@ -1,7 +1,5 @@
-/*
 package by.epamtc.zhenekns.dev.filter;
 
-import by.epamtc.zhenekns.dev.service.SessionAttributes;
 import by.epamtc.zhenekns.dev.service.command.CommandPage;
 
 import javax.servlet.*;
@@ -10,44 +8,36 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-
 public class AuthFilter implements Filter {
 
     private HttpServletRequest request;
 
-    private static final String[] loginRequiredURLs = {
-            "?command=values", "/edit_profile", "/update_profile"
-    };
 
-    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain chain)
-            throws IOException, ServletException {
-        request = (HttpServletRequest) servletRequest;
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain chain) throws IOException, ServletException {
+        HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
-        HttpSession session = request.getSession(false);
 
-        boolean isLoggedIn = (session != null && session.getAttribute(SessionAttributes.SESSION_USERNAME) != null);
-        String value = "command=authorization_page";
-        boolean isLoginRequest = request.getQueryString().equals(value);
-        System.out.println(value);
-        //System.out.println("URI: " + httpRequest.getRequestURL());
-        System.out.println("IS LOGGED_IN: " + isLoggedIn);
-        System.out.println("IS isLoginRequest: " + isLoginRequest);
-        //System.out.println("IS isLoginPage: " + isLoginPage);
-        if (isLoggedIn && (isLoginRequest)) {
-            request.getRequestDispatcher(CommandPage.MAIN_PAGE_JSP).forward(request, response);
-            System.out.println("There");
-        } else if (!isLoggedIn && isLoginRequired()) {
-            System.out.println("There 2");
-            RequestDispatcher dispatcher = request.getRequestDispatcher(CommandPage.AUTHORIZATION_PAGE_JSP);
-            dispatcher.forward(request, response);
-        } else {
-            System.out.println("there 3");
+        HttpSession session = request.getSession(false);
+        String loginURI = request.getContextPath() + "servlet?command=authorization_page";
+
+        boolean loggedIn = session != null && session.getAttribute("user") != null;
+        boolean loginRequest = (request.getRequestURI() + "?command=authorization_page").equals(loginURI);
+        System.out.println("LOGIN URI: " + loginURI);
+        System.out.println("REQUEST URI: " + (request.getRequestURI().replace('/', ' ')).trim() + "?command=authorization_page");
+        System.out.println("IS LOGGED IN: " + loggedIn);
+        System.out.println("IS LOGIN REQUEST: " + loginRequest);
+
+        if (loggedIn || loginRequest) {
+            System.out.println("there");
             chain.doFilter(request, response);
+        } else {
+            System.out.println("there2");
+            request.getRequestDispatcher(CommandPage.AUTHORIZATION_PAGE_JSP).forward(request, response);
         }
     }
 
 
-    private boolean isLoginRequired() {
+    /*private boolean isLoginRequired() {
         String requestURL = request.getRequestURL().toString();
 
         for (String loginRequiredURL : loginRequiredURLs) {
@@ -58,7 +48,7 @@ public class AuthFilter implements Filter {
 
         return false;
     }
-
+*/
     public AuthFilter() {
     }
 
@@ -69,4 +59,3 @@ public class AuthFilter implements Filter {
     }
 
 }
-*/
