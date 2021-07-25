@@ -87,103 +87,78 @@ body {
   color: var(--white);
   margin: 0;
 }
-.section {
-  margin-right: 20px;
-  height: 30px;
-  width: 30px;
+.drop-down:focus {
+  outline: none;
 }
-.menu__toggle {
+.dropdown {
   display: block;
-  margin: 0;
-  height: 30px;
-  width: 30px;
-  opacity: 0;
-  z-index: 2;
 }
-.menu-btn {
-  display: block;
+.dropbtn {
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(/items/burger-bg.svg);
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+.dropbtn:hover,
+.dropbtn:focus {
+  outline: none;
+}
+.dropdown {
   position: relative;
-  top: -30px;
-  height: 30px;
-  width: 30px;
-  background-color: var(--white);
-  border-radius: 100%;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--grey);
+  width: 150px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
-.menu-btn .span,
-.menu-btn .span::before,
-.menu-btn .span::after {
-  margin-top: -1px;
-  margin-left: -8px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 16px;
-  height: 2px;
-  background-color: #333;
-}
-.menu-btn .span::before,
-.menu-btn .span::after {
-  content: "";
-  display: block;
-  transition: 0.5s;
-}
-.menu-btn .span::before {
-  transform: translateY(-5px);
-}
-.menu-btn .span::after {
-  transform: translateY(5px);
-}
-.menu__box {
-  display: block;
-  visibility: hidden;
-  width: 150px;
-  height: 70px;
-  margin: 0;
-  padding: 20px 0;
-  list-style: none;
-  text-align: center;
-  background-color: #eceff1;
-  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
-}
-.menu__item {
-  display: block;
-  padding: 12px 24px;
-  color: #333;
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  font-weight: 600;
+.dropdown-content a {
+  display: flex;
+  color: var(--black);
+  padding: 12px 5px;
   text-decoration: none;
+  display: block;
+  font-family: var(--font);
+  font-size: 16px;
 }
-.menu__item:hover {
-  background-color: #cfd8dc;
+.dropdown a:hover {
+  background-color: var(--yellow);
 }
-.menu__toggle:checked ~ .menu__box {
-  visibility: visible;
-  left: 0;
+.show {
+  display: block;
 }
 .main {
-  height: 100vh;
-  background-image: url(items/1616028019_38-p-sero-zheltii-fon-44.jpg);
-  opacity: 0.9;
+  min-height: 80vh;
+  padding-bottom: 50px;
+  background-image: url(items/bg-image-3.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
-.main-bg-box {
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.438);
+.main-title {
+  font-family: var(--font);
+  font-size: 25px;
+  width: 100px;
+  margin: 0 auto;
+  padding-top: 50px;
+  color: var(--white);
 }
 .main-order-list {
   padding-top: 50px;
-  width: 600px;
+  width: 800px;
   margin: 0 auto;
 }
 .order-item {
   height: auto;
   display: block;
-  width: 600px;
+  width: 800px;
+  margin-bottom: 50px;
   background-color: var(--black);
   border-radius: 6px;
 }
@@ -223,13 +198,89 @@ body {
 }
 .order-info {
   display: none;
-  background: #000;
-  height: 400px;
-  width: 600px;
+  background: var(--grey);
+  font-family: var(--font);
+  border-radius: 0 0 6px 6px;
+  padding-bottom: 25px;
+  width: 800px;
+}
+.main-text {
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
 }
 .order-info.show {
   display: block;
 }
 .order-btn {
-  width: 600px;
+  width: 800px;
+}
+.name-of-customer,
+.technologies,
+.comand,
+.deadline {
+  margin: 0 auto;
+  display: flex;
+  padding: 20px 0;
+  width: 700px;
+  border-bottom: 1px solid var(--black);
+}
+.name,
+.technologies-stack,
+.size-of-comand,
+.deadline-date {
+  max-width: 700px;
+  margin: 0;
+  padding-left: 10px;
+}
+.name {
+  font-size: 17px;
+  color: var(--yellow);
+}
+.respond-btn {
+  margin-top: 20px;
+  margin-left: 50px;
+  border-radius: 6px;
+  display: block;
+  width: 100px;
+  height: 40px;
+  background-color: var(--yellow);
+  color: var(--black);
+}
+.respond-text {
+  margin: 0 auto;
+  width: 75px;
+  padding-top: 8px;
+}
+.footer {
+  z-index: 2;
+  background-color: var(--black);
+  padding: 15px;
+}
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-logo {
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+}
+.footer-subtitle {
+  font-family: var(--font);
+  font-size: 18px;
+  color: var(--grey);
+}
+.footer-logo path {
+  fill: var(--grey);
+}
+.footer-logout {
+  width: 100px;
+  height: 40px;
+  border-radius: 6px;
+  font-family: var(--font);
+  font-size: 15px;
+  color: var(--grey);
+  border: 1px solid var(--grey);
 }
