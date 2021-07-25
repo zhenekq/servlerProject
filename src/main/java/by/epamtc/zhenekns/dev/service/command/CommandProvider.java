@@ -24,6 +24,7 @@ public class CommandProvider {
         commands.put(CommandName.AUTHORIZATION_PAGE, new AuthorizationCommandPage());
         commands.put(CommandName.REGISTRATION_PAGE, new RegistrationCommandPage());
         commands.put(CommandName.ADDITIONAL_INFO_PAGE, new AdditionalInfoCommandPage());
+        commands.put(CommandName.AUTHORIZED_MAIN_PAGE, new AuthorizedMainPage());
 
     }
 

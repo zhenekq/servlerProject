@@ -1,18 +1,17 @@
 package by.epamtc.zhenekns.dev.service.command.event.post;
 
 import by.epamtc.zhenekns.dev.entity.User;
-import by.epamtc.zhenekns.dev.service.SessionAttributes;
 import by.epamtc.zhenekns.dev.service.command.Command;
 import by.epamtc.zhenekns.dev.service.command.CommandPage;
-import by.epamtc.zhenekns.dev.service.user.UserService;
-import by.epamtc.zhenekns.dev.service.user.UserServiceImpl;
+import by.epamtc.zhenekns.dev.service.UserService;
+import by.epamtc.zhenekns.dev.service.implementation.UserServiceImpl;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.List;
 
 
 public class AuthorizationCommand implements Command {
@@ -29,7 +28,8 @@ public class AuthorizationCommand implements Command {
             user = userService.getUserByEmailPassword(email,password);
             System.out.println(user);
             request.getSession().setAttribute("user", user);
-            request.getRequestDispatcher(CommandPage.MAIN_PAGE_JSP).forward(request, response);
+            List<User> users = userService.getAllUsers();
+            response.sendRedirect(request.getContextPath() + "?command=main_page");
         } else {
             request.setAttribute("error_message_login", "User not found, check your input data please!");
             request.getRequestDispatcher(CommandPage.AUTHORIZATION_PAGE_JSP).forward(request, response);

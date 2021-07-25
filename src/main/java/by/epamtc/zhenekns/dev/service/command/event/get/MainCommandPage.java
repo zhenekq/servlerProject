@@ -15,6 +15,7 @@ public class MainCommandPage implements Command {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.setAttribute("user", User.getInstance());
+        request.getSession().setAttribute("user", User.getInstance());
         request.getRequestDispatcher(CommandPage.MAIN_PAGE_JSP).forward(request,response);
     }
 }

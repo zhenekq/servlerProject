@@ -1,7 +1,6 @@
 package by.epamtc.zhenekns.dev.dao;
 
-import by.epamtc.zhenekns.dev.dao.user.UserDAO;
-import by.epamtc.zhenekns.dev.dao.user.UserDAOImpl;
+import by.epamtc.zhenekns.dev.dao.implementation.UserDAOImpl;
 
 public final class DAOFactory {
     private static final DAOFactory instance = new DAOFactory();

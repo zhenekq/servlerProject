@@ -2,13 +2,14 @@ package by.epamtc.zhenekns.dev.entity;
 
 import java.io.Serializable;
 
-public class User implements Serializable {
+public class User  {
 
     private int id;
     private String email;
     private String password;
     private String nickname;
     private Role role = Role.USER;
+    private UserInfo userInfo;
 
     private static User instance = new User();
 
@@ -19,8 +20,7 @@ public class User implements Serializable {
         return instance;
     }
 
-    public User() {
-    }
+    public User() {}
 
     public User(String username, String email) {
         this.email = email;
@@ -86,6 +86,14 @@ public class User implements Serializable {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    public UserInfo getUserInfo() {
+        return userInfo;
+    }
+
+    public void setUserInfo(UserInfo userInfo) {
+        this.userInfo = userInfo;
     }
 
     @Override

@@ -1,12 +1,9 @@
 package by.epamtc.zhenekns.dev.controller;
 
-import by.epamtc.zhenekns.dev.dao.DAOFactory;
-import by.epamtc.zhenekns.dev.dao.user.UserDAO;
-import by.epamtc.zhenekns.dev.entity.User;
 import by.epamtc.zhenekns.dev.service.command.Command;
 import by.epamtc.zhenekns.dev.service.command.CommandProvider;
-import by.epamtc.zhenekns.dev.service.user.UserService;
-import by.epamtc.zhenekns.dev.service.user.UserServiceImpl;
+import by.epamtc.zhenekns.dev.service.UserService;
+import by.epamtc.zhenekns.dev.service.implementation.UserServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
