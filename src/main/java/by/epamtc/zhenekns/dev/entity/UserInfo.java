@@ -13,16 +13,7 @@ public class UserInfo implements Serializable {
     private String dateOfRegistration;
     private String socialLink;
 
-    private int userId = User.getInstance().getId();
-
-    private static UserInfo instance = new UserInfo();
-
-    public static UserInfo getInstance() {
-        if(instance == null){
-            instance = new UserInfo();
-        }
-        return instance;
-    }
+    private int userId;
 
     public UserInfo() {
     }

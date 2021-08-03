@@ -13,15 +13,6 @@ import java.io.IOException;
 public class AdditionalInfoCommandPage implements Command {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        User user = User.getInstance();
-        UserInfo userInfo = UserInfo.getInstance();
-        System.out.println(user.getId());
-        System.out.println(userInfo.getUserId());
-        request.setAttribute("username", User.getInstance().getNickname());
-        request.setAttribute("userEmail", User.getInstance().getEmail());
-        System.out.println(User.getInstance().getNickname());
-        System.out.println(User.getInstance().getEmail());
-        request.setAttribute("user", user);
         request.getRequestDispatcher(CommandPage.ADDITIONAL_PAGE_JPS).forward(request,response);
     }
 }

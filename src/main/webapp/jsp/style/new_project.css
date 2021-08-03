@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+body {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --font: "Poppins", sans-serif;
+    --black: #333;
+    --yellow: #fdc62d;
+    --white: #fff;
+    --grey: #666;
+}
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.btn-reset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.btn-reset:focus {
+    outline: none;
+}
+.link-reset {
+    font-family: var(--font);
+    text-decoration: none;
+    transition: 0.5s;
+}
+.header {
+    background-color: var(--black);
+    padding: 20px 0;
+}
+.wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left-header {
+    display: flex;
+    align-items: center;
+}
+.header-logo {
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+}
+.header-logo path {
+    fill: var(--yellow);
+}
+.header-list {
+    display: flex;
+}
+.headerLinks-item {
+    margin-right: 30px;
+}
+.link-header {
+    font-size: 18px;
+    color: var(--white);
+}
+.link-header:hover {
+    color: var(--yellow);
+    transition: 0.9s;
+}
+.right-header {
+    display: flex;
+}
+.username {
+    margin: 0;
+    padding: 0 20px;
+    font-family: var(--font);
+    font-size: 17px;
+    color: var(--yellow);
+}
+.user-role-title {
+    padding: 0 5px;
+    margin: 0;
+    font-family: var(--font);
+    font-size: 17px;
+    color: var(--white);
+}
+.user-role {
+    font-family: var(--font);
+    font-size: 17px;
+    color: var(--white);
+    margin: 0;
+}
+.drop-down:focus {
+    outline: none;
+}
+.dropdown {
+    display: block;
+}
+.dropbtn {
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/images/burger-bg.svg);
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+.dropbtn:hover,
+.dropbtn:focus {
+    outline: none;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--grey);
+    width: 150px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    display: flex;
+    color: var(--black);
+    padding: 12px 5px;
+    text-decoration: none;
+    display: block;
+    font-family: var(--font);
+    font-size: 16px;
+}
+.dropdown a:hover {
+    background-color: var(--yellow);
+}
+.show {
+    display: block;
+}
+.main {
+    width: 100%;
+    height: 900px;
+    background-image: url(/images/1616028019_38-p-sero-zheltii-fon-44.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.bg-box {
+    position: relative;
+    width: 100%;
+    height: 900px;
+    background-color: rgba(0, 0, 0, 0.438);
+}
+.main-wrapper {
+    justify-self: center;
+}
+.progect-form {
+    position: relative;
+    left: 15%;
+    display: inline-block;
+    margin: 60px 0;
+    height: 750px;
+    width: 800px;
+    background-color: var(--black);
+    border-radius: 6px;
+}
+.progect-form-content {
+    padding: 20px;
+}
+.main-title {
+    padding-bottom: 35px;
+    font-family: var(--font);
+    font-size: 23px;
+    color: var(--white);
+    width: 330px;
+    margin: 0 auto;
+}
+.progect-item {
+    display: flex;
+    padding-bottom: 30px;
+}
+.progect-item:last-child {
+    padding-bottom: 45px;
+}
+.progect-input {
+    font-family: var(--font);
+    font-size: 18px;
+    color: var(--white);
+    width: 340px;
+    border-bottom: 1px solid var(--grey);
+}
+.progect-input::placeholder {
+    font-family: var(--font);
+    font-size: 18px;
+    color: var(--grey);
+}
+.progect-subtitle {
+    margin: 0;
+    width: 210px;
+    font-family: var(--font);
+    font-size: 18px;
+    color: var(--grey);
+}
+.textarea-text {
+    margin: 0;
+    font-family: var(--font);
+    font-size: 18px;
+    color: var(--grey);
+    width: 210px;
+}
+.progect-textarea {
+    font-family: var(--font);
+    font-size: 16px;
+    color: var(--white);
+    outline: none;
+    resize: none;
+    border: 1px solid var(--grey);
+    border-radius: 3px;
+}
+.submit-input {
+    display: block;
+    margin: 0 auto;
+    background-color: var(--yellow);
+    color: var(var(--black));
+    font-family: var(--font);
+    font-size: 18px;
+    width:
+
+            100px;
+    height: 40px;
+    border-radius: 6px;
+}
+.footer {
+    z-index: 2;
+    background-color: var(--black);
+    padding: 10px;
+}
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-logo {
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+}
+.footer-subtitle {
+    font-family: var(--font);
+    font-size: 18px;
+    color: var(--grey);
+}
+.footer-logo path {
+    fill: var(--grey);
+}
+.footer-logout {
+    width: 100px;
+    height: 40px;
+    border-radius: 6px;
+    font-family: var(--font);
+    font-size: 15px;
+    color: var(--grey);
+    border: 1px solid var(--grey);
+}

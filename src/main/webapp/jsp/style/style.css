@@ -46,10 +46,12 @@ a {
   fill: var(--yellow);
 }
 .header-list {
-  display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
 }
+.headerLinks-item {
+  margin-right: 30px;
+}
+
 .link-header {
   font-size: 18px;
   color: var(--white);

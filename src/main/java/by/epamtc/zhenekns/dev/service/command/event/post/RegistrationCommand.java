@@ -18,15 +18,14 @@ import java.io.IOException;
 
 public class RegistrationCommand implements Command {
 
-    private static User user = User.getInstance();
     private static UserDAO userDAO = new UserDAOImpl();
     private static UserService userService = new UserServiceImpl();
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         System.out.println("REGISTRATION");
-        UserInfo userInfo = UserInfo.getInstance();
-
+        UserInfo userInfo = new UserInfo();
+        User user = new User();
         String email = request.getParameter("email");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
@@ -49,6 +48,7 @@ public class RegistrationCommand implements Command {
             userInfo.setUserId(userId);
             System.out.println(user);
             userDAO.addUser(user);
+            request.getSession().setAttribute("user", user);
             response.sendRedirect(request.getContextPath() + CommandPageRedirect.ADDITIONAL_INFO_PAGE);
         } else if(userService.checkUser(username, email)){
             request.setAttribute("error_message", "User exists, try to login please!");

@@ -62,7 +62,7 @@
                     </div>
                     <div class="save-input">
                         <input class="submit-input btn-reset" type="submit" value="Save">
-                        <a href="#" class="skip-title subtitle link-reset">Skip</a>
+                        <a href="?command=additional_info" class="skip-title subtitle link-reset">Skip</a>
                     </div>
                 </div>
             </form>

@@ -3,6 +3,7 @@ package by.epamtc.zhenekns.dev.filter;
 import by.epamtc.zhenekns.dev.service.command.CommandPage;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -10,14 +11,12 @@ import java.io.IOException;
 
 public class AuthFilter implements Filter {
 
-    private HttpServletRequest request;
-
 
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
 
-        HttpSession session = request.getSession(false);
+        HttpSession session = request.getSession();
         String loginURI = request.getContextPath() + "servlet?command=authorization_page";
 
         boolean loggedIn = session != null && session.getAttribute("user") != null;

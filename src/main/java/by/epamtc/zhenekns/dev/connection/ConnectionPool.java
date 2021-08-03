@@ -24,7 +24,7 @@ public class ConnectionPool {
     private String password;
     private String driverName;
 
-    private static final int MAX_POOL_SIZE = 15;
+    private static final int MAX_POOL_SIZE = 40;
     private int connNum = 0;
 
     private Stack<Connection> freePool = new Stack<>();
@@ -56,7 +56,7 @@ public class ConnectionPool {
     public Connection getConnection() throws SQLException {
         Connection connection = null;
         if (isFull()) {
-            throw new SQLException("Connection pool is full!");
+
         }
         connection = getConnectionFromPool();
         if (connection == null) {

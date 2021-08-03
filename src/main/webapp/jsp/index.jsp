@@ -7,10 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/jsp/style/style.css"/>
     <title>Welcome!</title>
-    <%--<style>
-        <%@include file='style/style.css'%>
-        &lt;%&ndash;<jsp:useBean id="user" beanName="user" class="by.epamtc.zhenekns.dev.entity.User" scope="application" type="by.epamtc.zhenekns.dev.entity.User"/>&ndash;%&gt;
-    </style>--%>
 </head>
 <body>
 <header class="header">
@@ -36,12 +32,12 @@
                         d="m21.479 12.649h-6.318c-1.393 0-2.523 1.13-2.523 2.523s1.13 2.523 2.523 2.523h6.318c1.393 0 2.523-1.13 2.523-2.523s-1.13-2.523-2.523-2.523z"/>
             </svg>
         </div>
-        <ul class="header-list list-reset">
+        <%--<ul class="header-list list-reset">
             <li class="headerLinks-item"><a href="#" class="link-header">link</a></li>
             <li class="headerLinks-item"><a href="#" class="link-header">link</a></li>
             <li class="headerLinks-item"><a href="#" class="link-header">link</a></li>
             <li class="headerLinks-item"><a href="#" class="link-header">link</a></li>
-        </ul>
+        </ul>--%>
     </div>
     <div class="right-header">
         <button class="login header-btn btn-reset"><a class="header-btn-link"

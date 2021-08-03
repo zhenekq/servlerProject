@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500..");
+body {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --font: "Poppins", sans-serif;
+    --black: #333;
+    --yellow: #fdc62d;
+    --white: #fff;
+    --grey: #666;
+}
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.btn-reset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.btn-reset:focus {
+    outline: none;
+}
+.link-reset {
+    font-family: var(--font);
+    text-decoration: none;
+    transition: 0.5s;
+}
+.link-reset:hover {
+    cursor: pointer;
+}
+.header {
+    background-color: var(--black);
+    padding: 20px 0;
+}
+.wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left-header {
+    display: flex;
+    align-items: center;
+}
+.header-logo {
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+}
+.header-logo path {
+    fill: var(--yellow);
+}
+.header-list {
+    display: flex;
+}
+.headerLinks-item {
+    margin-right: 30px;
+}
+.link-header {
+    font-size: 18px;
+    color: var(--white);
+}
+.link-header:hover {
+    color: var(--yellow);
+    transition: 0.9s;
+}
+.right-header {
+    display: flex;
+}
+.username {
+    margin: 0;
+    padding: 0 20px;
+    font-family: var(--font);
+    font-size: 17px;
+    color: var(--yellow);
+}
+.user-role-title {
+    padding: 0 5px;
+    margin: 0;
+    font-family: var(--font);
+    font-size: 17px;
+    color: var(--white);
+}
+.user-role {
+    font-family: var(--font);
+    font-size: 17px;
+    color: var(--white);
+    margin: 0;
+}
+.drop-down:focus {
+    outline: none;
+}
+.dropdown {
+    display: block;
+}
+.dropbtn {
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/images/burger-bg.svg);
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+.dropbtn:hover,
+.dropbtn:focus {
+    outline: none;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--grey);
+    width: 150px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    display: flex;
+    color: var(--black);
+    padding: 12px 5px;
+    text-decoration: none;
+    display: block;
+    font-family: var(--font);
+    font-size: 16px;
+}
+.dropdown a:hover {
+    background-color: var(--yellow);
+}
+.show {
+    display: block;
+}
+.main {
+    width: 100%;
+    height: 900px;
+    background-image: url(/images/1616028019_38-p-sero-zheltii-fon-44.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.bg-box {
+    position: relative;
+    width: 100%;
+    height: 900px;
+    background-color: rgba(0, 0, 0, 0.438);
+}
+.main-wrapper {
+    padding: 50px 0;
+    justify-self: center;
+}
+.user-info-box {
+    border-radius: 6px;
+    margin: 0 auto;
+    width: 600px;
+    background-color: var(--black);
+}
+.user-info-content {
+    padding: 20px;
+}
+.user-info-title {
+    margin: 0 auto;
+    padding-bottom: 40px;
+    width: 180px;
+    font-family: var(--font);
+    font-size: 20px;
+    color: var(--white);
+}
+.user-item {
+    padding-bottom: 5px;
+    align-items: center;
+    width: 350px;
+    margin-bottom: 40px;
+    display: flex;
+    border-bottom: 1px solid var(--grey);
+}
+.about-item {
+    width: 500px;
+}
+.user-from-item {
+    border: none;
+}
+.user-subtitle {
+    padding-right: 20px;
+    margin: 0;
+    font-family: var(--font);
+    font-size: 17px;
+    color: var(--grey);
+}
+.about-subtitle {
+    width: 271px;
+}
+.info-subtitle {
+    margin: 0;
+    font-family: var(--font);
+    font-size: 17px;
+    color: var(--white);
+}
+.country-item,
+.city-item {
+    display: flex;
+    margin-right: 40px;
+    border-bottom: 1px solid var(--grey);
+}
+.footer {
+    z-index: 2;
+    background-color: var(--black);
+    padding: 10px;
+}
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-logo {
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+}
+.footer-subtitle {
+    font-family: var(--font);
+    font-size: 18px;
+    color: var(--grey);
+}
+.footer-logo path {
+
+    fill: var(--grey);
+}
+.footer-logout {
+    width: 100px;
+    height: 40px;
+    border-radius: 6px;
+    font-family: var(--font);
+    font-size: 15px;
+    color: var(--grey);
+    border: 1px solid var(--grey);
+}

@@ -4,6 +4,7 @@ public class Project {
     private int id;
     private String title;
     private String description;
+    private String qualification;
     private int teamSize;
     private int cost;
     private String deadline;
@@ -11,10 +12,21 @@ public class Project {
 
     public Project(){}
 
-    public Project(int id, String title, String description, int teamSize, int cost, String deadline, int user_id) {
+    public Project(int id, String title, String description, String qualification, int teamSize, int cost, String deadline, int user_id) {
         this.id = id;
         this.title = title;
         this.description = description;
+        this.qualification = qualification;
+        this.teamSize = teamSize;
+        this.cost = cost;
+        this.deadline = deadline;
+        this.user_id = user_id;
+    }
+
+    public Project(String title, String description, String qualification, int teamSize, int cost, String deadline, int user_id) {
+        this.title = title;
+        this.description = description;
+        this.qualification = qualification;
         this.teamSize = teamSize;
         this.cost = cost;
         this.deadline = deadline;
@@ -75,5 +87,27 @@ public class Project {
 
     public void setUser_id(int user_id) {
         this.user_id = user_id;
+    }
+
+    public String getQualification() {
+        return qualification;
+    }
+
+    public void setQualification(String qualification) {
+        this.qualification = qualification;
+    }
+
+    @Override
+    public String toString() {
+        return "Project{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", qualification='" + qualification + '\'' +
+                ", teamSize=" + teamSize +
+                ", cost=" + cost +
+                ", deadline='" + deadline + '\'' +
+                ", user_id=" + user_id +
+                '}';
     }
 }

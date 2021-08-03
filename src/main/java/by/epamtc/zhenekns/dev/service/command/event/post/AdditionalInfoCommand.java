@@ -21,9 +21,9 @@ public class AdditionalInfoCommand implements Command {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         System.out.println("ADDITIONAL INFO");
-        UserInfo userInfo = UserInfo.getInstance();
+        UserInfo userInfo = new UserInfo();
         UserDAOImpl userDAO1 = new UserDAOImpl();
-        User user = User.getInstance();
+        User user = (User)request.getSession().getAttribute("user");
         UserDAO userDAO = new UserDAOImpl();
         int idUserInfo = userDAO1.getLastIdInfo() + 1;
         String userCountry = request.getParameter("country");
@@ -52,7 +52,7 @@ public class AdditionalInfoCommand implements Command {
 
         userDAO.addAdditionalInfo(userInfo);
         System.out.println("info added");
-        response.sendRedirect(request.getContextPath() + CommandPageRedirect.MAIN_PAGE);
+        response.sendRedirect(request.getContextPath() + CommandPageRedirect.AUTHORIZED_MAIN_PAGE);
     }
 
 }

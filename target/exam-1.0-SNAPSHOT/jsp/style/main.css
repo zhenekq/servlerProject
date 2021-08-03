@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+body {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --font: "Poppins", sans-serif;
+    --black: #333;
+    --yellow: #fdc62d;
+    --white: #fff;
+    --grey: #666;
+}
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.btn-reset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.link-reset {
+    font-family: var(--font);
+    text-decoration: none;
+    transition: 0.5s;
+}
+.header {
+    background-color: var(--black);
+    padding: 20px 0;
+}
+.wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left-header {
+    display: flex;
+    align-items: center;
+}
+.header-logo {
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+}
+.header-logo path {
+    fill: var(--yellow);
+}
+.header-list {
+    display: flex;
+}
+.headerLinks-item {
+    margin-right: 30px;
+}
+
+.link-header {
+    font-size: 18px;
+    color: var(--white);
+}
+.link-header:hover {
+    color: var(--yellow);
+    transition: 0.9s;
+}
+.right-header {
+    display: flex;
+}
+.username {
+    margin: 0;
+    padding: 0 20px;
+    font-family: var(--font);
+    font-size: 17px;
+    color: var(--yellow);
+}
+.user-role-title {
+    padding: 0 5px;
+    margin: 0;
+    font-family: var(--font);
+    font-size: 17px;
+    color: var(--white);
+}
+.user-role {
+    font-family: var(--font);
+    font-size: 17px;
+    color: var(--white);
+    margin: 0;
+}
+.drop-down:focus {
+    outline: none;
+}
+.dropdown {
+    display: block;
+}
+.dropbtn {
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/images/burger-bg.svg);
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+.dropbtn:hover,
+.dropbtn:focus {
+    outline: none;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--grey);
+    width: 150px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    display: flex;
+    color: var(--black);
+    padding: 12px 5px;
+    text-decoration: none;
+    display: block;
+    font-family: var(--font);
+    font-size: 16px;
+}
+.dropdown a:hover {
+    background-color: var(--yellow);
+    transition: 0.8s;
+}
+.show {
+    display: block;
+}
+.main {
+    min-height: 80vh;
+    padding-bottom: 50px;
+    background-image: url(/images/bg_seri.jpg);
+
+}
+.main-title {
+    font-family: var(--font);
+    font-size: 25px;
+    width: 100px;
+    margin: 0 auto;
+    padding-top: 50px;
+    color: var(--white);
+}
+.main-order-list {
+    padding-top: 50px;
+    width: 800px;
+    margin: 0 auto;
+}
+.order-item {
+    height: auto;
+    display: block;
+    width: 800px;
+    margin-bottom: 50px;
+    background-color: var(--black);
+    border-radius: 6px;
+}
+.order-box {
+    padding: 15px 20px;
+}
+.order-title-box {
+    justify-content: space-between;
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+.order-title {
+    margin: 0;
+    font-family: var(--font);
+    color: var(--white);
+    font-size: 20px;
+}
+.order-price {
+    display: block;
+    margin: 0;
+    font-family: var(--font);
+    color: var(--yellow);
+    font-size: 20px;
+}
+.order-dscr {
+    display: block;
+    margin: 0;
+    font-family: var(--font);
+    color: var(--white);
+    font-size: 18px;
+}
+.order-box.active,
+.order-box:hover,
+.order-box:focus {
+    outline: none;
+}
+
+.order-info {
+    display: none;
+    background: var(--grey);
+    font-family: var(--font);
+    border-radius: 0 0 6px 6px;
+    padding-bottom: 25px;
+    width: 800px;
+}
+.main-text {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+}
+.order-info.show {
+    display: block;
+}
+.order-btn {
+    width: 800px;
+}
+.name-of-customer,
+.technologies,
+.comand,
+.deadline {
+    margin: 0 auto;
+    display: flex;
+    padding: 20px 0;
+    width: 700px;
+    border-bottom: 1px solid var(--black);
+}
+.name,
+.technologies-stack,
+.size-of-comand,
+.deadline-date {
+    max-width: 700px;
+    margin: 0;
+    padding-left: 10px;
+}
+.name {
+    font-size: 17px;
+    color: var(--yellow);
+}
+
+.name a{
+    color: var(--yellow);
+    text-decoration: underline;
+}
+
+.respond-btn {
+    margin-top: 20px;
+    margin-left: 50px;
+    border-radius: 6px;
+    display: block;
+    width: 100px;
+    height: 40px;
+    background-color: var(--yellow);
+    color: var(--black);
+}
+.respond-text {
+    margin: 0 auto;
+    width: 75px;
+    padding-top: 8px;
+}
+.footer {
+    z-index: 2;
+    background-color: var(--black);
+    padding: 15px;
+}
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-logo {
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+}
+.footer-subtitle {
+    font-family: var(--font);
+    font-size: 18px;
+    color: var(--grey);
+}
+.footer-logo path {
+    fill: var(--grey);
+}
+.footer-logout {
+    width: 100px;
+    height: 40px;
+    border-radius: 6px;
+    font-family: var(--font);
+    font-size: 15px;
+    color: var(--grey);
+    border: 1px solid var(--grey);
+}

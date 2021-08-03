@@ -11,14 +11,6 @@ public class User  {
     private Role role = Role.USER;
     private UserInfo userInfo;
 
-    private static User instance = new User();
-
-    public static User getInstance() {
-        if (instance == null) {
-            instance = new User();
-        }
-        return instance;
-    }
 
     public User() {}
 
@@ -39,6 +31,15 @@ public class User  {
         this.password = password;
         this.nickname = nickname;
         this.role = role;
+    }
+
+    public User(int id, String email, String password, String nickname, Role role, UserInfo userInfo) {
+        this.id = id;
+        this.email = email;
+        this.password = password;
+        this.nickname = nickname;
+        this.role = role;
+        this.userInfo = userInfo;
     }
 
     public User(String email, String password, String nickname, Role role) {
@@ -130,6 +131,7 @@ public class User  {
                 ", password='" + password + '\'' +
                 ", nickname='" + nickname + '\'' +
                 ", role=" + role +
+                ", userInfo=" + userInfo +
                 '}';
     }
 }
