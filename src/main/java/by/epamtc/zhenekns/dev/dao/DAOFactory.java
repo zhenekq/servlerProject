@@ -1,5 +1,7 @@
 package by.epamtc.zhenekns.dev.dao;
 
+import by.epamtc.zhenekns.dev.dao.implementation.ProjectDAOImpl;
+import by.epamtc.zhenekns.dev.dao.implementation.ProjectResponseImpl;
 import by.epamtc.zhenekns.dev.dao.implementation.UserDAOImpl;
 
 public final class DAOFactory {
@@ -8,8 +10,17 @@ public final class DAOFactory {
     private DAOFactory() {
     }
 
-    private UserDAO userDAO = new UserDAOImpl();
+    private final UserDAO userDAO = new UserDAOImpl();
+    private final ProjectDAO projectDAO = new ProjectDAOImpl();
+    private final ProjectResponseDAO projectResponseDAO = new ProjectResponseImpl();
 
+    public ProjectResponseDAO getProjectResponseDAO() {
+        return projectResponseDAO;
+    }
+
+    public ProjectDAO getProjectDAO() {
+        return projectDAO;
+    }
 
     public UserDAO getUserDAO() {
         return userDAO;

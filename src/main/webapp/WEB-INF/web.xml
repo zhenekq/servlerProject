@@ -15,7 +15,7 @@
     
     <servlet>
         <servlet-name>main</servlet-name>
-        <servlet-class>by.epamtc.zhenekns.dev.controller.MainController</servlet-class>
+        <servlet-class>by.epamtc.zhenekns.dev.controller.Controller</servlet-class>
     </servlet>
 
     <servlet-mapping>

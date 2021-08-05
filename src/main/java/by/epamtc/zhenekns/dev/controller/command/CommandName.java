@@ -1,0 +1,28 @@
+package by.epamtc.zhenekns.dev.controller.command;
+
+public enum CommandName {
+
+    //POST
+    AUTHORIZATION,
+    REGISTRATION,
+    ADDITIONAL_INFO,
+    ADD_NEW_PROJECT,
+    UPDATE_PROFILE,
+    RESPONSE_FOR_PROJECT,
+
+    //GET
+    NO_SUCH_COMMAND,
+    MAIN_PAGE,
+    REGISTRATION_PAGE,
+    AUTHORIZATION_PAGE,
+    ADDITIONAL_INFO_PAGE,
+    AUTHORIZED_MAIN_PAGE,
+    LOGOUT_PAGE,
+    ADD_NEW_PROJECT_PAGE,
+    SHOW_PROJECT,
+    USER_PROFILE,
+    PROFILE,
+    PROJECT_REQUESTS,
+    SHOW_MY_PROJECTS
+
+}
