@@ -1,9 +1,8 @@
 package by.epamtc.zhenekns.dev.controller;
 
-import by.epamtc.zhenekns.dev.service.UserService;
+import by.epamtc.zhenekns.dev.connection.ConnectionPool;
 import by.epamtc.zhenekns.dev.controller.command.Command;
 import by.epamtc.zhenekns.dev.controller.command.CommandProvider;
-import by.epamtc.zhenekns.dev.service.implementation.UserServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -15,12 +14,16 @@ public class Controller extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
     private static final CommandProvider provider = CommandProvider.getInstance();
-    private UserService userService = new UserServiceImpl();
 
     public Controller() {
         super();
     }
 
+    @Override
+    public void init() throws ServletException {
+        super.init();
+        ConnectionPool connectionPool = ConnectionPool.getConnectionPool();
+    }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -39,5 +42,10 @@ public class Controller extends HttpServlet {
         String commandName = request.getParameter("command");
         Command command = provider.getCommand(commandName);
         command.execute(request, response);
+    }
+
+    @Override
+    public void destroy() {
+        super.destroy();
     }
 }

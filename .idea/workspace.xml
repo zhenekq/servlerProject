@@ -7,59 +7,85 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bcdf4f8-750a-447a-8f35-872c5aacb208" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/get/EditProjectCommandPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/post/UpdateProjectCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/edit_project.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/customer/customer_project_responses.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/CommandName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/CommandName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/connection/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/connection/ConnectionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/CommandPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/CommandPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/CommandProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/CommandProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/get/AuthorizedMainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/get/AuthorizedMainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/get/ProjectRequestsCommandPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/get/ProjectRequestsCommandPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/ProjectDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/ProjectDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/ProjectResponseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/ProjectResponseDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/implementation/ProjectDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/implementation/ProjectDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/implementation/ProjectResponseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/implementation/ProjectResponseImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/ProjectResponseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/ProjectResponseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/ProjectService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/implementation/ProjectResponseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/implementation/ProjectResponseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/implementation/ProjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/implementation/ProjectServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/my_projects.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/my_projects.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/new_project.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/new_project.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/project_request.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/project_request.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/CommandName.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/CommandName.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/additional_info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/additional_info.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/edit_project.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/customer/edit_project.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/html/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/html/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/html/userInfo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/logout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/logout.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/my_projects.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/customer/my_projects.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/new_project.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/customer/new_project.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/project.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/project.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/project_request.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/project_request.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/registration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/user_profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/user_profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/connection/ConnectionPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/connection/ConnectionPool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/CommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/CommandPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/CommandProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/CommandProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AddNewProjectCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AddNewProjectCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AdditionalInfoCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AdditionalInfoCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AuthorizationCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AuthorizationCommandPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AuthorizedMainPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AuthorizedMainPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/EditProjectCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/EditProjectCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ErrorCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ErrorCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/LogoutCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/LogoutCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/MainCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/MainCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ProfileCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ProfileCommandPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ProjectRequestsCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ProjectRequestsCommandPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/ProjectDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/ProjectDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/ProjectResponseDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/ProjectResponseDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/implementation/ProjectDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/implementation/ProjectDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/implementation/ProjectResponseImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/implementation/ProjectResponseImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/ProjectResponseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/ProjectResponseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/ProjectService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/ProjectService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/implementation/ProjectResponseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/implementation/ProjectResponseServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/implementation/ProjectServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/implementation/ProjectServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/RegistrationCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/RegistrationCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ShowMyProjectsCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ShowMyProjectsCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ShowProjectCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ShowProjectCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/UserProfileCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/UserProfileCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/post/AuthorizationCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/post/AuthorizationCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/post/RegistrationCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/post/RegistrationCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/filter/AuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/filter/AuthFilter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/CommandName.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/CommandName.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/connection/ConnectionPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/connection/ConnectionPool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/CommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/CommandPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/CommandProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/CommandProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AddNewProjectCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AddNewProjectCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AdditionalInfoCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AdditionalInfoCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AuthorizationCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AuthorizationCommandPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AuthorizedMainPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AuthorizedMainPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/EditProjectCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/EditProjectCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ErrorCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ErrorCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/LogoutCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/LogoutCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/MainCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/MainCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ProfileCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ProfileCommandPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ProjectRequestsCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ProjectRequestsCommandPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/ProjectDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/ProjectDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/ProjectResponseDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/ProjectResponseDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/implementation/ProjectDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/implementation/ProjectDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/implementation/ProjectResponseImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/implementation/ProjectResponseImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/ProjectResponseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/ProjectResponseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/ProjectService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/ProjectService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/implementation/ProjectResponseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/implementation/ProjectResponseServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/implementation/ProjectServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/implementation/ProjectServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/jsp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/jsp/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/jsp/my_projects.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/jsp/my_projects.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/jsp/project_request.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/jsp/project_request.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/RegistrationCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/RegistrationCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ShowMyProjectsCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ShowMyProjectsCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ShowProjectCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ShowProjectCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/UserProfileCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/UserProfileCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/post/AuthorizationCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/post/AuthorizationCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/post/RegistrationCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/post/RegistrationCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/filter/AuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/filter/AuthFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/jsp/additional_info.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/jsp/edit_project.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/jsp/error.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/jsp/html/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/jsp/html/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/jsp/html/userInfo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/jsp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/jsp/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/jsp/main.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/jsp/my_projects.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/jsp/new_project.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/jsp/profile.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/jsp/project_request.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/jsp/registration.jsp" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -132,8 +158,8 @@
         <option value="Enum" />
         <option value="HTML File" />
         <option value="Interface" />
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -181,18 +207,18 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp" />
-      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp\WEB-INF\jsp\style" />
-      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp\images" />
-      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp\WEB-INF\jsp\js" />
-      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp\WEB-INF\jsp\html" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp\images" />
       <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp" />
       <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp\WEB-INF\jsp\items" />
       <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp\WEB-INF\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp\jsp\common" />
+      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp\jsp\manager" />
+      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp\jsp\customer" />
+      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp" />
+      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp\WEB-INF\jsp\style" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -412,7 +438,7 @@
       <workItem from="1627883146847" duration="27004000" />
       <workItem from="1627973458898" duration="34000" />
       <workItem from="1627976336815" duration="40864000" />
-      <workItem from="1628190110626" duration="5643000" />
+      <workItem from="1628190110626" duration="13978000" />
     </task>
     <servers />
   </component>
