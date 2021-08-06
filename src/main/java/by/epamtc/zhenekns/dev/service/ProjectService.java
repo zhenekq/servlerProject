@@ -12,5 +12,6 @@ public interface ProjectService {
     Project addNewProject(Project project) throws ServiceException;
     Project getProjectById(int id) throws ServiceException;
     List<Project> getProjectsByUserId(int id) throws ServiceException;
+    Project updateProjectDetails(Project project) throws ServiceException;
 
 }

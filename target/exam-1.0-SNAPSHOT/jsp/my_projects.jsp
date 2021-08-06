@@ -21,7 +21,7 @@
 <%@include file="parts/header.jsp" %>
 <main class="main">
     <div class="main-wrapper wrapper">
-        <h2 class="main-title">Projects</h2>
+        <h2 class="main-title">My projects</h2>
         <ul id="main-order-list" class="main-order-list list-reset">
             <c:forEach var="project" items="${projects}">
                 <li class="order-item">
@@ -33,14 +33,7 @@
                         <p class="order-dscr"><c:out value="${project.description}"/></p>
                     </button>
                     <div class="order-info">
-                        <div class="name-of-customer">
-                            <p class="name-text main-text">Name of customer: </p>
-                            <h3 class="name">
-                                <a class="link-reset" href="?command=user_profile&id=${project.id}">
-                                    <%--<c:out value="${project.nickname}"/>--%>
-                                </a>
-                            </h3>
-                        </div>
+
                         <div class="technologies">
                             <p class="technologies-text main-text">Technologies stack: </p>
                             <p class="technologies-stack"><c:out value="${project.qualification}"/></p>
@@ -53,9 +46,14 @@
                             <p class="deadline-text main-text">Deadline: </p>
                             <p class="deadline-date"><c:out value="${project.deadline}"/></p>
                         </div>
-                        <a class="respond-btn link-reset" href="?command=show_project&id=${project.id}">
-                            <p class="respond-text">Respond</p>
-                        </a>
+                        <div style="display: flex">
+                            <a class="respond-btn link-reset" href="?command=edit_project&id=${project.id}">
+                                <p class="respond-text">Edit</p>
+                            </a>
+                            <a class="respond-btn link-reset" href="?command=delete_project&id=${project.id}">
+                                <p class="respond-text">Delete</p>
+                            </a>
+                        </div>
                     </div>
                 </li>
             </c:forEach>

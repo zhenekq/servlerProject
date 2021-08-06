@@ -3,6 +3,7 @@
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/connection/ConnectionPool.java" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/implementation/ProjectDAOImpl.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/implementation/ProjectResponseImpl.java" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/implementation/UserDAOImpl.java" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/implementation/ProjectServiceImpl.java" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/implementation/UserServiceImpl.java" dialect="MySQL" />

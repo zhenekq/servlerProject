@@ -85,7 +85,8 @@
                             <div class="name-of-customer">
                                 <p class="name-text main-text">Name of customer: </p>
                                 <h3 class="name">
-                                    <a class="link-reset" href="?command=user_profile&id=${project.value.id}">
+                                    <a class="link-reset" href="?command=user_profile&id=${project.value.id}"
+                                       target="_blank">
                                         <c:out value="${project.value.nickname}"/>
                                     </a>
                                 </h3>
@@ -127,7 +128,7 @@
                             <div class="name-of-customer">
                                 <p class="name-text main-text">Manager: </p>
                                 <h3 class="name">
-                                    <a class="link-reset" href="?command=user_profile&id=${manager.id}">
+                                    <a class="link-reset" href="?command=user_profile&id=${manager.id}" target="_blank">
                                         <c:out value="${manager.nickname}"/>
                                     </a>
                                 </h3>
@@ -161,46 +162,6 @@
             <h2 class="main-title">Teams</h2>
         </c:if>
 
-        <!--
-        <ul id="main-order-list" class="main-order-list list-reset">
-            <c:forEach var="project" items="${projects}">
-                <li class="order-item">
-                    <button type="button" class="order-box order-btn btn-reset">
-                        <div class="order-title-box">
-                            <h3 class="order-title"><c:out value="${project.key.title}"/></h3>
-                            <p class="order-price"><c:out value="${project.key.cost}"/>$</p>
-                        </div>
-                        <p class="order-dscr"><c:out value="${project.key.description}"/></p>
-                    </button>
-                    <div class="order-info">
-                        <div class="name-of-customer">
-                            <p class="name-text main-text">Name of customer: </p>
-                            <h3 class="name">
-                                <a class="link-reset" href="?command=user_profile&id=${project.value.id}">
-                                    <c:out value="${project.value.nickname}"/>
-                                </a>
-                            </h3>
-                        </div>
-                        <div class="technologies">
-                            <p class="technologies-text main-text">Technologies stack: </p>
-                            <p class="technologies-stack"><c:out value="${project.key.qualification}"/></p>
-                        </div>
-                        <div class="comand">
-                            <p class="comand-text main-text">Size of command: </p>
-                            <p class="size-of-comand"><c:out value="${project.key.teamSize}"/></p>
-                        </div>
-                        <div class="deadline">
-                            <p class="deadline-text main-text">Deadline: </p>
-                            <p class="deadline-date"><c:out value="${project.key.deadline}"/></p>
-                        </div>
-                        <a class="respond-btn link-reset" href="?command=show_project&id=${project.key.id}">
-                            <p class="respond-text">Respond</p>
-                        </a>
-                    </div>
-                </li>
-            </c:forEach>
-        </ul>
-        -->
     </div>
 </main>
 <footer class="footer">

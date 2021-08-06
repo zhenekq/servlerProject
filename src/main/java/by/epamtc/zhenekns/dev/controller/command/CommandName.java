@@ -9,6 +9,7 @@ public enum CommandName {
     ADD_NEW_PROJECT,
     UPDATE_PROFILE,
     RESPONSE_FOR_PROJECT,
+    UPDATE_PROJECT,
 
     //GET
     NO_SUCH_COMMAND,
@@ -23,6 +24,7 @@ public enum CommandName {
     USER_PROFILE,
     PROFILE,
     PROJECT_REQUESTS,
-    SHOW_MY_PROJECTS
+    SHOW_MY_PROJECTS,
+    EDIT_PROJECT
 
 }

@@ -42,7 +42,7 @@ public class AuthorizedMainPage implements Command {
         } else if (user.getRole().equals("CUSTOMER")) {
             List<User> managers = null;
             try {
-                managers = userService.getAllUsersByRole(Role.valueOf(user.getRole()));
+                managers = userService.getAllUsersByRole(Role.MANAGER);
             } catch (ServiceException e) {
                 logger.log(Level.ERROR, e.getMessage());
             }

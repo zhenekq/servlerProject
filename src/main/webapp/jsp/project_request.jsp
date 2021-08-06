@@ -20,40 +20,40 @@
 <%@include file="parts/header.jsp"%>
 <main class="main">
     <div class="main-wrapper wrapper">
-        <h2 class="main-title">My requests for projects</h2>
+        <h2 class="main-title" style="width: 310px">My requests for projects</h2>
         <ul id="main-order-list" class="main-order-list list-reset">
-            <c:forEach var="project" items="${projects}">
+            <c:forEach var="response" items="${projectResponses}">
                 <li class="order-item">
                     <button type="button" class="order-box order-btn btn-reset">
                         <div class="order-title-box">
-                            <h3 class="order-title"><c:out value="${project.title}"/></h3>
-                            <p class="order-price"><c:out value="${project.cost}"/>$</p>
+                            <h3 class="order-title"><c:out value="${response.ownerId}"/></h3>
+                            <p class="order-price"><c:out value="${response.responsibleId}"/>$</p>
                         </div>
-                        <p class="order-dscr"><c:out value="${project.description}"/></p>
+                        <p class="order-dscr"><c:out value="${response.projectId}"/></p>
                     </button>
                     <div class="order-info">
                         <div class="name-of-customer">
-                            <p class="name-text main-text">Name of customer: </p>
+                            <p class="name-text main-text">Customer: </p>
                             <h3 class="name">
-                                <a class="link-reset" href="?command=user_profile&id=${project.id}">
-                                        <%--<c:out value="${project.nickname}"/>--%>
+                                <a class="link-reset" href="?command=user_profile&id=${response.id}">
+                                        <c:out value="${response.ownerId}"/>
                                 </a>
                             </h3>
                         </div>
                         <div class="technologies">
                             <p class="technologies-text main-text">Technologies stack: </p>
-                            <p class="technologies-stack"><c:out value="${project.qualification}"/></p>
+                            <p class="technologies-stack"><c:out value="${response.projectDetails}"/></p>
                         </div>
                         <div class="comand">
                             <p class="comand-text main-text">Size of command: </p>
-                            <p class="size-of-comand"><c:out value="${project.teamSize}"/></p>
+                            <p class="size-of-comand"><c:out value="${response.possiblePrice    }"/></p>
                         </div>
                         <div class="deadline">
                             <p class="deadline-text main-text">Deadline: </p>
-                            <p class="deadline-date"><c:out value="${project.deadline}"/></p>
+                            <p class="deadline-date"><c:out value="${response.deadline}"/></p>
                         </div>
-                        <a class="respond-btn link-reset" href="?command=show_project&id=${project.id}">
-                            <p class="respond-text">Respond</p>
+                        <a class="respond-btn link-reset" href="?command=show_project&id=${response.id}">
+                            <p class="respond-text">Edit</p>
                         </a>
                     </div>
                 </li>

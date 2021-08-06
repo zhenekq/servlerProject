@@ -7,7 +7,10 @@ import by.epamtc.zhenekns.dev.exception.DaoException;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProjectResponseImpl implements ProjectResponseDAO {
 
@@ -43,7 +46,30 @@ public class ProjectResponseImpl implements ProjectResponseDAO {
     }
 
     @Override
-    public ProjectResponse getProjectResponseByResponderId(int id) throws DaoException {
-        return null;
+    public List<ProjectResponse> getProjectResponsesByResponderId(int id) throws DaoException {
+        List<ProjectResponse> projectResponses = new ArrayList<>();
+
+        ConnectionPool connectionPool = ConnectionPool.getConnectionPool();
+        try (Connection connection = connectionPool.getConnection()) {
+            PreparedStatement preparedStatement = connection.prepareStatement
+                    ("SELECT * FROM orders_resp where responcer_id = ?");
+            preparedStatement.setInt(1, id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                ProjectResponse projectResponse = new ProjectResponse();
+                projectResponse.setId(resultSet.getInt("id"));
+                projectResponse.setOwnerId(resultSet.getInt("owner_id"));
+                projectResponse.setResponsibleId(resultSet.getInt("responcer_id"));
+                projectResponse.setProjectId(resultSet.getInt("project_id"));
+                projectResponse.setProjectDetails(resultSet.getString("details"));
+                projectResponse.setPossiblePrice(resultSet.getInt("price"));
+                projectResponse.setDeadline(resultSet.getString("deadline"));
+
+                projectResponses.add(projectResponse);
+            }
+        } catch (SQLException e) {
+            throw new DaoException(e);
+        }
+        return projectResponses;
     }
 }

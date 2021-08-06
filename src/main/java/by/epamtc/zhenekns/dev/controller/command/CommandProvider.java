@@ -18,6 +18,7 @@ public class CommandProvider {
         commands.put(CommandName.ADD_NEW_PROJECT, new AddNewProjectCommand());
         commands.put(CommandName.UPDATE_PROFILE, new UpdateProfileCommand());
         commands.put(CommandName.RESPONSE_FOR_PROJECT, new ResponseForProjectCommand());
+        commands.put(CommandName.UPDATE_PROJECT, new UpdateProjectCommand());
 
         //get
         commands.put(CommandName.NO_SUCH_COMMAND, new ErrorCommand());
@@ -33,6 +34,7 @@ public class CommandProvider {
         commands.put(CommandName.PROFILE, new ProfileCommandPage());
         commands.put(CommandName.PROJECT_REQUESTS, new ProjectRequestsCommandPage());
         commands.put(CommandName.SHOW_MY_PROJECTS, new ShowMyProjectsCommandPage());
+        commands.put(CommandName.EDIT_PROJECT, new EditProjectCommandPage());
 
     }
 

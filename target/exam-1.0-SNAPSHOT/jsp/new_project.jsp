@@ -71,7 +71,7 @@
                 <input type="hidden" name="command" value="add_new_project">
 
                 <div class="progect-form-content">
-                    <h2 class="main-title">Filling out the order form</h2>
+                    <h2 class="main-title">Create new project</h2>
                     <ul class="progect-list list-reset">
                         <li class="progect-item">
                             <p class="progect-subtitle">Title of order form:</p>

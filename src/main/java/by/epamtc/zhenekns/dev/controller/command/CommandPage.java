@@ -14,5 +14,6 @@ public class CommandPage {
     public static final String PROJECT_REQUEST = "jsp/project_request.jsp";
     public static final String SHOW_MY_PROJECTS = "jsp/my_projects.jsp";
     public static final String ERROR_PAGE = "jsp/error.jsp";
+    public static final String EDIT_PROJECT_PAGE = "jsp/edit_project.jsp";
 
 }

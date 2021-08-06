@@ -16,7 +16,20 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public Project addNewProject(Project project) throws ServiceException {
-        return projectDao.addNewProject(project);
+        try {
+            return projectDao.addNewProject(project);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
+        }
+    }
+
+    @Override
+    public Project updateProjectDetails(Project project) throws ServiceException {
+        try {
+            return projectDao.updateProject(project);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
+        }
     }
 
     @Override
