@@ -39,6 +39,7 @@ public class UpdateProjectCommand implements Command {
         } catch (ServiceException e) {
             logger.log(Level.ERROR, e.getMessage());
         }
+        request.getSession().removeAttribute("editProject");
         response.sendRedirect(CommandPageRedirect.AUTHORIZED_MAIN_PAGE);
     }
 
