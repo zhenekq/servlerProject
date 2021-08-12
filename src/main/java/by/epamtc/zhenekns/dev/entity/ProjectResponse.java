@@ -1,5 +1,7 @@
 package by.epamtc.zhenekns.dev.entity;
 
+import java.util.Objects;
+
 public class ProjectResponse {
 
     private int id;
@@ -7,6 +9,7 @@ public class ProjectResponse {
     private int responsibleId;
     private int projectId;
     private String projectDetails;
+    private String status;
     private int possiblePrice;
     private String deadline;
 
@@ -85,5 +88,47 @@ public class ProjectResponse {
 
     public void setDeadline(String deadline) {
         this.deadline = deadline;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ProjectResponse that = (ProjectResponse) o;
+        return id == that.id &&
+                ownerId == that.ownerId &&
+                responsibleId == that.responsibleId &&
+                projectId == that.projectId &&
+                possiblePrice == that.possiblePrice &&
+                projectDetails.equals(that.projectDetails) &&
+                status.equals(that.status) &&
+                deadline.equals(that.deadline);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, ownerId, responsibleId, projectId, projectDetails, status, possiblePrice, deadline);
+    }
+
+    @Override
+    public String toString() {
+        return "ProjectResponse{" +
+                "id=" + id +
+                ", ownerId=" + ownerId +
+                ", responsibleId=" + responsibleId +
+                ", projectId=" + projectId +
+                ", projectDetails='" + projectDetails + '\'' +
+                ", status='" + status + '\'' +
+                ", possiblePrice=" + possiblePrice +
+                ", deadline='" + deadline + '\'' +
+                '}';
     }
 }

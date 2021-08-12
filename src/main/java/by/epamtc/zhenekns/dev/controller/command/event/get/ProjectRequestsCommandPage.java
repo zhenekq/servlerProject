@@ -2,11 +2,14 @@ package by.epamtc.zhenekns.dev.controller.command.event.get;
 
 import by.epamtc.zhenekns.dev.controller.command.Command;
 import by.epamtc.zhenekns.dev.controller.command.CommandPage;
+import by.epamtc.zhenekns.dev.entity.Project;
 import by.epamtc.zhenekns.dev.entity.ProjectResponse;
 import by.epamtc.zhenekns.dev.entity.User;
 import by.epamtc.zhenekns.dev.exception.ServiceException;
 import by.epamtc.zhenekns.dev.service.ProjectResponseService;
+import by.epamtc.zhenekns.dev.service.ProjectService;
 import by.epamtc.zhenekns.dev.service.ServiceFactory;
+import by.epamtc.zhenekns.dev.status.ProjectResponseStatus;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -22,19 +25,20 @@ public class ProjectRequestsCommandPage implements Command {
     private static final Logger logger = LogManager.getLogger();
     private static final ProjectResponseService projectResponseService =
             ServiceFactory.getInstance().getProjectResponseService();
+    private static final ProjectService projectService = ServiceFactory.getInstance().getProjectService();
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         User user = (User) request.getSession().getAttribute("user");
         int userId = user.getId();
         List<ProjectResponse> projectResponses = null;
+        List<Project> project = null;
         try {
-             projectResponses = projectResponseService.getProjectResponsesByResponderId(userId);
+            projectResponses = projectResponseService.getProjectResponsesByResponderIdAndAvoidStatus(ProjectResponseStatus.APPROVED, userId);
         } catch (ServiceException e) {
             logger.log(Level.ERROR, e.getMessage());
         }
-        System.out.println(projectResponses);
         request.setAttribute("projectResponses", projectResponses);
-        request.getRequestDispatcher(CommandPage.PROJECT_REQUEST).forward(request,response);
+        request.getRequestDispatcher(CommandPage.PROJECT_REQUEST).forward(request, response);
     }
 }

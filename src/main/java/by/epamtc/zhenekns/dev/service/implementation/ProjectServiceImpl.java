@@ -58,4 +58,22 @@ public class ProjectServiceImpl implements ProjectService {
             throw new ServiceException(e);
         }
     }
+
+    @Override
+    public Map<Project, User> getAllProjectsByStatus(String status) throws ServiceException {
+        try {
+            return projectDao.getAllProjectsByStatus(status);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
+        }
+    }
+
+    @Override
+    public void updateProjectStatusById(String status, int id) throws ServiceException {
+        try {
+            projectDao.updateProjectStatusById(status,id);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
+        }
+    }
 }

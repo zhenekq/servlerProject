@@ -15,5 +15,11 @@ public class CommandPage {
     public static final String SHOW_MY_PROJECTS = "jsp/common/customer/my_projects.jsp";
     public static final String ERROR_PAGE = "jsp/common/error.jsp";
     public static final String EDIT_PROJECT_PAGE = "jsp/common/customer/edit_project.jsp";
+    public static final String EDIT_PROJECT_REQUEST_PAGE = "jsp/common/manager/edit_project_request.jsp";
+    public static final String CUSTOMER_PROJECT_REQUESTS_PAGE = "jsp/common/customer/customer_project_responses.jsp";
+    public static final String MANAGER_TEAMS_PAGE = "jsp/common/manager/team_manager.jsp";
+    public static final String CREATE_NEW_TEAM_PAGE = "jsp/common/manager/create_new_team.jsp";
+    public static final String PROJECT_INFO_PAGE = "/jsp/common/project_info.jsp";
+
 
 }

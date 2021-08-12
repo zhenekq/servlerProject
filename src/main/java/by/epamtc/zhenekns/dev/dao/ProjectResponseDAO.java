@@ -11,6 +11,8 @@ public interface ProjectResponseDAO {
     ProjectResponse cancelProjectResponse(ProjectResponse projectResponse) throws DaoException;
     ProjectResponse updateProjectResponse(ProjectResponse projectResponse) throws DaoException;
     List<ProjectResponse> getProjectResponsesByResponderId(int id) throws DaoException;
-
-
+    ProjectResponse getProjectResponseById(int id) throws DaoException;
+    List<ProjectResponse> getProjectResponsesByOwnerId(int id) throws DaoException;
+    List<ProjectResponse> getProjectResponsesByResponderIdAndAvoidStatus(String status, int id) throws DaoException;
+    void updateProjectResponseStatusById(String status, int id) throws DaoException;
 }

@@ -26,17 +26,25 @@
                 <li class="order-item">
                     <button type="button" class="order-box order-btn btn-reset">
                         <div class="order-title-box">
-                            <h3 class="order-title"><c:out value="${response.ownerId}"/></h3>
-                            <p class="order-price"><c:out value="${response.responsibleId}"/>$</p>
+                            <h3 class="order-title"><%--<c:out value="${response.ownerId}"/><--%>Project request</h3>
+                            <p class="order-price"><c:out value="${response.status}"/></p>
                         </div>
-                        <p class="order-dscr"><c:out value="${response.projectId}"/></p>
+                        <%--<p class="order-dscr"><c:out value="${response.projectId}"/></p>--%>
                     </button>
                     <div class="order-info">
                         <div class="name-of-customer">
                             <p class="name-text main-text">Customer: </p>
                             <h3 class="name">
-                                <a class="link-reset" href="?command=user_profile&id=${response.id}">
-                                        <c:out value="${response.ownerId}"/>
+                                <a class="link-reset" href="?command=user_profile&id=${response.ownerId}" target="_blank">
+                                        Check owner of project
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="name-of-customer">
+                            <p class="name-text main-text">Project: </p>
+                            <h3 class="name">
+                                <a class="link-reset" href="?command=project_info&id=${response.projectId}" target="_blank">
+                                    Check project
                                 </a>
                             </h3>
                         </div>
@@ -45,14 +53,14 @@
                             <p class="technologies-stack"><c:out value="${response.projectDetails}"/></p>
                         </div>
                         <div class="comand">
-                            <p class="comand-text main-text">Size of command: </p>
-                            <p class="size-of-comand"><c:out value="${response.possiblePrice    }"/></p>
+                            <p class="comand-text main-text">Project Cost: </p>
+                            <p class="size-of-comand"><c:out value="${response.possiblePrice}"/></p>
                         </div>
                         <div class="deadline">
                             <p class="deadline-text main-text">Deadline: </p>
                             <p class="deadline-date"><c:out value="${response.deadline}"/></p>
                         </div>
-                        <a class="respond-btn link-reset" href="?command=show_project&id=${response.id}">
+                        <a class="respond-btn link-reset" href="?command=edit_project_request&id=${response.id}">
                             <p class="respond-text">Edit</p>
                         </a>
                     </div>

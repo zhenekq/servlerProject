@@ -10,6 +10,7 @@ import by.epamtc.zhenekns.dev.service.ServiceFactory;
 import by.epamtc.zhenekns.dev.service.UserService;
 import by.epamtc.zhenekns.dev.controller.command.Command;
 import by.epamtc.zhenekns.dev.controller.command.CommandPage;
+import by.epamtc.zhenekns.dev.status.ProjectStatus;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -34,7 +35,7 @@ public class AuthorizedMainPage implements Command {
         if (user.getRole().equals("MANAGER")) {
             Map<Project, User> projects = null;
             try {
-                projects = projectService.getAllProjects();
+                projects = projectService.getAllProjectsByStatus(ProjectStatus.OPEN_FOR_REQUESTS);
             } catch (ServiceException e) {
                 logger.log(Level.ERROR, e.getMessage());
             }

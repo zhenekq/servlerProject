@@ -8,7 +8,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.HashSet;
 
 public class Controller extends HttpServlet {
 
@@ -42,6 +44,7 @@ public class Controller extends HttpServlet {
         String commandName = request.getParameter("command");
         Command command = provider.getCommand(commandName);
         command.execute(request, response);
+
     }
 
     @Override

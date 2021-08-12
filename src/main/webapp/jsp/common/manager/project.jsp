@@ -29,7 +29,8 @@
                 </li>
                 <li class="responce-item">
                     <h2 class="responce-subtitle">Progect details:</h2>
-                    <textarea class="responce-textarea btn-reset" name="details" cols="40" rows="8"></textarea>
+                    <textarea class="responce-textarea btn-reset" name="details" cols="40" rows="8">
+                    </textarea>
                 </li>
                 <li class="responce-item">
                     <h2 class="responce-subtitle">Cost:</h2>

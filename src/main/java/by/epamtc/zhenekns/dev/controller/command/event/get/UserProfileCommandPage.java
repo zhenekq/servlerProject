@@ -1,11 +1,12 @@
 package by.epamtc.zhenekns.dev.controller.command.event.get;
 
+import by.epamtc.zhenekns.dev.controller.command.Command;
+import by.epamtc.zhenekns.dev.controller.command.CommandPage;
 import by.epamtc.zhenekns.dev.entity.User;
 import by.epamtc.zhenekns.dev.entity.UserInfo;
 import by.epamtc.zhenekns.dev.exception.ServiceException;
+import by.epamtc.zhenekns.dev.service.ServiceFactory;
 import by.epamtc.zhenekns.dev.service.UserService;
-import by.epamtc.zhenekns.dev.controller.command.Command;
-import by.epamtc.zhenekns.dev.controller.command.CommandPage;
 import by.epamtc.zhenekns.dev.service.implementation.UserServiceImpl;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -19,6 +20,7 @@ import java.io.IOException;
 public class UserProfileCommandPage implements Command {
 
     private final static Logger logger = LogManager.getLogger();
+    //private final static UserService userService = ServiceFactory.getInstance().getUserService();
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -36,8 +38,8 @@ public class UserProfileCommandPage implements Command {
         } catch (ServiceException e) {
             logger.log(Level.ERROR, e.getMessage());
         }
-        request.setAttribute("user", user);
+        request.setAttribute("userBasics", user);
         request.setAttribute("userInfo", userInfo);
-        request.getRequestDispatcher(CommandPage.USER_PROFILE_JSP).forward(request,response);
+        request.getRequestDispatcher(CommandPage.USER_PROFILE_JSP).forward(request, response);
     }
 }

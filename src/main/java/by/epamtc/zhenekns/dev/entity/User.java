@@ -1,8 +1,8 @@
 package by.epamtc.zhenekns.dev.entity;
 
-import java.io.Serializable;
+import java.util.concurrent.ConcurrentHashMap;
 
-public class User  {
+public class User {
 
     private int id;
     private String email;
@@ -12,7 +12,8 @@ public class User  {
     private UserInfo userInfo;
 
 
-    public User() {}
+    public User() {
+    }
 
     public User(String username, String email) {
         this.email = email;

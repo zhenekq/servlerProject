@@ -12,12 +12,12 @@ import java.util.List;
 public class ProjectResponseServiceImpl implements ProjectResponseService {
 
     private static final DAOFactory daoFactory = DAOFactory.getInstance();
-    private static final ProjectResponseDAO projectServiceResponseDao = daoFactory.getProjectResponseDAO();
+    private static final ProjectResponseDAO projectResponseDao = daoFactory.getProjectResponseDAO();
 
     @Override
     public ProjectResponse addProjectResponse(ProjectResponse projectResponse) throws ServiceException {
         try {
-            return projectServiceResponseDao.addProjectResponse(projectResponse);
+            return projectResponseDao.addProjectResponse(projectResponse);
         } catch (DaoException e) {
             throw new ServiceException(e);
         }
@@ -30,13 +30,53 @@ public class ProjectResponseServiceImpl implements ProjectResponseService {
 
     @Override
     public ProjectResponse updateProjectResponse(ProjectResponse projectResponse) throws ServiceException {
-        return null;
+        try {
+            return projectResponseDao.updateProjectResponse(projectResponse);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
+        }
     }
 
     @Override
     public List<ProjectResponse> getProjectResponsesByResponderId(int id) throws ServiceException {
         try {
-            return projectServiceResponseDao.getProjectResponsesByResponderId(id);
+            return projectResponseDao.getProjectResponsesByResponderId(id);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
+        }
+    }
+
+    @Override
+    public ProjectResponse getProjectResponseById(int id) throws ServiceException {
+        try {
+            return projectResponseDao.getProjectResponseById(id);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
+        }
+    }
+
+    @Override
+    public List<ProjectResponse> getProjectResponsesByOwnerId(int id) throws ServiceException {
+        try {
+            return projectResponseDao.getProjectResponsesByOwnerId(id);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
+        }
+    }
+
+    @Override
+    public void updateProjectResponseStatusById(String status, int id) throws ServiceException {
+        try {
+            projectResponseDao.updateProjectResponseStatusById(status,id);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
+        }
+    }
+
+    @Override
+    public List<ProjectResponse> getProjectResponsesByResponderIdAndAvoidStatus(String status, int id) throws ServiceException {
+        try {
+            return projectResponseDao.getProjectResponsesByResponderIdAndAvoidStatus(status,id);
         } catch (DaoException e) {
             throw new ServiceException(e);
         }

@@ -1,11 +1,15 @@
 package by.epamtc.zhenekns.dev.entity;
 
+import java.util.Objects;
+
 public class Project {
+
     private int id;
     private String title;
     private String description;
     private String qualification;
     private int teamSize;
+    private String status;
     private int cost;
     private String deadline;
     private int user_id;
@@ -97,6 +101,35 @@ public class Project {
         this.qualification = qualification;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Project project = (Project) o;
+        return id == project.id &&
+                teamSize == project.teamSize &&
+                cost == project.cost &&
+                user_id == project.user_id &&
+                title.equals(project.title) &&
+                description.equals(project.description) &&
+                qualification.equals(project.qualification) &&
+                status.equals(project.status) &&
+                deadline.equals(project.deadline);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, title, description, qualification, teamSize, status, cost, deadline, user_id);
+    }
+
     @Override
     public String toString() {
         return "Project{" +
@@ -105,6 +138,7 @@ public class Project {
                 ", description='" + description + '\'' +
                 ", qualification='" + qualification + '\'' +
                 ", teamSize=" + teamSize +
+                ", status='" + status + '\'' +
                 ", cost=" + cost +
                 ", deadline='" + deadline + '\'' +
                 ", user_id=" + user_id +

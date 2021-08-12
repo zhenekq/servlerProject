@@ -24,7 +24,7 @@ public class ConnectionPool {
     private String password;
     private String driverName;
 
-    private static int MAX_POOL_SIZE;
+    private static int MAX_POOL_SIZE = 40;
     private int connNum = 0;
 
     private Stack<Connection> freePool = new Stack<>();
@@ -44,8 +44,6 @@ public class ConnectionPool {
         this.username = dbProperties.getProperty("db.username");
         this.password = dbProperties.getProperty("db.password");
         this.driverName = dbProperties.getProperty("db.driver");
-        MAX_POOL_SIZE = Integer.parseInt(dbProperties.getProperty("db.poolSize"));
-        fillFreePool();
     }
 
     private void fillFreePool() {

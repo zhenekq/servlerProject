@@ -19,6 +19,12 @@ public class CommandProvider {
         commands.put(CommandName.UPDATE_PROFILE, new UpdateProfileCommand());
         commands.put(CommandName.RESPONSE_FOR_PROJECT, new ResponseForProjectCommand());
         commands.put(CommandName.UPDATE_PROJECT, new UpdateProjectCommand());
+        commands.put(CommandName.UPDATE_PROJECT_REQUEST, new UpdateProjectRequestCommand());
+        commands.put(CommandName.ADD_NEW_TEAM, new AddNewTeamCommand());
+        commands.put(CommandName.APPROVE_PROJECT_REQUEST, new ApproveProjectRequestCommand());
+        commands.put(CommandName.REJECT_PROJECT_REQUEST, new RejectProjectRequestCommand());
+        commands.put(CommandName.CLOSE_REQUESTS_FOR_PROJECT, new CloseRequestsForProjectCommand());
+        commands.put(CommandName.OPEN_REQUESTS_FOR_PROJECT, new OpenRequestsForProjectCommand());
 
         //get
         commands.put(CommandName.NO_SUCH_COMMAND, new ErrorCommand());
@@ -35,7 +41,11 @@ public class CommandProvider {
         commands.put(CommandName.PROJECT_REQUESTS, new ProjectRequestsCommandPage());
         commands.put(CommandName.SHOW_MY_PROJECTS, new ShowMyProjectsCommandPage());
         commands.put(CommandName.EDIT_PROJECT, new EditProjectCommandPage());
-
+        commands.put(CommandName.EDIT_PROJECT_REQUEST, new EditProjectRequestCommandPage());
+        commands.put(CommandName.CUSTOMER_PROJECT_RESPONSES, new CustomerProjectResponsesCommandPage());
+        commands.put(CommandName.MANAGER_TEAMS, new ShowManagerTeamsCommandPage());
+        commands.put(CommandName.CREATE_NEW_TEAM, new CreateNewTeamCommandPage());
+        commands.put(CommandName.PROJECT_INFO, new ProjectInfoCommandPage());
     }
 
     public static CommandProvider getInstance() {

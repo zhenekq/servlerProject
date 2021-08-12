@@ -261,7 +261,7 @@ public class UserDAOImpl implements UserDAO {
             nickname = resultSet.getString("user_nickname");
             role = resultSet.getString("user_role");
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new DaoException(e);
         } finally {
             try {
                 connection.close();

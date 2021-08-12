@@ -79,7 +79,7 @@ public class UserServiceImpl implements UserService {
         try {
             user = userDAO.addUser(user);
         } catch (DaoException e) {
-            e.printStackTrace();
+            throw new ServiceException(e);
         }
         return user;
     }

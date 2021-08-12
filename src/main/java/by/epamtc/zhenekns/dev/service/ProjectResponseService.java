@@ -11,5 +11,9 @@ public interface ProjectResponseService {
     ProjectResponse addProjectResponse(ProjectResponse projectResponse)throws ServiceException;
     ProjectResponse cancelProjectResponse(ProjectResponse projectResponse) throws ServiceException;
     ProjectResponse updateProjectResponse(ProjectResponse projectResponse) throws ServiceException;
-    public List<ProjectResponse> getProjectResponsesByResponderId(int id) throws ServiceException;
+    List<ProjectResponse> getProjectResponsesByResponderId(int id) throws ServiceException;
+    ProjectResponse getProjectResponseById(int id) throws ServiceException;
+    List<ProjectResponse> getProjectResponsesByOwnerId(int id) throws ServiceException;
+    List<ProjectResponse> getProjectResponsesByResponderIdAndAvoidStatus(String status, int id) throws ServiceException;
+    void updateProjectResponseStatusById(String status, int id) throws ServiceException;
 }

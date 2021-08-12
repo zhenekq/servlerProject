@@ -8,14 +8,19 @@ import by.epamtc.zhenekns.dev.entity.User;
 import by.epamtc.zhenekns.dev.exception.ServiceException;
 import by.epamtc.zhenekns.dev.service.ProjectResponseService;
 import by.epamtc.zhenekns.dev.service.ServiceFactory;
+import by.epamtc.zhenekns.dev.status.ProjectResponseStatus;
+import com.sun.source.tree.Tree;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.ServletSecurity;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
+import java.util.TreeMap;
 
 public class ResponseForProjectCommand implements Command {
 
@@ -26,11 +31,9 @@ public class ResponseForProjectCommand implements Command {
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         User user = (User) request.getSession().getAttribute("user");
         Project project = (Project) request.getSession().getAttribute("project");
-
         String date = request.getParameter("date");
         String details = request.getParameter("details");
         int cost = Integer.parseInt(request.getParameter("cost"));
-
         int projectOwnerId = project.getUser_id();
         int responseId = user.getId();
         int projectId = project.getId();
@@ -38,6 +41,9 @@ public class ResponseForProjectCommand implements Command {
         ProjectResponse projectResponse = new ProjectResponse(projectOwnerId, responseId,
                                                               projectId, details,
                                                               cost, date);
+        projectResponse.setStatus(ProjectResponseStatus.WAITING_FOR_RESPONSE);
+
+
         try {
             projectResponseService.addProjectResponse(projectResponse);
         } catch (ServiceException e) {

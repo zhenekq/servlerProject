@@ -11,9 +11,11 @@ import java.util.Map;
 public interface ProjectDAO {
 
     Project addNewProject(Project project) throws DaoException;
-    Project deleteProject(Project project);
     Project updateProject(Project project) throws DaoException;
     Map<Project, User> getAllProjects() throws DaoException;
     List<Project> getProjectsByUserId(int id) throws DaoException;
     Project getProjectById(int id) throws DaoException;
+    Map<Project, User> getAllProjectsByStatus(String status) throws DaoException;
+
+    void updateProjectStatusById(String status, int id) throws DaoException;
 }
