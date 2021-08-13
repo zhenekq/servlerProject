@@ -45,7 +45,7 @@
                 <c:set var="role" value="${user.role}"/>
                 <c:if test="${role.equals('MANAGER')}">
                     <li class="headerLinks-item"><a href="?command=authorized_main_page" class="link-reset link-header">Projects</a></li>
-                    <li class="headerLinks-item"><a href="#" class="link-reset link-header">My projects</a></li>
+                    <li class="headerLinks-item"><a href="?command=managed_projects" class="link-reset link-header">My projects</a></li>
                     <li class="headerLinks-item"><a href="?command=manager_teams" class="link-reset link-header">Team</a></li>
                     <li class="headerLinks-item"><a href="?command=project_requests" class="link-reset link-header">Requests for projects</a></li>
                     <li class="headerLinks-item"><a href="?command=add_new_project_page" class="link-reset link-header">New Task</a></li>

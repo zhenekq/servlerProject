@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project request</title>
-    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="../../style/main.css">
     <style>
         <%@include file="../../style/main.css"%>
     </style>
@@ -54,15 +54,18 @@
                         </div>
                         <div class="comand">
                             <p class="comand-text main-text">Project Cost: </p>
-                            <p class="size-of-comand"><c:out value="${response.possiblePrice}"/></p>
+                            <p class="size-of-comand"><c:out value="${response.possiblePrice}"/>$</p>
                         </div>
                         <div class="deadline">
                             <p class="deadline-text main-text">Deadline: </p>
                             <p class="deadline-date"><c:out value="${response.deadline}"/></p>
                         </div>
-                        <a class="respond-btn link-reset" href="?command=edit_project_request&id=${response.id}">
-                            <p class="respond-text">Edit</p>
-                        </a>
+                        <c:set var="status" value="${response.status}"/>
+                        <c:if test="${status.equals('WAITING_FOR_RESPONSE')}">
+                            <a class="respond-btn link-reset" href="?command=edit_project_request&id=${response.id}">
+                                <p class="respond-text">Edit</p>
+                            </a>
+                        </c:if>
                     </div>
                 </li>
             </c:forEach>

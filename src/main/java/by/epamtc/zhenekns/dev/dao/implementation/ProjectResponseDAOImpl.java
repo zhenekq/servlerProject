@@ -185,4 +185,33 @@ public class ProjectResponseDAOImpl implements ProjectResponseDAO {
         }
         return projectResponses;
     }
+
+    @Override
+    public List<ProjectResponse> getProjectResponsesByResponderIdAndStatus(String status, int id) throws DaoException {
+        ConnectionPool connectionPool = ConnectionPool.getConnectionPool();
+        List<ProjectResponse> projectResponses = new ArrayList<>();
+        try(Connection connection = connectionPool.getConnection()){
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "SELECT * FROM orders_resp where responcer_id = ? and status = ? order by id desc"
+            );
+            preparedStatement.setInt(1, id);
+            preparedStatement.setString(2, status);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                ProjectResponse projectResponse = new ProjectResponse();
+                projectResponse.setId(resultSet.getInt("id"));
+                projectResponse.setOwnerId(resultSet.getInt("owner_id"));
+                projectResponse.setResponsibleId(resultSet.getInt("responcer_id"));
+                projectResponse.setProjectId(resultSet.getInt("project_id"));
+                projectResponse.setProjectDetails(resultSet.getString("details"));
+                projectResponse.setPossiblePrice(resultSet.getInt("price"));
+                projectResponse.setDeadline(resultSet.getString("deadline"));
+                projectResponse.setStatus(resultSet.getString("status"));
+                projectResponses.add(projectResponse);
+            }
+        }catch (SQLException e){
+            throw new DaoException(e);
+        }
+        return projectResponses;
+    }
 }

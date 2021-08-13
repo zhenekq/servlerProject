@@ -46,6 +46,7 @@ public class CommandProvider {
         commands.put(CommandName.MANAGER_TEAMS, new ShowManagerTeamsCommandPage());
         commands.put(CommandName.CREATE_NEW_TEAM, new CreateNewTeamCommandPage());
         commands.put(CommandName.PROJECT_INFO, new ProjectInfoCommandPage());
+        commands.put(CommandName.MANAGED_PROJECTS, new ManagedProjectsCommandPage());
     }
 
     public static CommandProvider getInstance() {

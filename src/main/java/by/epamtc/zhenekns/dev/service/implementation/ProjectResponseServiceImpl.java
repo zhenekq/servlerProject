@@ -81,4 +81,13 @@ public class ProjectResponseServiceImpl implements ProjectResponseService {
             throw new ServiceException(e);
         }
     }
+
+    @Override
+    public List<ProjectResponse> getProjectResponsesByResponderIdAndStatus(String status, int id) throws ServiceException {
+        try {
+            return projectResponseDao.getProjectResponsesByResponderIdAndStatus(status,id);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
+        }
+    }
 }

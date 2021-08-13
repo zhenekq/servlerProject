@@ -20,6 +20,6 @@ public class CommandPage {
     public static final String MANAGER_TEAMS_PAGE = "jsp/common/manager/team_manager.jsp";
     public static final String CREATE_NEW_TEAM_PAGE = "jsp/common/manager/create_new_team.jsp";
     public static final String PROJECT_INFO_PAGE = "/jsp/common/project_info.jsp";
-
+    public static final String MANAGED_PROJECTS_PAGE = "jsp/common/manager/manager_managed_projects.jsp";
 
 }
