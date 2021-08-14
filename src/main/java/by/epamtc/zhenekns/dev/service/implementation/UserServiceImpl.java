@@ -110,4 +110,13 @@ public class UserServiceImpl implements UserService {
             throw new ServiceException(e);
         }
     }
+
+    @Override
+    public void updateUserStatusById(int id, String status) throws ServiceException {
+        try {
+            userDAO.updateUserStatusById(id, status);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
+        }
+    }
 }

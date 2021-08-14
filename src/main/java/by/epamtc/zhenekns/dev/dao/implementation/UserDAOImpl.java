@@ -298,4 +298,20 @@ public class UserDAOImpl implements UserDAO {
         }
         return false;
     }
+
+    @Override
+    public void updateUserStatusById(int id, String status) throws DaoException {
+        ConnectionPool connectionPool = ConnectionPool.getConnectionPool();
+        try(Connection connection = connectionPool.getConnection()){
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "UPDATE user_info set status = ? where user_id = ?"
+            );
+            preparedStatement.setString(1, status);
+            preparedStatement.setInt(2, id);
+
+            preparedStatement.executeUpdate();
+        }catch (SQLException e){
+            throw new DaoException(e);
+        }
+    }
 }

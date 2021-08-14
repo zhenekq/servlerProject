@@ -3,7 +3,6 @@ package by.epamtc.zhenekns.dev.service;
 import by.epamtc.zhenekns.dev.entity.Role;
 import by.epamtc.zhenekns.dev.entity.User;
 import by.epamtc.zhenekns.dev.entity.UserInfo;
-import by.epamtc.zhenekns.dev.exception.DaoException;
 import by.epamtc.zhenekns.dev.exception.ServiceException;
 
 import java.util.List;
@@ -22,4 +21,5 @@ public interface UserService {
     UserInfo getAllInfoAboutUserById(int id) throws ServiceException;
     User loginUser(String email, String password) throws ServiceException;
     User authorizationUser(User user) throws ServiceException;
+    void updateUserStatusById(int id, String status) throws ServiceException;
 }

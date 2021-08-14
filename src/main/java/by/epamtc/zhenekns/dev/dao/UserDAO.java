@@ -8,7 +8,7 @@ import by.epamtc.zhenekns.dev.exception.DaoException;
 import java.util.List;
 
 public interface UserDAO {
-    
+
     User addUser(User user) throws DaoException;
     int getLastIdInfo() throws DaoException;
     User updateUser(User user) throws DaoException;
@@ -19,5 +19,6 @@ public interface UserDAO {
     List<User> getAllUsersByRole(Role role) throws DaoException;
     User getUserById(int id) throws DaoException;
     boolean checkUser(String username, String email) throws DaoException;
+    void updateUserStatusById(int id, String status) throws DaoException;
 
 }

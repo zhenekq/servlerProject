@@ -7,6 +7,7 @@ import by.epamtc.zhenekns.dev.entity.User;
 import by.epamtc.zhenekns.dev.exception.ServiceException;
 import by.epamtc.zhenekns.dev.service.ServiceFactory;
 import by.epamtc.zhenekns.dev.service.TeamService;
+import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -15,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 public class ShowManagerTeamsCommandPage implements Command {
 
@@ -32,6 +34,6 @@ public class ShowManagerTeamsCommandPage implements Command {
             e.printStackTrace();
         }
         request.setAttribute("teams", teams);
-        request.getRequestDispatcher(CommandPage.MANAGER_TEAMS_PAGE).forward(request,response);
+        request.getRequestDispatcher(CommandPage.MANAGER_TEAMS_PAGE).forward(request, response);
     }
 }

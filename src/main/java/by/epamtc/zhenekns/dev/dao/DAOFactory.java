@@ -1,9 +1,6 @@
 package by.epamtc.zhenekns.dev.dao;
 
-import by.epamtc.zhenekns.dev.dao.implementation.ProjectDAOImpl;
-import by.epamtc.zhenekns.dev.dao.implementation.ProjectResponseDAOImpl;
-import by.epamtc.zhenekns.dev.dao.implementation.TeamDAOImpl;
-import by.epamtc.zhenekns.dev.dao.implementation.UserDAOImpl;
+import by.epamtc.zhenekns.dev.dao.implementation.*;
 
 public final class DAOFactory {
     private static final DAOFactory instance = new DAOFactory();
@@ -15,6 +12,7 @@ public final class DAOFactory {
     private final ProjectDAO projectDAO = new ProjectDAOImpl();
     private final ProjectResponseDAO projectResponseDAO = new ProjectResponseDAOImpl();
     private final TeamDAO teamDAO = new TeamDAOImpl();
+    private final TaskDAO taskDAO = new TaskDAOImpl();
 
     public ProjectResponseDAO getProjectResponseDAO() {
         return projectResponseDAO;
@@ -30,6 +28,10 @@ public final class DAOFactory {
 
     public TeamDAO getTeamDAO() {
         return teamDAO;
+    }
+
+    public TaskDAO getTaskDAO() {
+        return taskDAO;
     }
 
     public static DAOFactory getInstance() {

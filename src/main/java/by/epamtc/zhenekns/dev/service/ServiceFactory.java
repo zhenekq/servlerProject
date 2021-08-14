@@ -1,9 +1,6 @@
 package by.epamtc.zhenekns.dev.service;
 
-import by.epamtc.zhenekns.dev.service.implementation.ProjectResponseServiceImpl;
-import by.epamtc.zhenekns.dev.service.implementation.ProjectServiceImpl;
-import by.epamtc.zhenekns.dev.service.implementation.TeamServiceImpl;
-import by.epamtc.zhenekns.dev.service.implementation.UserServiceImpl;
+import by.epamtc.zhenekns.dev.service.implementation.*;
 
 import javax.print.attribute.standard.OrientationRequested;
 
@@ -16,6 +13,7 @@ public class ServiceFactory {
     private final ProjectService projectService = new ProjectServiceImpl();
     private final ProjectResponseService projectResponseService = new ProjectResponseServiceImpl();
     private final TeamService teamService = new TeamServiceImpl();
+    private final TaskService taskService = new TaskServiceImpl();
 
     public UserService getUserService(){
         return userService;
@@ -31,6 +29,10 @@ public class ServiceFactory {
 
     public TeamService getTeamService() {
         return teamService;
+    }
+
+    public TaskService getTaskService() {
+        return taskService;
     }
 
     public static ServiceFactory getInstance() {

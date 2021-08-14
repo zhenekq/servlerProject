@@ -25,6 +25,9 @@ public class CommandProvider {
         commands.put(CommandName.REJECT_PROJECT_REQUEST, new RejectProjectRequestCommand());
         commands.put(CommandName.CLOSE_REQUESTS_FOR_PROJECT, new CloseRequestsForProjectCommand());
         commands.put(CommandName.OPEN_REQUESTS_FOR_PROJECT, new OpenRequestsForProjectCommand());
+        commands.put(CommandName.ADD_NEW_TASK, new AddNewTaskCommand());
+        commands.put(CommandName.FIND_DEVELOPER, new FindDeveloperCommandPage());
+        commands.put(CommandName.ADD_TO_TEAM, new AddToTeamCommand());
 
         //get
         commands.put(CommandName.NO_SUCH_COMMAND, new ErrorCommand());
@@ -47,6 +50,8 @@ public class CommandProvider {
         commands.put(CommandName.CREATE_NEW_TEAM, new CreateNewTeamCommandPage());
         commands.put(CommandName.PROJECT_INFO, new ProjectInfoCommandPage());
         commands.put(CommandName.MANAGED_PROJECTS, new ManagedProjectsCommandPage());
+        commands.put(CommandName.CREATE_NEW_TASK, new CreateNewTaskCommandPage());
+        commands.put(CommandName.ADD_TO_TEAM_PAGE, new AddToTeamCommandPage());
     }
 
     public static CommandProvider getInstance() {
