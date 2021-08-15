@@ -29,36 +29,38 @@
                     <li class="main-item">
                         <div class="command-box">
                             <div class="command-title">
-                                <h3 class="command-title-text">${team.name}</h3>
+                                <h3 class="command-title-text">${team.key.name}</h3>
                                 <div class="command-amount">
                                     <p class="command-participants">Participants:</p>
-                                    <p class="command-participants">0/</p>
-                                    <p class="command-participants">${team.teamSize}</p>
+                                    <p class="command-participants">${team.key.currentTeamSize}/</p>
+                                    <p class="command-participants">${team.key.teamSize}</p>
                                 </div>
                             </div>
                             <div class="command-descr">
-                                <p class="descr-text">${team.description}</p>
+                                <p class="descr-text">${team.key.description}</p>
                                 <a href="#" class="edit-link link-reset">
                                     <p class="edit-text">Edit command</p>
                                 </a>
-                                <button class="btn">View participants</button>
+                                <button style="cursor: pointer" class="btn">View participants</button>
                                 <div class="view-box">
                                     <ul class="view-list list-reset">
-                                        <li class="view-item">
-                                            <h3 class="view-name">Nickname</h3>
-                                            <div class="view-about">
-                                                <p class="about-user">About user:</p>
-                                                <p class="about-text">about</p>
-                                            </div>
-                                            <div class="view-links">
-                                                <a href="#" class="view-link link-reset">
-                                                    <p class="edit-text">View profile</p>
-                                                </a>
-                                                <a href="#" class="view-link link-reset">
-                                                    <p class="edit-text">Invite to the team</p>
-                                                </a>
-                                            </div>
-                                        </li>
+                                        <c:forEach var="user" items="${team.value}">
+                                            <li class="view-item">
+                                                <h3 class="view-name">${user.nickname}</h3>
+                                                <div class="view-about">
+                                                    <p class="about-user">About user:</p>
+                                                    <p class="about-text">${user.userInfo.qualification}</p>
+                                                </div>
+                                                <div class="view-links">
+                                                    <a href="servlet?command=user_profile&id=${user.id}" class="view-link link-reset" target="_blank">
+                                                        <p class="edit-text">View profile</p>
+                                                    </a>
+                                                    <a href="#" class="view-link link-reset">
+                                                        <p class="edit-text">Invite to the team</p>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </c:forEach>
                                     </ul>
                                 </div>
                             </div>

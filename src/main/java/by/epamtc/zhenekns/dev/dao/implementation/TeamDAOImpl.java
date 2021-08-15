@@ -1,10 +1,15 @@
 package by.epamtc.zhenekns.dev.dao.implementation;
 
 import by.epamtc.zhenekns.dev.connection.ConnectionPool;
+import by.epamtc.zhenekns.dev.dao.DAOFactory;
 import by.epamtc.zhenekns.dev.dao.TeamDAO;
+import by.epamtc.zhenekns.dev.dao.UserDAO;
 import by.epamtc.zhenekns.dev.entity.Team;
+import by.epamtc.zhenekns.dev.entity.User;
+import by.epamtc.zhenekns.dev.entity.UserInfo;
 import by.epamtc.zhenekns.dev.exception.DaoException;
 
+import javax.print.MultiDocPrintService;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TeamDAOImpl implements TeamDAO {
+
 
     @Override
     public Team createTeam(Team team) throws DaoException {
@@ -85,6 +91,8 @@ public class TeamDAOImpl implements TeamDAO {
                 team.setDescription(resultSet.getString("description"));
                 team.setManagerId(resultSet.getInt("manager_id"));
                 team.setTeamSize(resultSet.getInt("teamSize"));
+                int currentTeamSize = getTeamSizeByTeamId(team.getId());
+                team.setCurrentTeamSize(currentTeamSize);
                 teamList.add(team);
             }
         } catch (SQLException e) {
@@ -109,5 +117,48 @@ public class TeamDAOImpl implements TeamDAO {
         } catch (SQLException e) {
             throw new DaoException(e);
         }
+    }
+
+    @Override
+    public List<User> getUsersByTeamId(int id) throws DaoException {
+        ConnectionPool connectionPool = ConnectionPool.getConnectionPool();
+        List<User> userList = new ArrayList<>();
+        try (Connection connection = connectionPool.getConnection()) {
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "SELECT * FROM team_dev where team_id = ?"
+            );
+            preparedStatement.setInt(1, id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            UserDAO userDAO = DAOFactory.getInstance().getUserDAO();
+            while (resultSet.next()) {
+                int userId = resultSet.getInt("developer_id");
+                User user = userDAO.getUserById(userId);
+                UserInfo userInfo = userDAO.getAllInfoAboutUserById(userId);
+                user.setUserInfo(userInfo);
+                userList.add(user);
+            }
+        } catch (SQLException e) {
+            throw new DaoException(e);
+        }
+        return userList;
+    }
+
+    @Override
+    public int getTeamSizeByTeamId(int id) throws DaoException {
+        ConnectionPool connectionPool = ConnectionPool.getConnectionPool();
+        int counter = 0;
+        try (Connection connection = connectionPool.getConnection()) {
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "SELECT * FROM team_dev where team_id = ?"
+            );
+            preparedStatement.setInt(1, id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                counter++;
+            }
+        } catch (SQLException e) {
+            throw new DaoException(e);
+        }
+        return counter;
     }
 }

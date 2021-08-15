@@ -43,4 +43,12 @@ public class TeamServiceImpl implements TeamService {
         }
     }
 
+    @Override
+    public List<User> getUsersByTeamId(int id) throws ServiceException {
+        try {
+            return teamDAO.getUsersByTeamId(id);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
+        }
+    }
 }

@@ -7,6 +7,7 @@ public class Team {
     private int id;
     private String name;
     private String description;
+    private int currentTeamSize;
     private int teamSize;
     private int managerId;
 
@@ -18,6 +19,14 @@ public class Team {
         this.description = description;
         this.teamSize = teamSize;
         this.managerId = managerId;
+    }
+
+    public int getCurrentTeamSize() {
+        return currentTeamSize;
+    }
+
+    public void setCurrentTeamSize(int currentTeamSize) {
+        this.currentTeamSize = currentTeamSize;
     }
 
     public int getId() {
@@ -66,6 +75,7 @@ public class Team {
         if (o == null || getClass() != o.getClass()) return false;
         Team team = (Team) o;
         return id == team.id &&
+                currentTeamSize == team.currentTeamSize &&
                 teamSize == team.teamSize &&
                 managerId == team.managerId &&
                 name.equals(team.name) &&
@@ -74,7 +84,7 @@ public class Team {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, description, teamSize, managerId);
+        return Objects.hash(id, name, description, currentTeamSize, teamSize, managerId);
     }
 
     @Override
@@ -83,6 +93,7 @@ public class Team {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
+                ", currentTeamSize=" + currentTeamSize +
                 ", teamSize=" + teamSize +
                 ", managerId=" + managerId +
                 '}';

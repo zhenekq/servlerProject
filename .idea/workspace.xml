@@ -7,87 +7,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bcdf4f8-750a-447a-8f35-872c5aacb208" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/get/AddToTeamCommandPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/get/CreateNewTaskCommandPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/get/FindDeveloperCommandPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/post/AddNewTaskCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/post/AddToTeamCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/TaskDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/implementation/TaskDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/entity/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/TaskService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/implementation/TaskServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/status/TaskStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/add_to_team.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/create_new_task.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/find_developer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/style/new_task.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c592bc33-e7b2-4722-8fd2-0a37a6a15ce6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c592bc33-e7b2-4722-8fd2-0a37a6a15ce6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/developer/my_tasks.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/CommandName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/CommandName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/CommandPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/CommandPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/CommandPageRedirect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/CommandPageRedirect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/CommandProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/CommandProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/get/ShowManagerTeamsCommandPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/get/ShowManagerTeamsCommandPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/DAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/DAOFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/TeamDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/TeamDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/implementation/TeamDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/implementation/TeamDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/implementation/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/implementation/UserDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/ServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/ServiceFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/entity/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/entity/Team.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/TeamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/TeamService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/implementation/TeamServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/implementation/TeamServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/implementation/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/implementation/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/additional_info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/additional_info.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/team_manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/team_manager.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/parts/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/parts/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/CommandName.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/CommandName.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/CommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/CommandPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/CommandPageRedirect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/CommandPageRedirect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/CommandProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/CommandProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/META-INF/Colibri_JDBC.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ShowManagerTeamsCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ShowManagerTeamsCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/TeamDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/TeamDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/implementation/TeamDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/implementation/TeamDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/entity/Team.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/entity/Team.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/TeamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/TeamService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/implementation/TeamServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/implementation/TeamServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/manager/team_manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/manager/team_manager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/Colibri_JDBC.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ShowManagerTeamsCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ShowManagerTeamsCommandPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/DAOFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/DAOFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/TeamDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/TeamDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/UserDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/implementation/TeamDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/implementation/TeamDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/implementation/UserDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/implementation/UserDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/ServiceFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/ServiceFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/entity/Team.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/entity/Team.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/TeamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/TeamService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/implementation/TeamServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/implementation/TeamServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/implementation/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/implementation/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/status/UserStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/status/UserStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/connection/ConnectionPool.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/CommandName.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/CommandPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/CommandPageRedirect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/CommandProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/ShowManagerTeamsCommandPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/DAOFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/TeamDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/UserDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/implementation/TeamDAOImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/implementation/UserDAOImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/ServiceFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/TeamService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/implementation/TeamServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/implementation/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/status/UserStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/classes/db.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/jsp/common/additional_info.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/jsp/common/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/jsp/common/manager/team_manager.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/exam-1.0-SNAPSHOT/jsp/parts/header.jsp" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -181,8 +125,8 @@
         <option value="Enum" />
         <option value="HTML File" />
         <option value="Interface" />
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -601,7 +545,7 @@
       <workItem from="1628868275533" duration="19531000" />
       <workItem from="1628946518612" duration="396000" />
       <workItem from="1628947043401" duration="3439000" />
-      <workItem from="1628963146312" duration="478000" />
+      <workItem from="1628963146312" duration="7400000" />
     </task>
     <servers />
   </component>
