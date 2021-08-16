@@ -61,12 +61,6 @@
                                     <p style="width: 119px;" class="respond-text">Close requests</p>
                                 </a>
                             </c:if>
-                            <c:if test="${status.equals('CLOSED_FOR_REQUESTS')}">
-                                <a style="width: 140px;" class="respond-btn link-reset"
-                                   href="?command=open_requests_for_project&id=${project.id}">
-                                    <p style="width: 119px;" class="respond-text">Open requests</p>
-                                </a>
-                            </c:if>
                         </div>
                     </div>
                 </li>

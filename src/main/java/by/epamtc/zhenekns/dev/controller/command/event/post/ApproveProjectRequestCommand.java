@@ -39,6 +39,6 @@ public class ApproveProjectRequestCommand implements Command {
         } catch (ServiceException e) {
             logger.log(Level.ERROR, e.getMessage());
         }
-        response.sendRedirect(CommandPageRedirect.CUSTOMER_PROJECT_RESPONSES);
+        response.sendRedirect(CommandPageRedirect.AUTHORIZED_MAIN_PAGE);
     }
 }

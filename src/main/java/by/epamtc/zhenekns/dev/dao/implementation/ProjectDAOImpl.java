@@ -78,6 +78,7 @@ public class ProjectDAOImpl implements ProjectDAO {
                 project.setCost(resultSet.getInt("cost"));
                 project.setDeadline(resultSet.getString("deadline"));
                 project.setUser_id(resultSet.getInt("user_id"));
+                project.setStatus(resultSet.getString("status"));
                 int id = project.getUser_id();
                 User user = userDAO.getUserById(id);
                 projects.put(project, user);

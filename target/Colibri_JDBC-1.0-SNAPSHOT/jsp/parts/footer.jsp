@@ -38,7 +38,7 @@
             <p class="footer-subtitle">©Yauheny Vozny - 2021</p>
         </div>
         <div class="right-header">
-            <button class="footer-logout btn-reset"><a class="header-btn-link">Logout</a></button>
+            <button class="footer-logout btn-reset"><a class="header-btn-link" href="servlet?command=logout_page">Logout</a></button>
         </div>
     </div>
 </footer>

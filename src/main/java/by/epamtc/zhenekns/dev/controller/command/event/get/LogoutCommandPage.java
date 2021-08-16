@@ -2,6 +2,7 @@ package by.epamtc.zhenekns.dev.controller.command.event.get;
 
 import by.epamtc.zhenekns.dev.controller.command.Command;
 import by.epamtc.zhenekns.dev.controller.command.CommandPage;
+import by.epamtc.zhenekns.dev.controller.command.CommandPageRedirect;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -19,6 +20,6 @@ public class LogoutCommandPage implements Command {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.getSession().invalidate();
-        request.getRequestDispatcher(CommandPage.MAIN_PAGE_JSP).forward(request,response);
+        response.sendRedirect(CommandPageRedirect.MAIN_PAGE);
     }
 }

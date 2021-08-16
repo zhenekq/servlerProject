@@ -2,6 +2,7 @@ package by.epamtc.zhenekns.dev.controller.command.event.get;
 
 import by.epamtc.zhenekns.dev.controller.command.Command;
 import by.epamtc.zhenekns.dev.controller.command.CommandPage;
+import by.epamtc.zhenekns.dev.controller.command.CommandPageRedirect;
 import by.epamtc.zhenekns.dev.entity.Project;
 import by.epamtc.zhenekns.dev.entity.Role;
 import by.epamtc.zhenekns.dev.entity.User;
@@ -31,6 +32,7 @@ public class AuthorizedMainPage implements Command {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         User user = (User) request.getSession().getAttribute("user");
+
         request.setAttribute("user", user);
         if (user.getRole().equals("MANAGER")) {
             Map<Project, User> projects = null;

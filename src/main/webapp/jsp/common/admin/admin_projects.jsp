@@ -53,13 +53,27 @@
                             <p class="deadline-text main-text">Deadline: </p>
                             <p class="deadline-date"><c:out value="${project.key.deadline}"/></p>
                         </div>
+                        <div class="deadline">
+                            <p class="deadline-text main-text">Status: </p>
+                            <p class="deadline-date"><c:out value="${project.key.status}"/></p>
+                        </div>
                         <div style="display: flex">
-                            <a class="respond-btn link-reset" href="?command=show_project&id=${project.key.id}">
+                            <a class="respond-btn link-reset" href="?command=edit_project&id=${project.key.id}">
                                 <p class="respond-text">Edit</p>
                             </a>
-                            <a class="respond-btn link-reset" href="?command=show_project&id=${project.key.id}">
-                                <p class="respond-text">Block</p>
-                            </a>
+                            <c:set var="status" value="${project.key.status}"/>
+                            <c:if test="${status.equals('CLOSED_FOR_REQUESTS')}">
+                                <a class="respond-btn link-reset"
+                                   href="?command=open_requests_for_project&id=${project.key.id}">
+                                    <p class="respond-text">Unblock</p>
+                                </a>
+                            </c:if>
+                            <c:if test="${status.equals('OPEN_FOR_REQUESTS')}">
+                                <a class="respond-btn link-reset"
+                                   href="?command=close_requests_for_project&id=${project.key.id}">
+                                    <p class="respond-text">Block</p>
+                                </a>
+                            </c:if>
                         </div>
                     </div>
                 </li>

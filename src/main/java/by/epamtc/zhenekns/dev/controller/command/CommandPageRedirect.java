@@ -9,4 +9,5 @@ public class CommandPageRedirect {
     public static final String CUSTOMER_PROJECT_RESPONSES = "?command=customer_project_responses";
     public static final String CUSTOMER_PROJECTS = "?command=show_my_projects";
     public static final String FIND_DEVELOPER = "?command=find_developer";
+    public static final String BLOCKED_USER = "?command=blocked_user";
 }

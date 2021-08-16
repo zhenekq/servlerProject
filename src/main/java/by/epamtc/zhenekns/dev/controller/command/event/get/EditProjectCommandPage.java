@@ -4,6 +4,7 @@ import by.epamtc.zhenekns.dev.controller.command.Command;
 import by.epamtc.zhenekns.dev.controller.command.CommandPage;
 import by.epamtc.zhenekns.dev.controller.command.CommandPageRedirect;
 import by.epamtc.zhenekns.dev.entity.Project;
+import by.epamtc.zhenekns.dev.entity.Role;
 import by.epamtc.zhenekns.dev.entity.User;
 import by.epamtc.zhenekns.dev.exception.ServiceException;
 import by.epamtc.zhenekns.dev.service.ProjectService;
@@ -31,7 +32,7 @@ public class EditProjectCommandPage implements Command {
 
         try {
             int ownerId = projectService.getProjectById(projectId).getUser_id();
-            if (ownerId == user.getId()) {
+            if (ownerId == user.getId() || user.getRole().equals(Role.ADMIN.toString())) {
                 project = projectService.getProjectById(projectId);
                 request.setAttribute("project", project);
                 request.getSession().setAttribute("editProject", project);

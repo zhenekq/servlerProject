@@ -49,6 +49,10 @@ public enum CommandName {
     ADMIN_PROJECTS,
     ADMIN_PROJECT_RESPONSES,
     ADMIN_TEAMS,
-    ADMIN_TASKS
+    ADMIN_TASKS,
+    BLOCK_USER,
+    UNBLOCK_USER,
+    EDIT_USER_PAGE,
+    EDIT_USER
 
 }

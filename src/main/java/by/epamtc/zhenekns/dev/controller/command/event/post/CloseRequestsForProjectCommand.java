@@ -28,6 +28,6 @@ public class CloseRequestsForProjectCommand implements Command {
         } catch (ServiceException e) {
             logger.log(Level.ERROR, e.getMessage());
         }
-        response.sendRedirect(CommandPageRedirect.CUSTOMER_PROJECTS);
+        response.sendRedirect(CommandPageRedirect.AUTHORIZED_MAIN_PAGE);
     }
 }

@@ -30,6 +30,8 @@ public class CommandProvider {
         commands.put(CommandName.ADD_TO_TEAM, new AddToTeamCommand());
         commands.put(CommandName.COMPLETE_TASK, new CompleteTaskCommand());
         commands.put(CommandName.ADMIN_PROJECTS, new AdminProjectsCommandPage());
+        commands.put(CommandName.BLOCK_USER, new BlockUserCommand());
+        commands.put(CommandName.UNBLOCK_USER, new UnblockUserCommand());
 
         //get
         commands.put(CommandName.NO_SUCH_COMMAND, new ErrorCommand());

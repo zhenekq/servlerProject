@@ -26,7 +26,7 @@
                 <li class="order-item">
                     <button type="button" class="order-box order-btn btn-reset">
                         <div class="order-title-box">
-                            <h3 class="order-title"><%--<c:out value="${response.ownerId}"/><--%>Project request</h3>
+                            <h3 class="order-title"><%--<c:out value="${response.ownerId}"/><--%>Project status</h3>
                             <p class="order-price"><c:out value="${response.status}"/></p>
                         </div>
                             <%--<p class="order-dscr"><c:out value="${response.projectId}"/></p>--%>

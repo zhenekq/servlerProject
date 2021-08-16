@@ -199,6 +199,7 @@ public class UserDAOImpl implements UserDAO {
                 userInfo.setCountry(resultSet.getString("country"));
                 userInfo.setSocialLink(resultSet.getString("link_to_social_network"));
                 userInfo.setDateOfRegistration(resultSet.getString("date_of_birth"));
+                userInfo.setUserId(resultSet.getInt("user_id"));
             }
         } catch (SQLException e) {
             throw new DaoException(e);

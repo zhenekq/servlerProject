@@ -146,6 +146,10 @@
                                 <p class="comand-text main-text">Country: </p>
                                 <p class="size-of-comand"><c:out value="${user.userInfo.country}"/></p>
                             </div>
+                            <div class="comand">
+                                <p class="comand-text main-text">Status: </p>
+                                <p class="size-of-comand"><c:out value="${user.userInfo.status}"/></p>
+                            </div>
                             <div class="deadline">
                                 <p class="deadline-text main-text">Contact me there: </p>
                                 <p class="deadline-date">
@@ -158,9 +162,17 @@
                                 <a class="respond-btn link-reset" href="?command=show_project&id=${user.id}">
                                     <p class="respond-text">Edit</p>
                                 </a>
-                                <a class="respond-btn link-reset" href="?command=show_project&id=${user.id}">
-                                    <p class="respond-text">Block</p>
-                                </a>
+                                <c:set var="status" value="${user.userInfo.status}"/>
+                                <c:if test="${!status.equals('BLOCKED')}">
+                                    <a class="respond-btn link-reset" href="?command=block_user&id=${user.id}">
+                                        <p class="respond-text">Block</p>
+                                    </a>
+                                </c:if>
+                                <c:if test="${status.equals('BLOCKED')}">
+                                    <a class="respond-btn link-reset" href="?command=unblock_user&id=${user.id}">
+                                        <p class="respond-text">Unblock</p>
+                                    </a>
+                                </c:if>
                             </div>
                         </div>
                     </li>

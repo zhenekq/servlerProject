@@ -27,7 +27,8 @@ public class PagesFilter implements Filter {
                 CommandName.AUTHORIZATION_PAGE,
                 CommandName.REGISTRATION,
                 CommandName.REGISTRATION_PAGE,
-                CommandName.MAIN_PAGE
+                CommandName.MAIN_PAGE,
+                CommandName.LOGOUT_PAGE
         );
         pagesFilter.put(Role.USER, guestPages);
 
@@ -81,8 +82,8 @@ public class PagesFilter implements Filter {
                 CommandName.APPROVE_PROJECT_REQUEST,
                 CommandName.REJECT_PROJECT_REQUEST,
                 CommandName.EDIT_PROJECT,
-                CommandName.OPEN_REQUESTS_FOR_PROJECT,
-                CommandName.CLOSE_REQUESTS_FOR_PROJECT
+                CommandName.CLOSE_REQUESTS_FOR_PROJECT,
+                CommandName.UPDATE_PROJECT
         );
         pagesFilter.put(Role.CUSTOMER, customerPages);
 
@@ -113,7 +114,14 @@ public class PagesFilter implements Filter {
                 CommandName.ADMIN_PROJECTS,
                 CommandName.ADMIN_PROJECT_RESPONSES,
                 CommandName.ADMIN_TASKS,
-                CommandName.ADMIN_TEAMS
+                CommandName.ADMIN_TEAMS,
+                CommandName.OPEN_REQUESTS_FOR_PROJECT,
+                CommandName.CLOSE_REQUESTS_FOR_PROJECT,
+                CommandName.BLOCK_USER,
+                CommandName.UNBLOCK_USER,
+                CommandName.EDIT_USER,
+                CommandName.EDIT_PROJECT,
+                CommandName.UPDATE_PROJECT
         );
 
         pagesFilter.put(Role.ADMIN, adminPages);
