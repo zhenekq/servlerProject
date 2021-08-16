@@ -58,6 +58,7 @@ public class CommandProvider {
         commands.put(CommandName.ADD_TO_TEAM_PAGE, new AddToTeamCommandPage());
         commands.put(CommandName.DEVELOPER_TASKS, new DeveloperTasksCommandPage());
         commands.put(CommandName.COMPLETE_TASK_PAGE, new CompleteTaskCommandPage());
+        commands.put(CommandName.FIND_USER, new FindUserCommandPage());
     }
 
     public static CommandProvider getInstance() {

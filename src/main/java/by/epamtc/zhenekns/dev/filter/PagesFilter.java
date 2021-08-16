@@ -49,6 +49,8 @@ public class PagesFilter implements Filter {
                 CommandName.PROFILE,
                 CommandName.SHOW_PROJECT,
                 CommandName.LOGOUT_PAGE,
+                CommandName.ADDITIONAL_INFO,
+                CommandName.ADDITIONAL_INFO_PAGE,
                 CommandName.FIND_DEVELOPER,
                 CommandName.MANAGED_PROJECTS,
                 CommandName.MANAGER_TEAMS,
@@ -74,6 +76,8 @@ public class PagesFilter implements Filter {
                 CommandName.SHOW_PROJECT,
                 CommandName.LOGOUT_PAGE,
                 CommandName.UPDATE_PROFILE,
+                CommandName.ADDITIONAL_INFO,
+                CommandName.ADDITIONAL_INFO_PAGE,
                 //=====
                 CommandName.SHOW_MY_PROJECTS,
                 CommandName.CUSTOMER_PROJECT_RESPONSES,
@@ -97,8 +101,10 @@ public class PagesFilter implements Filter {
                 CommandName.UPDATE_PROFILE,
                 CommandName.DEVELOPER_TASKS,
                 CommandName.COMPLETE_TASK_PAGE,
-                CommandName.COMPLETE_TASK
-        );
+                CommandName.COMPLETE_TASK,
+                CommandName.ADDITIONAL_INFO,
+                CommandName.ADDITIONAL_INFO_PAGE
+                );
         pagesFilter.put(Role.DEVELOPER, developerPages);
 
         List<CommandName> adminPages = Arrays.asList(
@@ -109,6 +115,8 @@ public class PagesFilter implements Filter {
                 CommandName.SHOW_PROJECT,
                 CommandName.LOGOUT_PAGE,
                 CommandName.UPDATE_PROFILE,
+                CommandName.ADDITIONAL_INFO,
+                CommandName.ADDITIONAL_INFO_PAGE,
 
                 CommandName.AUTHORIZED_MAIN_PAGE,
                 CommandName.ADMIN_PROJECTS,
@@ -121,7 +129,8 @@ public class PagesFilter implements Filter {
                 CommandName.UNBLOCK_USER,
                 CommandName.EDIT_USER,
                 CommandName.EDIT_PROJECT,
-                CommandName.UPDATE_PROJECT
+                CommandName.UPDATE_PROJECT,
+                CommandName.FIND_USER
         );
 
         pagesFilter.put(Role.ADMIN, adminPages);

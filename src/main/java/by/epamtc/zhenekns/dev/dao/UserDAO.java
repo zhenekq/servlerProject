@@ -20,7 +20,7 @@ public interface UserDAO {
     User getUserById(int id) throws DaoException;
     boolean checkUser(String username, String email) throws DaoException;
     void updateUserStatusById(int id, String status) throws DaoException;
-
     List<User> getAllUsers() throws DaoException;
+    List<User> getUsersByTag(String tag) throws DaoException;
 
 }

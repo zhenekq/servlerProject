@@ -35,7 +35,6 @@ public class BlockFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse) servletResponse;
 
         User user = (User) request.getSession(true).getAttribute("user");
-        System.out.println(user);
         if (user == null) {
             filterChain.doFilter(request, response);
         } else {

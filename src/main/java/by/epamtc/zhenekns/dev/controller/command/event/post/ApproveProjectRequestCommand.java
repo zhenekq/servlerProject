@@ -3,6 +3,7 @@ package by.epamtc.zhenekns.dev.controller.command.event.post;
 import by.epamtc.zhenekns.dev.controller.command.Command;
 import by.epamtc.zhenekns.dev.controller.command.CommandPageRedirect;
 import by.epamtc.zhenekns.dev.entity.ProjectResponse;
+import by.epamtc.zhenekns.dev.entity.User;
 import by.epamtc.zhenekns.dev.exception.ServiceException;
 import by.epamtc.zhenekns.dev.service.ProjectResponseService;
 import by.epamtc.zhenekns.dev.service.ProjectService;
@@ -12,6 +13,7 @@ import by.epamtc.zhenekns.dev.status.ProjectStatus;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.util.Assert;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -34,7 +36,6 @@ public class ApproveProjectRequestCommand implements Command {
             System.out.println(projectId);
             projectResponseService.updateProjectResponseStatusById(ProjectResponseStatus.APPROVED, id);
             projectService.updateProjectStatusById(ProjectStatus.CLOSED_FOR_REQUESTS, projectId);
-
 
         } catch (ServiceException e) {
             logger.log(Level.ERROR, e.getMessage());

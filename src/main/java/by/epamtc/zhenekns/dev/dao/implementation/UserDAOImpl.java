@@ -6,6 +6,7 @@ import by.epamtc.zhenekns.dev.entity.Role;
 import by.epamtc.zhenekns.dev.entity.User;
 import by.epamtc.zhenekns.dev.entity.UserInfo;
 import by.epamtc.zhenekns.dev.exception.DaoException;
+import by.epamtc.zhenekns.dev.status.UserStatus;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -27,6 +28,11 @@ public class UserDAOImpl implements UserDAO {
             preparedStatement.setString(4, user.getPassword());
             preparedStatement.setString(5, user.getRole());
             preparedStatement.executeUpdate();
+            UserInfo userInfo = new UserInfo();
+            userInfo.setUserId(user.getId());
+            userInfo.setId(user.getId());
+            userInfo.setStatus(UserStatus.USER_STATUS_FREE);
+            addAdditionalInfo(userInfo);
         } catch (SQLException e) {
             throw new DaoException(e);
         } finally {
@@ -300,7 +306,7 @@ public class UserDAOImpl implements UserDAO {
     @Override
     public void updateUserStatusById(int id, String status) throws DaoException {
         ConnectionPool connectionPool = ConnectionPool.getConnectionPool();
-        try(Connection connection = connectionPool.getConnection()){
+        try (Connection connection = connectionPool.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(
                     "UPDATE user_info set status = ? where user_id = ?"
             );
@@ -308,7 +314,7 @@ public class UserDAOImpl implements UserDAO {
             preparedStatement.setInt(2, id);
 
             preparedStatement.executeUpdate();
-        }catch (SQLException e){
+        } catch (SQLException e) {
             throw new DaoException(e);
         }
     }
@@ -317,12 +323,12 @@ public class UserDAOImpl implements UserDAO {
     public List<User> getAllUsers() throws DaoException {
         List<User> users = new ArrayList<>();
         ConnectionPool connectionPool = ConnectionPool.getConnectionPool();
-        try(Connection connection = connectionPool.getConnection()){
+        try (Connection connection = connectionPool.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(
                     "SELECT * FROM users order by id desc"
             );
             ResultSet resultSet = statement.executeQuery();
-            while(resultSet.next()){
+            while (resultSet.next()) {
                 User user = new User();
                 int userId = resultSet.getInt("id");
                 UserInfo userInfo = getAllInfoAboutUserById(userId);
@@ -334,9 +340,36 @@ public class UserDAOImpl implements UserDAO {
                 user.setUserInfo(userInfo);
                 users.add(user);
             }
-        }catch (SQLException e){
+        } catch (SQLException e) {
             throw new DaoException(e);
         }
         return users;
     }
+
+    @Override
+    public List<User> getUsersByTag(String tag) throws DaoException {
+        ConnectionPool connectionPool = ConnectionPool.getConnectionPool();
+        List<User> users = new ArrayList<>();
+        try (Connection connection = connectionPool.getConnection()) {
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("" +
+                    "SELECT * FROM users where user_nickname like '%" + tag + "%'");
+            while (resultSet.next()) {
+                User user = new User();
+                int userId = resultSet.getInt("id");
+                UserInfo userInfo = getAllInfoAboutUserById(userId);
+                user.setRole(Role.valueOf(resultSet.getString("user_role")));
+                user.setEmail(resultSet.getString("user_email"));
+                user.setNickname(resultSet.getString("user_nickname"));
+                user.setPassword(resultSet.getString("user_password"));
+                user.setId(userId);
+                user.setUserInfo(userInfo);
+                users.add(user);
+            }
+        } catch (SQLException e) {
+            throw new DaoException(e);
+        }
+        return users;
+    }
+
 }

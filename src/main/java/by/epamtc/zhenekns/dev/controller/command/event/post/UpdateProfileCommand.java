@@ -3,9 +3,12 @@ package by.epamtc.zhenekns.dev.controller.command.event.post;
 import by.epamtc.zhenekns.dev.entity.User;
 import by.epamtc.zhenekns.dev.entity.UserInfo;
 import by.epamtc.zhenekns.dev.exception.ServiceException;
+import by.epamtc.zhenekns.dev.service.ServiceFactory;
 import by.epamtc.zhenekns.dev.service.UserService;
 import by.epamtc.zhenekns.dev.controller.command.Command;
 import by.epamtc.zhenekns.dev.service.implementation.UserServiceImpl;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -13,10 +16,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class UpdateProfileCommand implements Command {
+
+    private final Logger logger = LogManager.getLogger();
+    private final UserService userService = ServiceFactory.getInstance().getUserService();
+
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         User user = (User) request.getSession().getAttribute("user");
-        UserService userService = new UserServiceImpl();
         UserInfo userInfo = null;
         try {
             userInfo = userService.getAllInfoAboutUserById(user.getId());

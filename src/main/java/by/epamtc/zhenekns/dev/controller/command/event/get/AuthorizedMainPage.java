@@ -61,10 +61,19 @@ public class AuthorizedMainPage implements Command {
             request.setAttribute("managers", managers);
         } else if (user.getRole().equals("ADMIN")) {
             List<User> users = null;
-            try {
-                users = userService.getAllUsers();
-            } catch (ServiceException e) {
-                logger.log(Level.ERROR, e.getMessage());
+            if (request.getParameter("tag") == null || request.getParameter("tag").isEmpty()){
+                try {
+                    users = userService.getAllUsers();
+                } catch (ServiceException e) {
+                    logger.log(Level.ERROR, e.getMessage());
+                }
+            }else{
+                String tag = request.getParameter("tag");
+                try {
+                    users = userService.getUsersByTag(tag);
+                } catch (ServiceException e) {
+                    logger.log(Level.ERROR, e.getMessage());
+                }
             }
             request.setAttribute("users", users);
         }

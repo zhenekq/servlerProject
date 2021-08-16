@@ -41,8 +41,9 @@ public class AdditionalInfoCommand implements Command {
         userInfo = new UserInfo(idUserInfo, status, aboutUser,
                 userCountry, userCity, userExperience, userDateOfBirth,
                 userSocialLink, user.getId());
+        user.setUserInfo(userInfo);
         try {
-            userService.addAdditionalInfo(userInfo);
+            userService.updateUser(user);
         } catch (ServiceException e) {
             logger.log(Level.ERROR, e.getMessage());
         }

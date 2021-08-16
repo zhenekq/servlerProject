@@ -53,6 +53,7 @@ public enum CommandName {
     BLOCK_USER,
     UNBLOCK_USER,
     EDIT_USER_PAGE,
-    EDIT_USER
+    EDIT_USER,
+    FIND_USER
 
 }

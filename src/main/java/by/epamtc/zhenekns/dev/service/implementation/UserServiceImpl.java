@@ -128,4 +128,13 @@ public class UserServiceImpl implements UserService {
             throw new ServiceException(e);
         }
     }
+
+    @Override
+    public List<User> getUsersByTag(String tag) throws ServiceException {
+        try {
+            return userDAO.getUsersByTag(tag);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
+        }
+    }
 }

@@ -17,6 +17,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class DeveloperTasksCommandPage implements Command {
@@ -29,16 +30,16 @@ public class DeveloperTasksCommandPage implements Command {
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         User user = (User) request.getSession().getAttribute("user");
         int userId = user.getId();
-        List<Task> tasks = null;
+        List<Task> tasks = new ArrayList<>();
         try {
             Team team = teamService.getTeamByDeveloperId(userId);
+            System.out.println("USER ID: " + user.getId());
+            System.out.println("TEAM ID: " + team.getId());
             tasks = taskService.getTasksByTeamId(team.getId());
-            System.out.println(team);
-            System.out.println(tasks);
         } catch (ServiceException e) {
             logger.log(Level.ERROR, e.getMessage());
         }
         request.setAttribute("tasks", tasks);
-        request.getRequestDispatcher(CommandPage.DEVELOPER_TASKS).forward(request,response);
+        request.getRequestDispatcher(CommandPage.DEVELOPER_TASKS).forward(request, response);
     }
 }

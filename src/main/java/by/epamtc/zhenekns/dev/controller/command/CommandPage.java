@@ -29,5 +29,6 @@ public class CommandPage {
     public static final String DEVELOPER_TASKS = "jsp/common/developer/my_tasks.jsp";
     public static final String COMPLETE_TASK_PAGE = "jsp/common/developer/complete_task.jsp";
     public static final String ADMIN_PROJECTS = "jsp/common/admin/admin_projects.jsp";
+    public static final String FIND_USER = "jsp/common/find_user.jsp";
 
 }

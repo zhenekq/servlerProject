@@ -23,4 +23,6 @@ public interface UserService {
     User authorizationUser(User user) throws ServiceException;
     void updateUserStatusById(int id, String status) throws ServiceException;
     List<User> getAllUsers() throws ServiceException;
+
+    List<User> getUsersByTag(String tag) throws ServiceException;
 }
