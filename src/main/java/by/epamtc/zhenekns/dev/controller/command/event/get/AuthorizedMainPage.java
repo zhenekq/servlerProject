@@ -1,5 +1,7 @@
 package by.epamtc.zhenekns.dev.controller.command.event.get;
 
+import by.epamtc.zhenekns.dev.controller.command.Command;
+import by.epamtc.zhenekns.dev.controller.command.CommandPage;
 import by.epamtc.zhenekns.dev.entity.Project;
 import by.epamtc.zhenekns.dev.entity.Role;
 import by.epamtc.zhenekns.dev.entity.User;
@@ -8,8 +10,6 @@ import by.epamtc.zhenekns.dev.exception.ServiceException;
 import by.epamtc.zhenekns.dev.service.ProjectService;
 import by.epamtc.zhenekns.dev.service.ServiceFactory;
 import by.epamtc.zhenekns.dev.service.UserService;
-import by.epamtc.zhenekns.dev.controller.command.Command;
-import by.epamtc.zhenekns.dev.controller.command.CommandPage;
 import by.epamtc.zhenekns.dev.status.ProjectStatus;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -26,7 +26,7 @@ public class AuthorizedMainPage implements Command {
 
     private final static Logger logger = LogManager.getLogger();
     private final static UserService userService = ServiceFactory.getInstance().getUserService();
-    private final static  ProjectService projectService = ServiceFactory.getInstance().getProjectService();
+    private final static ProjectService projectService = ServiceFactory.getInstance().getProjectService();
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -52,11 +52,19 @@ public class AuthorizedMainPage implements Command {
                 try {
                     userInfo = userService.getAllInfoAboutUserById(manager.getId());
                 } catch (ServiceException e) {
-                    e.printStackTrace();
+                    logger.log(Level.ERROR, e.getMessage());
                 }
                 manager.setUserInfo(userInfo);
             }
             request.setAttribute("managers", managers);
+        } else if (user.getRole().equals("ADMIN")) {
+            List<User> users = null;
+            try {
+                users = userService.getAllUsers();
+            } catch (ServiceException e) {
+                logger.log(Level.ERROR, e.getMessage());
+            }
+            request.setAttribute("users", users);
         }
         request.getRequestDispatcher(CommandPage.AUTHORIZED_MAIN_PAGE_JSP)
                 .forward(request, response);

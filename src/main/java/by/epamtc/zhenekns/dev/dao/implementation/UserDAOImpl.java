@@ -7,10 +7,7 @@ import by.epamtc.zhenekns.dev.entity.User;
 import by.epamtc.zhenekns.dev.entity.UserInfo;
 import by.epamtc.zhenekns.dev.exception.DaoException;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -313,5 +310,32 @@ public class UserDAOImpl implements UserDAO {
         }catch (SQLException e){
             throw new DaoException(e);
         }
+    }
+
+    @Override
+    public List<User> getAllUsers() throws DaoException {
+        List<User> users = new ArrayList<>();
+        ConnectionPool connectionPool = ConnectionPool.getConnectionPool();
+        try(Connection connection = connectionPool.getConnection()){
+            PreparedStatement statement = connection.prepareStatement(
+                    "SELECT * FROM users order by id desc"
+            );
+            ResultSet resultSet = statement.executeQuery();
+            while(resultSet.next()){
+                User user = new User();
+                int userId = resultSet.getInt("id");
+                UserInfo userInfo = getAllInfoAboutUserById(userId);
+                user.setRole(Role.valueOf(resultSet.getString("user_role")));
+                user.setEmail(resultSet.getString("user_email"));
+                user.setNickname(resultSet.getString("user_nickname"));
+                user.setPassword(resultSet.getString("user_password"));
+                user.setId(userId);
+                user.setUserInfo(userInfo);
+                users.add(user);
+            }
+        }catch (SQLException e){
+            throw new DaoException(e);
+        }
+        return users;
     }
 }

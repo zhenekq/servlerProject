@@ -13,6 +13,7 @@ public interface TaskService {
     List<Task> getTasksByManagerId(int id) throws ServiceException;
     List<Task> getTasksByDeveloperId(int id) throws ServiceException;
     Task getTaskById(int id) throws ServiceException;
+    List<Task> getTasksByTeamId(int id) throws ServiceException;
 
 
 }

@@ -1,4 +1,4 @@
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: user
@@ -44,26 +44,50 @@
                 <!--MANAGER HEADER-->
                 <c:set var="role" value="${user.role}"/>
                 <c:if test="${role.equals('MANAGER')}">
-                    <li class="headerLinks-item"><a href="?command=authorized_main_page" class="link-reset link-header">Projects</a></li>
-                    <li class="headerLinks-item"><a href="?command=find_developer" class="link-reset link-header">Find developer</a></li>
-                    <li class="headerLinks-item"><a href="?command=managed_projects" class="link-reset link-header">My projects</a></li>
-                    <li class="headerLinks-item"><a href="?command=manager_teams" class="link-reset link-header">Team</a></li>
-                    <li class="headerLinks-item"><a href="?command=project_requests" class="link-reset link-header">Requests for projects</a></li>
-                    <li class="headerLinks-item"><a href="?command=create_new_task" class="link-reset link-header">New Task</a></li>
+                    <li class="headerLinks-item"><a href="?command=authorized_main_page" class="link-reset link-header">Projects</a>
+                    </li>
+                    <li class="headerLinks-item"><a href="?command=find_developer" class="link-reset link-header">Find
+                        developer</a></li>
+                    <li class="headerLinks-item"><a href="?command=managed_projects" class="link-reset link-header">My
+                        projects</a></li>
+                    <li class="headerLinks-item"><a href="?command=manager_teams"
+                                                    class="link-reset link-header">Team</a></li>
+                    <li class="headerLinks-item"><a href="?command=project_requests" class="link-reset link-header">Requests
+                        for projects</a></li>
+                    <li class="headerLinks-item"><a href="?command=create_new_task" class="link-reset link-header">New
+                        Task</a></li>
                 </c:if>
                 <!--DEVELOPER HEADER HEADER-->
                 <c:if test="${role.equals('DEVELOPER')}">
-                    <li class="headerLinks-item"><a href="?command=authorized_main_page" class="link-reset link-header">Find team</a></li>
+                    <li class="headerLinks-item"><a href="?command=authorized_main_page" class="link-reset link-header">Find
+                        team</a></li>
                     <li class="headerLinks-item"><a href="#" class="link-reset link-header">Team</a></li>
-                    <li class="headerLinks-item"><a href="?command=show_tasks" class="link-reset link-header">Tasks</a></li>
+                    <li class="headerLinks-item"><a href="?command=developer_tasks"
+                                                    class="link-reset link-header">Tasks</a></li>
                 </c:if>
                 <!--CUSTOMER HEADER HEADER-->
                 <c:if test="${role.equals('CUSTOMER')}">
-                    <li class="headerLinks-item"><a href="?command=authorized_main_page" class="link-reset link-header">Managers</a></li>
-                    <li class="headerLinks-item"><a href="?command=show_my_projects" class="link-reset link-header">My projects</a></li>
-                    <li class="headerLinks-item"><a href="?command=customer_project_responses" class="link-reset link-header">Project responses</a></li>
-                    <li class="headerLinks-item"><a href="?command=add_new_project_page" class="link-reset link-header">New project</a></li>
-
+                    <li class="headerLinks-item"><a href="?command=authorized_main_page" class="link-reset link-header">Managers</a>
+                    </li>
+                    <li class="headerLinks-item"><a href="?command=show_my_projects" class="link-reset link-header">My
+                        projects</a></li>
+                    <li class="headerLinks-item"><a href="?command=customer_project_responses"
+                                                    class="link-reset link-header">Project responses</a></li>
+                    <li class="headerLinks-item"><a href="?command=add_new_project_page" class="link-reset link-header">New
+                        project</a></li>
+                </c:if>
+                <!--ADMIN HEADER HEADER-->
+                <c:if test="${role.equals('ADMIN')}">
+                    <li class="headerLinks-item"><a href="?command=authorized_main_page" class="link-reset link-header">Users</a>
+                    </li>
+                    <li class="headerLinks-item"><a href="?command=admin_projects" class="link-reset link-header">Projects</a>
+                    </li>
+                    <li class="headerLinks-item"><a href="?command=admin_project_responses"
+                                                    class="link-reset link-header">Project responses</a></li>
+                    <li class="headerLinks-item"><a href="?command=admin_teams" class="link-reset link-header">Teams</a>
+                    </li>
+                    <li class="headerLinks-item"><a href="?command=admin_tasks" class="link-reset link-header">Tasks</a>
+                    </li>
                 </c:if>
             </ul>
         </div>

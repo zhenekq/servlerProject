@@ -28,6 +28,8 @@ public class CommandProvider {
         commands.put(CommandName.ADD_NEW_TASK, new AddNewTaskCommand());
         commands.put(CommandName.FIND_DEVELOPER, new FindDeveloperCommandPage());
         commands.put(CommandName.ADD_TO_TEAM, new AddToTeamCommand());
+        commands.put(CommandName.COMPLETE_TASK, new CompleteTaskCommand());
+        commands.put(CommandName.ADMIN_PROJECTS, new AdminProjectsCommandPage());
 
         //get
         commands.put(CommandName.NO_SUCH_COMMAND, new ErrorCommand());
@@ -52,6 +54,8 @@ public class CommandProvider {
         commands.put(CommandName.MANAGED_PROJECTS, new ManagedProjectsCommandPage());
         commands.put(CommandName.CREATE_NEW_TASK, new CreateNewTaskCommandPage());
         commands.put(CommandName.ADD_TO_TEAM_PAGE, new AddToTeamCommandPage());
+        commands.put(CommandName.DEVELOPER_TASKS, new DeveloperTasksCommandPage());
+        commands.put(CommandName.COMPLETE_TASK_PAGE, new CompleteTaskCommandPage());
     }
 
     public static CommandProvider getInstance() {

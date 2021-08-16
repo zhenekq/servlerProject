@@ -21,4 +21,6 @@ public interface UserDAO {
     boolean checkUser(String username, String email) throws DaoException;
     void updateUserStatusById(int id, String status) throws DaoException;
 
+    List<User> getAllUsers() throws DaoException;
+
 }

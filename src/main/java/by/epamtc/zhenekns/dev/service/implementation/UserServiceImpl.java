@@ -119,4 +119,13 @@ public class UserServiceImpl implements UserService {
             throw new ServiceException(e);
         }
     }
+
+    @Override
+    public List<User> getAllUsers() throws ServiceException {
+        try {
+            return userDAO.getAllUsers();
+        } catch (DaoException e) {
+            throw new ServiceException(e);
+        }
+    }
 }

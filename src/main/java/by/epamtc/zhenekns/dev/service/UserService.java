@@ -22,4 +22,5 @@ public interface UserService {
     User loginUser(String email, String password) throws ServiceException;
     User authorizationUser(User user) throws ServiceException;
     void updateUserStatusById(int id, String status) throws ServiceException;
+    List<User> getAllUsers() throws ServiceException;
 }

@@ -23,4 +23,16 @@
         <url-pattern>/servlet</url-pattern>
     </servlet-mapping>
 
+    <filter>
+        <filter-name>pageFilter</filter-name>
+        <filter-class>by.epamtc.zhenekns.dev.filter.PagesFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>pageFilter</filter-name>
+        <url-pattern>/servlet</url-pattern>
+    </filter-mapping>
+
+
+
 </web-app>

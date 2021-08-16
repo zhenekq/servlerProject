@@ -52,9 +52,6 @@
                             <p class="deadline-text main-text">Deadline: </p>
                             <p class="deadline-date">${project.deadline}</p>
                         </div>
-                        <a class="respond-btn link-reset" href="#">
-                            <p class="respond-text">Respond</p>
-                        </a>
                     </div>
                 </li>
             </ul>

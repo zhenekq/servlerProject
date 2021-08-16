@@ -161,4 +161,24 @@ public class TeamDAOImpl implements TeamDAO {
         }
         return counter;
     }
+
+    @Override
+    public Team getTeamByDeveloperId(int id) throws DaoException {
+        ConnectionPool connectionPool = ConnectionPool.getConnectionPool();
+        Team team = null;
+        try (Connection connection = connectionPool.getConnection()) {
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "SELECT * FROM team_dev where developer_id = ?"
+            );
+            preparedStatement.setInt(1, id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                team = new Team();
+                team.setId(resultSet.getInt("team_id"));
+            }
+        } catch (SQLException e) {
+            throw new DaoException(e);
+        }
+        return team;
+    }
 }

@@ -13,5 +13,6 @@ public interface TaskDAO {
     List<Task> getTasksByManagerId(int id) throws DaoException;
     List<Task> getTasksByDeveloperId(int id) throws DaoException;
     Task getTaskById(int id) throws DaoException;
+    List<Task> getTasksByTeamId(int id) throws DaoException;
 
 }

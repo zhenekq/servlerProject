@@ -44,19 +44,19 @@
                         <ul class="more-input-box list-reset">
                             <li class="more-item">
                                 <h3 class="more-subtitle subtitle">Experience:</h3>
-                                <input class="more-input btn-reset" name="experience" type="text" >
+                                <input class="more-input btn-reset" name="experience" type="text" required>
                             </li>
                             <li class="more-item">
                                 <h3 class="more-subtitle subtitle">Link to social network:</h3>
-                                <input class="more-input btn-reset" name="social_link" type="text" >
+                                <input class="more-input btn-reset" name="social_link" type="text" required>
                             </li>
                             <li class="more-item">
                                 <h3 class="more-subtitle subtitle">Date of Birth:</h3>
-                                <input class="more-input more-date btn-reset" name="date" value="2021-01-01" type="date" >
+                                <input class="more-input more-date btn-reset" name="date" value="2021-01-01" type="date" required >
                             </li>
                         </ul>
                         <div class="more-textarea-box">
-                            <textarea class="textarea" name="about" cols="30" rows="10" placeholder="Tell us about yourself"></textarea>
+                            <textarea class="textarea" name="about" cols="30" rows="10" placeholder="Tell us about yourself" required></textarea>
                         </div>
                     </div>
                     <div class="save-input">
