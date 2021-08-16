@@ -12,10 +12,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Main page</title>
     <link rel="stylesheet" href="/style/main.css">
     <style>
         <%@include file="../style/main.css"%>
+        input.find_place::placeholder {
+            color: #ffffff;
+        }
     </style>
 </head>
 <body>
@@ -118,7 +123,13 @@
         </c:if>
 
         <c:if test="${role.equals('ADMIN')}">
-            <h2 class="main-title">Users</h2>
+            <h2 style="padding-bottom: 30px" class="main-title">Users</h2>
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" method="get" action="servlet">
+                <input type="hidden" name="command" value="find_user">
+                <input style="color: #fdc62d;background-color: #666; width: 700px; margin: 0 auto"
+                       type="search" class="form-control form-control-dark find_place"
+                       placeholder="Enter name or another info about user!" aria-label="Search">
+            </form>
             <ul id="main-order-list" class="main-order-list list-reset">
                 <c:forEach var="user" items="${users}">
                     <li class="order-item">
