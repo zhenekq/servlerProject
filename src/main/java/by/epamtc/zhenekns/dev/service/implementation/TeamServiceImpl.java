@@ -78,4 +78,13 @@ public class TeamServiceImpl implements TeamService {
             throw new ServiceException(e);
         }
     }
+
+    @Override
+    public Team updateTeam(Team team) throws ServiceException {
+        try {
+            return teamDAO.updateTeam(team);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
+        }
+    }
 }

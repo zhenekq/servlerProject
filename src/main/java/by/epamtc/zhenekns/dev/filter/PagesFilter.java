@@ -64,7 +64,9 @@ public class PagesFilter implements Filter {
                 CommandName.UPDATE_PROFILE,
                 CommandName.ADD_TO_TEAM_PAGE,
                 CommandName.ADD_TO_TEAM,
-                CommandName.CREATE_NEW_TEAM
+                CommandName.CREATE_NEW_TEAM,
+                CommandName.UPDATE_TEAM,
+                CommandName.UPDATE_TEAM_PAGE
         );
         pagesFilter.put(Role.MANAGER, managerPages);
 

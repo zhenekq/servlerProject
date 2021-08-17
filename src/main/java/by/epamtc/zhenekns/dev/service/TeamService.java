@@ -17,4 +17,5 @@ public interface TeamService {
     Team getTeamByDeveloperId(int id) throws ServiceException;
     int getTeamSizeByTeamId(int id) throws ServiceException;
     Team getTeamById(int id) throws ServiceException;
+    Team updateTeam(Team team) throws ServiceException;
 }

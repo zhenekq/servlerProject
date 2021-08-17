@@ -41,7 +41,21 @@ public class TeamDAOImpl implements TeamDAO {
 
     @Override
     public Team updateTeam(Team team) throws DaoException {
-        return null;
+        ConnectionPool connectionPool = ConnectionPool.getConnectionPool();
+        try (Connection connection = connectionPool.getConnection()) {
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "UPDATE team  set name=?, description=?, teamSize=? where id=?"
+            );
+            preparedStatement.setString(1, team.getName());
+            preparedStatement.setString(2, team.getDescription());
+            preparedStatement.setInt(3, team.getTeamSize());
+            preparedStatement.setInt(4, team.getId());
+
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            throw new DaoException(e);
+        }
+        return team;
     }
 
     @Override
@@ -194,13 +208,15 @@ public class TeamDAOImpl implements TeamDAO {
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
-                team.setId(resultSet.getInt("id"));
+                team = new Team();
+                int teamId = resultSet.getInt("id");
+                team.setId(teamId);
                 team.setName(resultSet.getString("name"));
                 team.setDescription(resultSet.getString("description"));
                 team.setManagerId(resultSet.getInt("manager_id"));
                 team.setTeamSize(resultSet.getInt("teamSize"));
                 team.setStatus(resultSet.getString("status"));
-                team.setCurrentTeamSize(getTeamSizeByTeamId(team.getId()));
+                team.setCurrentTeamSize(getTeamSizeByTeamId(teamId));
             }
         } catch (SQLException e) {
             throw new DaoException(e);
