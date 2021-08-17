@@ -33,6 +33,8 @@ public class CommandProvider {
         commands.put(CommandName.BLOCK_USER, new BlockUserCommand());
         commands.put(CommandName.UNBLOCK_USER, new UnblockUserCommand());
         commands.put(CommandName.UPDATE_TEAM, new UpdateTeamCommand());
+        commands.put(CommandName.DELETE_TEAMMATE, new DeleteTeammateCommand());
+        commands.put(CommandName.UPDATE_TASK, new UpdateTaskCommand());
 
         //get
         commands.put(CommandName.NO_SUCH_COMMAND, new ErrorCommand());
@@ -61,6 +63,9 @@ public class CommandProvider {
         commands.put(CommandName.COMPLETE_TASK_PAGE, new CompleteTaskCommandPage());
         commands.put(CommandName.FIND_USER, new FindUserCommandPage());
         commands.put(CommandName.UPDATE_TEAM_PAGE, new UpdateTeamCommandPage());
+        commands.put(CommandName.SHOW_TEAM, new ShowTeamCommandPage());
+        commands.put(CommandName.VIEW_TASKS, new ViewTasksCommandPage());
+        commands.put(CommandName.EDIT_TASK, new EditTaskCommandPage());
     }
 
     public static CommandProvider getInstance() {

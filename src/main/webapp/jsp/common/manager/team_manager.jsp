@@ -38,14 +38,17 @@
                             </div>
                             <div class="command-descr">
                                 <p class="descr-text">${team.key.description}</p>
-                                <a href="servlet?command=update_team_page&id=${team.key.id}" class="edit-link link-reset">
-                                    <p class="edit-text">Edit command</p>
+                                <a href="servlet?command=update_team_page&id=${team.key.id}" class="edit-link link-reset" target="_blank">
+                                    <p class="edit-text">Edit team</p>
+                                </a>
+                                <a href="servlet?command=view_tasks&id=${team.key.id}" class="edit-link link-reset" target="_blank">
+                                    <p class="edit-text">View task</p>
                                 </a>
                                 <button style="cursor: pointer" class="btn">View participants</button>
                                 <div class="view-box">
                                     <ul class="view-list list-reset">
                                         <c:forEach var="user" items="${team.value}">
-                                            <li class="view-item">
+                                            <li style="height: 100%" class="view-item">
                                                 <h3 class="view-name">${user.nickname}</h3>
                                                 <div class="view-about">
                                                     <p class="about-user">About user:</p>
@@ -55,8 +58,8 @@
                                                     <a href="servlet?command=user_profile&id=${user.id}" class="view-link link-reset" target="_blank">
                                                         <p class="edit-text">View profile</p>
                                                     </a>
-                                                    <a href="#" class="view-link link-reset">
-                                                        <p class="edit-text">Invite to the team</p>
+                                                    <a href="servlet?command=delete_teammate&id=${user.id}" class="view-link link-reset">
+                                                        <p class="edit-text">Delete</p>
                                                     </a>
                                                 </div>
                                             </li>
@@ -75,37 +78,7 @@
     </div>
 </main>
 
-<footer class="footer">
-    <div class="footer-wrapper wrapper">
-        <div class="left-header">
-            <div class="header-logo">
-                <svg class="footer-logo" enable-background="new 0 0 24 24" height="50" viewBox="0 0 24 24" width="50"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <path
-                            d="m8.843 12.651c-1.392 0-2.521 1.129-2.521 2.521v6.306c0 1.392 1.129 2.521 2.521 2.521s2.521-1.129 2.521-2.521v-6.306c-.001-1.392-1.13-2.521-2.521-2.521z"/>
-                    <path
-                            d="m.019 15.172c0 1.393 1.13 2.523 2.523 2.523s2.523-1.13 2.523-2.523v-2.523h-2.521c-.001 0-.001 0-.002 0-1.393 0-2.523 1.13-2.523 2.523z"/>
-                    <path
-                            d="m8.846-.001c-.001 0-.002 0-.003 0-1.393 0-2.523 1.13-2.523 2.523s1.13 2.523 2.523 2.523h2.521c0-1.431 0-1.083 0-2.528-.001-1.391-1.128-2.518-2.518-2.518z"/>
-                    <path
-                            d="m2.525 11.37h6.318c1.393 0 2.523-1.13 2.523-2.523s-1.13-2.523-2.523-2.523h-6.318c-1.393 0-2.523 1.13-2.523 2.523s1.13 2.523 2.523 2.523z"/>
-                    <path
-                            d="m21.457 6.323c-1.391 0-2.518 1.127-2.518 2.518v.005 2.523h2.521c1.393 0 2.523-1.13 2.523-2.523s-1.13-2.523-2.523-2.523c-.001 0-.002 0-.003 0z"/>
-                    <path
-                            d="m12.641 2.522v6.325c0 1.392 1.129 2.521 2.521 2.521s2.521-1.129 2.521-2.521v-6.325c0-1.392-1.129-2.521-2.521-2.521-1.392 0-2.521 1.129-2.521 2.521z"/>
-                    <path
-                            d="m17.682 21.476c0-1.392-1.129-2.521-2.521-2.521h-2.521v2.523c.001 1.391 1.129 2.519 2.521 2.519s2.521-1.129 2.521-2.521z"/>
-                    <path
-                            d="m21.479 12.649h-6.318c-1.393 0-2.523 1.13-2.523 2.523s1.13 2.523 2.523 2.523h6.318c1.393 0 2.523-1.13 2.523-2.523s-1.13-2.523-2.523-2.523z"/>
-                </svg>
-            </div>
-            <p class="footer-subtitle">©Yauheny Vozny - 2021</p>
-        </div>
-        <div class="right-header">
-            <button class="footer-logout btn-reset"><a class="header-btn-link">Logout</a></button>
-        </div>
-    </div>
-</footer>
+<%@include file="../../parts/footer.jsp"%>
 <script>
     var acc = document.getElementsByClassName("btn");
     var i;

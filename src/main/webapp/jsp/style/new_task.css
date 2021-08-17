@@ -169,8 +169,9 @@ body {
 }
 .main-title {
     display: block;
-    width: 335px;
+    width: 100%;
     font-family: var(--font);
+    text-align: center;
     color: var(--white);
     font-size: 28px;
     margin: 0 auto;

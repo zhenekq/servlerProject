@@ -8,6 +8,8 @@ import by.epamtc.zhenekns.dev.entity.Team;
 import by.epamtc.zhenekns.dev.entity.User;
 import by.epamtc.zhenekns.dev.entity.UserInfo;
 import by.epamtc.zhenekns.dev.exception.DaoException;
+import by.epamtc.zhenekns.dev.status.TeamStatus;
+import by.epamtc.zhenekns.dev.status.UserStatus;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -106,9 +108,7 @@ public class TeamDAOImpl implements TeamDAO {
                 team.setTeamSize(resultSet.getInt("teamSize"));
                 int currentTeamSize = getTeamSizeByTeamId(team.getId());
                 team.setCurrentTeamSize(currentTeamSize);
-                if (currentTeamSize != team.getTeamSize() || currentTeamSize == 0) {
-                    teamList.add(team);
-                }
+                teamList.add(team);
             }
         } catch (SQLException e) {
             throw new DaoException(e);
@@ -127,8 +127,12 @@ public class TeamDAOImpl implements TeamDAO {
             preparedStatement.setInt(2, managerId);
             preparedStatement.setInt(3, devId);
             preparedStatement.setInt(4, teamId);
-
+            Team team = getTeamById(teamId);
+            int currentTeamSize = getTeamSizeByTeamId(teamId);
             preparedStatement.executeUpdate();
+            if (currentTeamSize == team.getTeamSize() - 1) {
+                updateTeamStatusById(teamId, TeamStatus.CLOSED_FOR_REQUESTS);
+            }
         } catch (SQLException e) {
             throw new DaoException(e);
         }
@@ -180,7 +184,7 @@ public class TeamDAOImpl implements TeamDAO {
     @Override
     public Team getTeamByDeveloperId(int id) throws DaoException {
         ConnectionPool connectionPool = ConnectionPool.getConnectionPool();
-        Team team = null;
+        Team team = new Team();
         try (Connection connection = connectionPool.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(
                     "SELECT * FROM team_dev where developer_id = ?"
@@ -188,8 +192,9 @@ public class TeamDAOImpl implements TeamDAO {
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
-                team = new Team();
-                team.setId(resultSet.getInt("team_id"));
+                int teamId = resultSet.getInt("team_id");
+                team = getTeamById(teamId);
+                System.out.println(team);
             }
         } catch (SQLException e) {
             throw new DaoException(e);
@@ -222,5 +227,69 @@ public class TeamDAOImpl implements TeamDAO {
             throw new DaoException(e);
         }
         return team;
+    }
+
+    @Override
+    public void deleteTeammate(int teammateId) throws DaoException {
+        ConnectionPool connectionPool = ConnectionPool.getConnectionPool();
+        UserDAO userDAO = DAOFactory.getInstance().getUserDAO();
+        try (Connection connection = connectionPool.getConnection()) {
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "DELETE FROM team_dev where developer_id = ?"
+            );
+            preparedStatement.setInt(1, teammateId);
+            Team team = getTeamByDeveloperId(teammateId);
+            int currentTeamSize = getTeamSizeByTeamId(team.getId());
+            if (currentTeamSize == team.getTeamSize()) {
+                updateTeamStatusById(team.getId(), TeamStatus.HIRING);
+            }
+            preparedStatement.executeUpdate();
+            userDAO.updateUserStatusById(teammateId, UserStatus.USER_STATUS_FREE);
+        } catch (SQLException e) {
+            throw new DaoException(e);
+        }
+    }
+
+    @Override
+    public List<Team> getAllTeams() throws DaoException {
+        ConnectionPool connectionPool = ConnectionPool.getConnectionPool();
+        List<Team> teamList = new ArrayList<>();
+        try (Connection connection = connectionPool.getConnection()) {
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "SELECT * FROM team"
+            );
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                Team team = new Team();
+                team.setId(resultSet.getInt("id"));
+                team.setName(resultSet.getString("name"));
+                team.setDescription(resultSet.getString("description"));
+                team.setManagerId(resultSet.getInt("manager_id"));
+                team.setTeamSize(resultSet.getInt("teamSize"));
+                int currentTeamSize = getTeamSizeByTeamId(team.getId());
+                team.setCurrentTeamSize(currentTeamSize);
+                if (currentTeamSize != team.getTeamSize() || currentTeamSize == 0) {
+                    teamList.add(team);
+                }
+            }
+        } catch (SQLException e) {
+            throw new DaoException(e);
+        }
+        return teamList;
+    }
+
+    @Override
+    public void updateTeamStatusById(int teamId, String status) throws DaoException {
+        ConnectionPool connectionPool = ConnectionPool.getConnectionPool();
+        try (Connection connection = connectionPool.getConnection()) {
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "UPDATE team  set status=? where id=?"
+            );
+            preparedStatement.setString(1, status);
+            preparedStatement.setInt(2, teamId);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            throw new DaoException(e);
+        }
     }
 }

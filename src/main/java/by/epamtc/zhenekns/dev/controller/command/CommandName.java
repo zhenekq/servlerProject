@@ -56,6 +56,11 @@ public enum CommandName {
     EDIT_USER_PAGE,
     EDIT_USER,
     FIND_USER,
-    UPDATE_TEAM_PAGE
+    UPDATE_TEAM_PAGE,
+    DELETE_TEAMMATE,
+    SHOW_TEAM,
+    VIEW_TASKS,
+    EDIT_TASK,
+    UPDATE_TASK
 
 }

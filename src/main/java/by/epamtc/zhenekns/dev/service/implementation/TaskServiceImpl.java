@@ -44,7 +44,11 @@ public class TaskServiceImpl implements TaskService {
 
     @Override
     public Task getTaskById(int id) throws ServiceException {
-        return null;
+        try {
+            return taskDAO.getTaskById(id);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
+        }
     }
 
     @Override

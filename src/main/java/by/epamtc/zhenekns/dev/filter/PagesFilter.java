@@ -66,7 +66,12 @@ public class PagesFilter implements Filter {
                 CommandName.ADD_TO_TEAM,
                 CommandName.CREATE_NEW_TEAM,
                 CommandName.UPDATE_TEAM,
-                CommandName.UPDATE_TEAM_PAGE
+                CommandName.UPDATE_TEAM_PAGE,
+                CommandName.DELETE_TEAMMATE,
+                CommandName.SHOW_TEAM,
+                CommandName.VIEW_TASKS,
+                CommandName.UPDATE_TASK,
+                CommandName.EDIT_TASK
         );
         pagesFilter.put(Role.MANAGER, managerPages);
 
@@ -81,6 +86,7 @@ public class PagesFilter implements Filter {
                 CommandName.UPDATE_PROFILE,
                 CommandName.ADDITIONAL_INFO,
                 CommandName.ADDITIONAL_INFO_PAGE,
+                CommandName.SHOW_TEAM,
                 //=====
                 CommandName.SHOW_MY_PROJECTS,
                 CommandName.CUSTOMER_PROJECT_RESPONSES,
@@ -90,7 +96,8 @@ public class PagesFilter implements Filter {
                 CommandName.REJECT_PROJECT_REQUEST,
                 CommandName.EDIT_PROJECT,
                 CommandName.CLOSE_REQUESTS_FOR_PROJECT,
-                CommandName.UPDATE_PROJECT
+                CommandName.UPDATE_PROJECT,
+                CommandName.SHOW_TEAM
         );
         pagesFilter.put(Role.CUSTOMER, customerPages);
 
@@ -106,7 +113,8 @@ public class PagesFilter implements Filter {
                 CommandName.COMPLETE_TASK_PAGE,
                 CommandName.COMPLETE_TASK,
                 CommandName.ADDITIONAL_INFO,
-                CommandName.ADDITIONAL_INFO_PAGE
+                CommandName.ADDITIONAL_INFO_PAGE,
+                CommandName.SHOW_TEAM
                 );
         pagesFilter.put(Role.DEVELOPER, developerPages);
 
@@ -133,7 +141,9 @@ public class PagesFilter implements Filter {
                 CommandName.EDIT_USER,
                 CommandName.EDIT_PROJECT,
                 CommandName.UPDATE_PROJECT,
-                CommandName.FIND_USER
+                CommandName.FIND_USER,
+                CommandName.SHOW_TEAM,
+                CommandName.VIEW_TASKS
         );
 
         pagesFilter.put(Role.ADMIN, adminPages);

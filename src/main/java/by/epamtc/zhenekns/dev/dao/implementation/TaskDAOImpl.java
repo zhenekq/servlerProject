@@ -5,7 +5,10 @@ import by.epamtc.zhenekns.dev.dao.TaskDAO;
 import by.epamtc.zhenekns.dev.entity.Task;
 import by.epamtc.zhenekns.dev.exception.DaoException;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +17,7 @@ public class TaskDAOImpl implements TaskDAO {
     @Override
     public Task addTask(Task task) throws DaoException {
         ConnectionPool connectionPool = ConnectionPool.getConnectionPool();
-        try(Connection connection = connectionPool.getConnection()){
+        try (Connection connection = connectionPool.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(
                     "INSERT INTO task VALUES(?,?,?,?,?)"
             );
@@ -25,7 +28,7 @@ public class TaskDAOImpl implements TaskDAO {
             preparedStatement.setString(5, task.getStatus());
 
             preparedStatement.executeUpdate();
-        }catch (SQLException e){
+        } catch (SQLException e) {
             throw new DaoException(e);
         }
         return task;
@@ -53,20 +56,39 @@ public class TaskDAOImpl implements TaskDAO {
 
     @Override
     public Task getTaskById(int id) throws DaoException {
-        return null;
+        ConnectionPool connectionPool = ConnectionPool.getConnectionPool();
+        Task task = null;
+        try (Connection connection = connectionPool.getConnection()) {
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "SELECT * FROM task where id = ?"
+            );
+            preparedStatement.setInt(1, id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                task = new Task();
+                task.setId(resultSet.getInt("id"));
+                task.setName(resultSet.getString("name"));
+                task.setDescription(resultSet.getString("description"));
+                task.setTeamId(resultSet.getInt("team_id"));
+                task.setStatus(resultSet.getString("status"));
+            }
+        } catch (SQLException e) {
+            throw new DaoException(e);
+        }
+        return task;
     }
 
     @Override
     public List<Task> getTasksByTeamId(int id) throws DaoException {
         ConnectionPool connectionPool = ConnectionPool.getConnectionPool();
         List<Task> tasks = new ArrayList<>();
-        try(Connection connection = connectionPool.getConnection()){
+        try (Connection connection = connectionPool.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(
                     "SELECT * FROM task where team_id = ?"
             );
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 Task task = new Task();
                 task.setId(resultSet.getInt("id"));
                 task.setName(resultSet.getString("name"));
@@ -75,7 +97,7 @@ public class TaskDAOImpl implements TaskDAO {
                 task.setStatus(resultSet.getString("status"));
                 tasks.add(task);
             }
-        }catch (SQLException e){
+        } catch (SQLException e) {
             throw new DaoException(e);
         }
         return tasks;

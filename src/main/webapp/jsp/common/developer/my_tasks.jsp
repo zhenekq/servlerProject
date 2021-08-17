@@ -26,34 +26,26 @@
                     <button type="button" class="order-box order-btn btn-reset">
                         <div class="order-title-box">
                             <h3 class="order-title"><c:out value="${task.name}"/></h3>
-                            <p class="order-price"><c:out value="${task.description}"/></p>
+                            <p class="order-price"><c:out value="${task.status}"/></p>
                         </div>
                         <p class="order-dscr"><%--<c:out value="${manager.userInfo.qualification}"/>--%></p>
                     </button>
                     <div class="order-info">
                         <div class="name-of-customer">
-                            <p class="name-text main-text">Manager: </p>
+                            <p class="name-text main-text">Team: </p>
                             <h3 class="name">
-                                <a class="link-reset" href="?command=user_profile&id=${task.id}" target="_blank">
-                                    <c:out value="${task.teamId}"/>
+                                <a class="link-reset" href="?command=show_team&id=${task.teamId}" target="_blank">
+                                    Check team
                                 </a>
                             </h3>
                         </div>
                         <div class="technologies">
-                            <p class="technologies-text main-text">Technologies stack: </p>
+                            <p class="technologies-text main-text">Task status: </p>
                             <p class="technologies-stack"><c:out value="${task.status}"/></p>
                         </div>
                         <div class="comand">
-                            <p class="comand-text main-text">Country: </p>
+                            <p class="comand-text main-text">Description: </p>
                             <p class="size-of-comand"><c:out value="${task.description}"/></p>
-                        </div>
-                        <div class="deadline">
-                            <p class="deadline-text main-text">Contact me there: </p>
-                            <p class="deadline-date">
-                                <a class="link-reset" href="${task.description}">
-                                    <c:out value="${task.description}"/>
-                                </a>
-                            </p>
                         </div>
                         <a class="respond-btn link-reset" href="?command=complete_task_page&id=${task.id}">
                             <p class="respond-text">Complete</p>

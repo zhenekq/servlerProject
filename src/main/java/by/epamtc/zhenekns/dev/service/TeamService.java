@@ -18,4 +18,5 @@ public interface TeamService {
     int getTeamSizeByTeamId(int id) throws ServiceException;
     Team getTeamById(int id) throws ServiceException;
     Team updateTeam(Team team) throws ServiceException;
+    void deleteTeammate(int teammateId) throws ServiceException;
 }

@@ -45,6 +45,7 @@
                         </ul>
                         <input class="submit-input btn-reset" type="submit" value="Update">
                     </form>
+                    <div>${error}</div>
                 </div>
             </div>
         </div>

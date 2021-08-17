@@ -1,6 +1,7 @@
 package by.epamtc.zhenekns.dev.controller.command.event.post;
 
 import by.epamtc.zhenekns.dev.controller.command.Command;
+import by.epamtc.zhenekns.dev.controller.command.CommandPage;
 import by.epamtc.zhenekns.dev.controller.command.CommandPageRedirect;
 import by.epamtc.zhenekns.dev.entity.Team;
 import by.epamtc.zhenekns.dev.exception.ServiceException;
@@ -28,7 +29,14 @@ public class UpdateTeamCommand implements Command {
         Team team = (Team) request.getSession().getAttribute("team");
         setTeam(team, name, desc, teamSize);
         try {
-            teamService.updateTeam(team);
+            if (teamSize >= team.getCurrentTeamSize()) {
+                teamService.updateTeam(team);
+            }else{
+                String error = "Team size can't be lower than exists!";
+                request.setAttribute("error", error);
+                request.getRequestDispatcher(CommandPage.UPDATE_TEAM_PAGE).forward(request,response);
+                return;
+            }
         } catch (ServiceException e) {
             logger.log(Level.ERROR, e.getMessage());
         }

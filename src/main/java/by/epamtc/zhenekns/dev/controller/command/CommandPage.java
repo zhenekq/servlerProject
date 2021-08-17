@@ -31,5 +31,8 @@ public class CommandPage {
     public static final String ADMIN_PROJECTS = "jsp/common/admin/admin_projects.jsp";
     public static final String FIND_USER = "jsp/common/find_user.jsp";
     public static final String UPDATE_TEAM_PAGE = "jsp/common/manager/update_team.jsp";
+    public static final String SHOW_TEAM = "jsp/common/team.jsp";
+    public static final String VIEW_TASKS = "jsp/common/manager/manager_tasks.jsp";
+    public static final String EDIT_TASK = "jsp/common/manager/edit_task.jsp";
 
 }

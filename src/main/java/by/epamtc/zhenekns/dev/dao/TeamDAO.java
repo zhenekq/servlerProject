@@ -20,4 +20,7 @@ public interface TeamDAO {
     Team getTeamByDeveloperId(int id) throws DaoException;
     Team getTeamById(int id) throws DaoException;
 
+    void deleteTeammate(int teammateId) throws DaoException;
+    List<Team> getAllTeams() throws DaoException;
+    void updateTeamStatusById(int teamId, String status) throws DaoException;
 }

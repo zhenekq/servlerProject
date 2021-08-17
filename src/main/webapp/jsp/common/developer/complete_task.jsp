@@ -31,7 +31,7 @@
                         <ul class="create-list list-reset">
                             <li class="create-item">
                                 <p class="create-title">File name rules:</p>
-                                <p class="create-title">dfjskjdkfjsldkjfksjdflskdjfksldkjfskdfljs jkjdkls jkdjlfksjdklfkjs kdjkfls jkdlfsk kdjfls kjdkfls jkdls</p>
+                                <p class="create-title">Name your file like USERNAME_TASK_$NAME$.*</p>
                             </li>
                             <li class="create-item">
                                 <p class="create-title">Comments:</p>

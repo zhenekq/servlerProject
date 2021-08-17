@@ -87,4 +87,13 @@ public class TeamServiceImpl implements TeamService {
             throw new ServiceException(e);
         }
     }
+
+    @Override
+    public void deleteTeammate(int teammateId) throws ServiceException {
+        try {
+            teamDAO.deleteTeammate(teammateId);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
+        }
+    }
 }
