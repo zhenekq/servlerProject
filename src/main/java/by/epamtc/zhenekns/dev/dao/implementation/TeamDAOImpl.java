@@ -9,7 +9,6 @@ import by.epamtc.zhenekns.dev.entity.User;
 import by.epamtc.zhenekns.dev.entity.UserInfo;
 import by.epamtc.zhenekns.dev.exception.DaoException;
 
-import javax.print.MultiDocPrintService;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -25,14 +24,14 @@ public class TeamDAOImpl implements TeamDAO {
         ConnectionPool connectionPool = ConnectionPool.getConnectionPool();
         try (Connection connection = connectionPool.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(
-                    "INSERT INTO team values(?,?,?,?,?)"
+                    "INSERT INTO team values(?,?,?,?,?,?)"
             );
             preparedStatement.setInt(1, team.getId());
             preparedStatement.setString(2, team.getName());
             preparedStatement.setString(3, team.getDescription());
             preparedStatement.setInt(4, team.getTeamSize());
             preparedStatement.setInt(5, team.getManagerId());
-
+            preparedStatement.setString(6, team.getStatus());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             throw new DaoException(e);
@@ -93,7 +92,9 @@ public class TeamDAOImpl implements TeamDAO {
                 team.setTeamSize(resultSet.getInt("teamSize"));
                 int currentTeamSize = getTeamSizeByTeamId(team.getId());
                 team.setCurrentTeamSize(currentTeamSize);
-                teamList.add(team);
+                if (currentTeamSize != team.getTeamSize() || currentTeamSize == 0) {
+                    teamList.add(team);
+                }
             }
         } catch (SQLException e) {
             throw new DaoException(e);
@@ -153,7 +154,7 @@ public class TeamDAOImpl implements TeamDAO {
             );
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 counter++;
             }
         } catch (SQLException e) {
@@ -175,6 +176,31 @@ public class TeamDAOImpl implements TeamDAO {
             if (resultSet.next()) {
                 team = new Team();
                 team.setId(resultSet.getInt("team_id"));
+            }
+        } catch (SQLException e) {
+            throw new DaoException(e);
+        }
+        return team;
+    }
+
+    @Override
+    public Team getTeamById(int id) throws DaoException {
+        ConnectionPool connectionPool = ConnectionPool.getConnectionPool();
+        Team team = null;
+        try (Connection connection = connectionPool.getConnection()) {
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "SELECT * FROM team where id = ?"
+            );
+            preparedStatement.setInt(1, id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                team.setId(resultSet.getInt("id"));
+                team.setName(resultSet.getString("name"));
+                team.setDescription(resultSet.getString("description"));
+                team.setManagerId(resultSet.getInt("manager_id"));
+                team.setTeamSize(resultSet.getInt("teamSize"));
+                team.setStatus(resultSet.getString("status"));
+                team.setCurrentTeamSize(getTeamSizeByTeamId(team.getId()));
             }
         } catch (SQLException e) {
             throw new DaoException(e);

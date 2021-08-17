@@ -36,7 +36,7 @@
                             <p class="nav-title">Уou can contact admin:</p>
                         </li>
                         <li class="nav-item">
-                            <a target="_blank" href="https://t.me/uliana_fomina" class="social-links link-reset">
+                            <a target="_blank" href="https://t.me/zhenyavozny" class="social-links link-reset">
                                 <svg class="social-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                                      x="0px" y="0px" viewBox="0 0 512 512"
                                      style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -65,7 +65,7 @@ L303.983,184.203z M353.637,354.649l-95.586-44.607l107.897-164.684L353.637,354.64
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a target="_blank" href="https://vk.com/id214775741" class="social-links link-reset">
+                            <a target="_blank" href="https://vk.com/zhenekns" class="social-links link-reset">
                                 <svg class="social-svg" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                      x="0px" y="0px" viewBox="0 0 112.196 112.196"
                                      style="enable-background:new 0 0 112.196 112.196;" xml:space="preserve">
@@ -89,7 +89,7 @@ C44.264,81.287,53.979,80.702,53.979,80.702L53.979,80.702z"/>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="tel:+375336758599" class="social-links link-reset">
+                            <a href="tel:+375295141627" class="social-links link-reset">
                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px"
                                      y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
                                      xml:space="preserve">
@@ -112,7 +112,7 @@ C391.911,345.502,391.926,352.363,387.703,356.605z"/>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a target="_blank" href="mailto:6758599@gmail.com" class="social-links link-reset">
+                            <a target="_blank" href="mailto:zhenek02ss@gmail.com" class="social-links link-reset">
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px"
                                      y="0px" viewBox="0 0 216 216" style="enable-background:new 0 0 216 216;"
                                      xml:space="preserve">
@@ -124,7 +124,7 @@ l49.374-39.276V156z"/>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a target="_blank" href="https://vk.com/id214775741" class="social-links link-reset">
+                            <a target="_blank" href="https://www.linkedin.com/in/zhenya-vozny/" class="social-links link-reset">
                                 <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                                     <path style="fill:#fdc62d;"
                                           d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm-74.390625 387h-62.347656v-187.574219h62.347656zm-31.171875-213.1875h-.40625c-20.921875 0-34.453125-14.402344-34.453125-32.402344 0-18.40625 13.945313-32.410156 35.273437-32.410156 21.328126 0 34.453126 14.003906 34.859376 32.410156 0 18-13.53125 32.402344-35.273438 32.402344zm255.984375 213.1875h-62.339844v-100.347656c0-25.21875-9.027343-42.417969-31.585937-42.417969-17.222656 0-27.480469 11.601563-31.988282 22.800781-1.648437 4.007813-2.050781 9.609375-2.050781 15.214844v104.75h-62.34375s.816407-169.976562 0-187.574219h62.34375v26.558594c8.285157-12.78125 23.109375-30.960937 56.1875-30.960937 41.019531 0 71.777344 26.808593 71.777344 84.421874zm0 0"/>

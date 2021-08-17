@@ -38,7 +38,7 @@
                             </div>
                             <div class="command-descr">
                                 <p class="descr-text">${team.key.description}</p>
-                                <a href="#" class="edit-link link-reset">
+                                <a href="?command=update_team_page&id=${team.key.id}" class="edit-link link-reset">
                                     <p class="edit-text">Edit command</p>
                                 </a>
                                 <button style="cursor: pointer" class="btn">View participants</button>

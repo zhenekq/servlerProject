@@ -33,6 +33,7 @@ public class AddToTeamCommandPage implements Command {
         List<Team> teams = null;
         try {
             teams = teamService.getTeamsByManagerId(userId);
+            deleteFullTeams(teams);
             developer = userService.getUserById(userIdDeveloper);
         } catch (ServiceException e) {
             logger.log(Level.ERROR, e.getMessage());
@@ -40,5 +41,14 @@ public class AddToTeamCommandPage implements Command {
         request.getSession().setAttribute("developer", developer);
         request.setAttribute("teams", teams);
         request.getRequestDispatcher(CommandPage.ADD_TO_TEAM_PAGE).forward(request, response);
+    }
+
+    private void deleteFullTeams(List<Team> teams) {
+        for (int i = 0; i < teams.size(); i++) {
+            Team team = teams.get(i);
+            if (team.getCurrentTeamSize() == team.getTeamSize()) {
+                teams.remove(i);
+            }
+        }
     }
 }

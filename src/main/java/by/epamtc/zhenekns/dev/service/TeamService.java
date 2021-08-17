@@ -15,4 +15,6 @@ public interface TeamService {
     void addParticipantToTeam(int managerId, int devId, int teamId) throws ServiceException;
     List<User> getUsersByTeamId(int id) throws ServiceException;
     Team getTeamByDeveloperId(int id) throws ServiceException;
+    int getTeamSizeByTeamId(int id) throws ServiceException;
+    Team getTeamById(int id) throws ServiceException;
 }

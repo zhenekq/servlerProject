@@ -15,6 +15,7 @@ public enum CommandName {
     ADD_NEW_TASK,
     ADD_TO_TEAM,
     COMPLETE_TASK,
+    UPDATE_TEAM,
 
     //GET
     NO_SUCH_COMMAND,
@@ -54,6 +55,7 @@ public enum CommandName {
     UNBLOCK_USER,
     EDIT_USER_PAGE,
     EDIT_USER,
-    FIND_USER
+    FIND_USER,
+    UPDATE_TEAM_PAGE
 
 }

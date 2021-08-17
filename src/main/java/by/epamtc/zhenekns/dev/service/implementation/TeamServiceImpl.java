@@ -60,4 +60,22 @@ public class TeamServiceImpl implements TeamService {
             throw new ServiceException(e);
         }
     }
+
+    @Override
+    public int getTeamSizeByTeamId(int id) throws ServiceException {
+        try {
+            return teamDAO.getTeamSizeByTeamId(id);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
+        }
+    }
+
+    @Override
+    public Team getTeamById(int id) throws ServiceException {
+        try {
+            return teamDAO.getTeamById(id);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
+        }
+    }
 }

@@ -33,9 +33,8 @@ public class DeveloperTasksCommandPage implements Command {
         List<Task> tasks = new ArrayList<>();
         try {
             Team team = teamService.getTeamByDeveloperId(userId);
-            System.out.println("USER ID: " + user.getId());
-            System.out.println("TEAM ID: " + team.getId());
-            tasks = taskService.getTasksByTeamId(team.getId());
+            if (team != null)
+                tasks = taskService.getTasksByTeamId(team.getId());
         } catch (ServiceException e) {
             logger.log(Level.ERROR, e.getMessage());
         }

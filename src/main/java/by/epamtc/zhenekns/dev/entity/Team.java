@@ -10,19 +10,30 @@ public class Team {
     private int currentTeamSize;
     private int teamSize;
     private int managerId;
+    private String status;
 
     public Team(){}
 
-    public Team(int id, String name, String description, int teamSize, int managerId) {
+    public Team(int id, String name, String description, int currentTeamSize, int teamSize, int managerId, String status) {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.currentTeamSize = currentTeamSize;
         this.teamSize = teamSize;
         this.managerId = managerId;
+        this.status = status;
     }
 
     public int getCurrentTeamSize() {
         return currentTeamSize;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public void setCurrentTeamSize(int currentTeamSize) {
@@ -79,12 +90,13 @@ public class Team {
                 teamSize == team.teamSize &&
                 managerId == team.managerId &&
                 name.equals(team.name) &&
-                description.equals(team.description);
+                description.equals(team.description) &&
+                status.equals(team.status);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, description, currentTeamSize, teamSize, managerId);
+        return Objects.hash(id, name, description, currentTeamSize, teamSize, managerId, status);
     }
 
     @Override
@@ -96,6 +108,7 @@ public class Team {
                 ", currentTeamSize=" + currentTeamSize +
                 ", teamSize=" + teamSize +
                 ", managerId=" + managerId +
+                ", status='" + status + '\'' +
                 '}';
     }
 }

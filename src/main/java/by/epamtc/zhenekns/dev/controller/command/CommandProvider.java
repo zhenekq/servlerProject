@@ -32,6 +32,7 @@ public class CommandProvider {
         commands.put(CommandName.ADMIN_PROJECTS, new AdminProjectsCommandPage());
         commands.put(CommandName.BLOCK_USER, new BlockUserCommand());
         commands.put(CommandName.UNBLOCK_USER, new UnblockUserCommand());
+        commands.put(CommandName.UPDATE_TEAM, new UpdateTeamCommand());
 
         //get
         commands.put(CommandName.NO_SUCH_COMMAND, new ErrorCommand());
@@ -59,6 +60,7 @@ public class CommandProvider {
         commands.put(CommandName.DEVELOPER_TASKS, new DeveloperTasksCommandPage());
         commands.put(CommandName.COMPLETE_TASK_PAGE, new CompleteTaskCommandPage());
         commands.put(CommandName.FIND_USER, new FindUserCommandPage());
+        commands.put(CommandName.UPDATE_TEAM_PAGE, new UpdateTeamCommandPage());
     }
 
     public static CommandProvider getInstance() {

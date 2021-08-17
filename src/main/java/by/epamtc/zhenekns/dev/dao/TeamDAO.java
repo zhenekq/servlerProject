@@ -18,5 +18,6 @@ public interface TeamDAO {
     List<User> getUsersByTeamId(int id) throws DaoException;
     int getTeamSizeByTeamId(int id) throws DaoException;
     Team getTeamByDeveloperId(int id) throws DaoException;
+    Team getTeamById(int id) throws DaoException;
 
 }

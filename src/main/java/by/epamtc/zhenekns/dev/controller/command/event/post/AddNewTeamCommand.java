@@ -7,6 +7,7 @@ import by.epamtc.zhenekns.dev.entity.User;
 import by.epamtc.zhenekns.dev.exception.ServiceException;
 import by.epamtc.zhenekns.dev.service.ServiceFactory;
 import by.epamtc.zhenekns.dev.service.TeamService;
+import by.epamtc.zhenekns.dev.status.TeamStatus;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -32,7 +33,6 @@ public class AddNewTeamCommand implements Command {
 
         Team team = new Team();
         setTeam(team, name, description, teamSize, managerId);
-
         try {
             teamService.createTeam(team);
         } catch (ServiceException e) {
@@ -46,5 +46,6 @@ public class AddNewTeamCommand implements Command {
         team.setName(name);
         team.setTeamSize(teamSize);
         team.setManagerId(managerId);
+        team.setStatus(TeamStatus.HIRING);
     }
 }
