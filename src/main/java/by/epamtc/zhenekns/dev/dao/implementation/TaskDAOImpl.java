@@ -35,8 +35,19 @@ public class TaskDAOImpl implements TaskDAO {
     }
 
     @Override
-    public Task updateTask(Task task) throws DaoException {
-        return null;
+    public void updateTask(String name, String description, int id) throws DaoException {
+        ConnectionPool connectionPool = ConnectionPool.getConnectionPool();
+        try(Connection connection = connectionPool.getConnection()){
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "UPDATE task set name = ?, description = ? where id = ?"
+            );
+            preparedStatement.setString(1, name);
+            preparedStatement.setString(2, description);
+            preparedStatement.setInt(3, id);
+            preparedStatement.executeUpdate();
+        }catch (SQLException e){
+            throw new DaoException(e);
+        }
     }
 
     @Override

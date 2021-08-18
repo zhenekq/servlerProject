@@ -23,8 +23,12 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
-    public Task updateTask(Task task) throws ServiceException {
-        return null;
+    public void updateTaskById(String name, String description, int id) throws ServiceException {
+        try {
+            taskDAO.updateTask(name, description, id);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
+        }
     }
 
     @Override
