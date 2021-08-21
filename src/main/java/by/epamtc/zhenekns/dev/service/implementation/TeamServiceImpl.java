@@ -96,4 +96,13 @@ public class TeamServiceImpl implements TeamService {
             throw new ServiceException(e);
         }
     }
+
+    @Override
+    public List<Team> getTeamsByStatus(String status) throws ServiceException {
+        try {
+            return teamDAO.getTeamsByStatus(status);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
+        }
+    }
 }

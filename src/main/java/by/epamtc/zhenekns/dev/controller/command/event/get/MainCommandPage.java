@@ -12,6 +12,7 @@ public class MainCommandPage implements Command {
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        request.getSession().setAttribute("language", "en");
         request.getRequestDispatcher(CommandPage.MAIN_PAGE_JSP).forward(request, response);
     }
 }

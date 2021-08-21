@@ -6,11 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+<%@ taglib prefix="ctg" uri="freelance/tag" %>
+
 <footer class="footer">
     <div class="footer-wrapper wrapper">
         <div class="left-header">
@@ -35,12 +32,13 @@
                             d="m21.479 12.649h-6.318c-1.393 0-2.523 1.13-2.523 2.523s1.13 2.523 2.523 2.523h6.318c1.393 0 2.523-1.13 2.523-2.523s-1.13-2.523-2.523-2.523z" />
                 </svg>
             </div>
-            <p class="footer-subtitle">©Yauheny Vozny - 2021</p>
+            <div class="footer-subtitle"><%--©Yauheny Vozny - 2021--%>
+                <ctg:copyright developer="Yauheni Vozny" year="2021"/>
+            </div>
         </div>
+
         <div class="right-header">
             <button class="footer-logout btn-reset"><a style="text-decoration: none; color: #aaaaaa" class="header-btn-link" href="servlet?command=logout_page">Logout</a></button>
         </div>
     </div>
 </footer>
-</body>
-</html>

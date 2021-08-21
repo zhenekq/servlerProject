@@ -113,4 +113,23 @@ public class TaskDAOImpl implements TaskDAO {
         }
         return tasks;
     }
+
+    @Override
+    public void deleteTaskById(int taskId) throws DaoException {
+        ConnectionPool connectionPool = ConnectionPool.getConnectionPool();
+        try(Connection connection = connectionPool.getConnection()){
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "DELETE FROM task where id = ?"
+            );
+            preparedStatement.setInt(1, taskId);
+            preparedStatement.executeUpdate();
+        }catch (SQLException e){
+            throw new DaoException(e);
+        }
+    }
+
+    @Override
+    public void updateTaskStatusById(int id, String status) throws DaoException {
+
+    }
 }

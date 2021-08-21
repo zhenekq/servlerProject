@@ -14,6 +14,7 @@ public interface TaskService {
     List<Task> getTasksByDeveloperId(int id) throws ServiceException;
     Task getTaskById(int id) throws ServiceException;
     List<Task> getTasksByTeamId(int id) throws ServiceException;
+    void deleteTaskById(int taskId) throws ServiceException;
 
 
 }

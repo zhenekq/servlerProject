@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
 <%--
   Created by IntelliJ IDEA.
   User: user
@@ -44,7 +45,9 @@
                 <!--MANAGER HEADER-->
                 <c:set var="role" value="${user.role}"/>
                 <c:if test="${role.equals('MANAGER')}">
-                    <li class="headerLinks-item"><a href="?command=authorized_main_page" class="link-reset link-header">Projects</a>
+                    <li class="headerLinks-item"><a href="?command=authorized_main_page" class="link-reset link-header">
+                        Projects
+                    </a>
                     </li>
                     <li class="headerLinks-item"><a href="?command=find_developer" class="link-reset link-header">Find
                         developer</a></li>
@@ -61,7 +64,7 @@
                 <c:if test="${role.equals('DEVELOPER')}">
                     <li class="headerLinks-item"><a href="?command=authorized_main_page" class="link-reset link-header">Find
                         team</a></li>
-                    <li class="headerLinks-item"><a href="#" class="link-reset link-header">Team</a></li>
+                    <li class="headerLinks-item"><a href="?command=developer_team" class="link-reset link-header">Team</a></li>
                     <li class="headerLinks-item"><a href="?command=developer_tasks"
                                                     class="link-reset link-header">Tasks</a></li>
                 </c:if>
@@ -91,7 +94,7 @@
                 </c:if>
             </ul>
         </div>
-        <div class="right-header">
+        <div style="align-items: center" class="right-header">
             <h2 class="username">${user.nickname}</h2>
             <div class="dropdown">
                 <button onclick="myFunction()" class="dropbtn btn-reset"></button>

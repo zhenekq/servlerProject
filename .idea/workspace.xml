@@ -7,18 +7,82 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bcdf4f8-750a-447a-8f35-872c5aacb208" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/get/DeveloperTeamCommandPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/get/LanguageCommandPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/post/DeleteTaskCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/post/WorkThereCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/filter/LocaleFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/tag/CopyrightTag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local_en.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local_ru.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/developer/developer_team.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/tld/Copyright.tld" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/CommandName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/CommandName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/CommandPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/CommandPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/CommandProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/CommandProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/get/AddNewProjectCommandPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/get/AddNewProjectCommandPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/get/AuthorizedMainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/get/AuthorizedMainPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/get/EditTaskCommandPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/get/EditTaskCommandPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/post/UpdateTaskCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/post/UpdateTaskCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/get/MainCommandPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/get/MainCommandPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/TaskDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/TaskDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/TeamDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/TeamDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/implementation/TaskDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/implementation/TaskDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/implementation/TeamDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/dao/implementation/TeamDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/filter/PagesFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/filter/PagesFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/TaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/TeamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/TeamService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/implementation/TaskServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/implementation/TaskServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/edit_task.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/edit_task.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/implementation/TeamServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/implementation/TeamServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/status/TaskStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/status/TaskStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/blocked_user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/blocked_user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/parts/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/parts/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/parts/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/parts/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/CommandName.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/CommandName.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/CommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/CommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/CommandProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/CommandProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AddNewProjectCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AddNewProjectCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AuthorizedMainPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AuthorizedMainPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/EditTaskCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/EditTaskCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/MainCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/MainCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/post/UpdateTaskCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/post/UpdateTaskCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/TaskDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/TaskDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/TeamDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/TeamDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/implementation/TaskDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/implementation/TaskDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/implementation/TeamDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/dao/implementation/TeamDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/filter/PagesFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/filter/PagesFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/TaskService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/TaskService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/TeamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/TeamService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/implementation/TaskServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/implementation/TaskServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/implementation/TeamServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/implementation/TeamServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/status/TaskStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/status/TaskStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/manager/edit_task.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/manager/edit_task.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/parts/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/parts/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/parts/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/parts/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/CommandName.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/CommandName.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/CommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/CommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/CommandProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/CommandProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AddNewProjectCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AddNewProjectCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AuthorizedMainPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AuthorizedMainPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/EditTaskCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/EditTaskCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/MainCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/MainCommandPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/post/UpdateTaskCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/post/UpdateTaskCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/TaskDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/TaskDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/TeamDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/TeamDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/implementation/TaskDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/implementation/TaskDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/implementation/TeamDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/dao/implementation/TeamDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/filter/PagesFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/filter/PagesFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/TaskService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/TaskService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/TeamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/TeamService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/implementation/TaskServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/implementation/TaskServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/implementation/TeamServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/implementation/TeamServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/status/TaskStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/status/TaskStatus.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,8 +175,8 @@
         <option value="FxmlFile" />
         <option value="Enum" />
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="CSS File" />
+        <option value="Interface" />
         <option value="Jsp File" />
         <option value="Class" />
       </list>
@@ -157,24 +221,24 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp\images" />
-      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp" />
-      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp\WEB-INF\jsp\items" />
-      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp\WEB-INF\lib" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp\jsp\common" />
       <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp\jsp\manager" />
       <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp\jsp\customer" />
       <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp" />
       <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp\WEB-INF\jsp\style" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp\images" />
+      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp" />
+      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp\WEB-INF\jsp\items" />
+      <recent name="D:\folderWithAllDevelopmentOnThisPC\Servlets\colibri\src\main\webapp\WEB-INF\lib" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -538,7 +602,8 @@
       <workItem from="1628947043401" duration="3439000" />
       <workItem from="1628963146312" duration="52125000" />
       <workItem from="1629187046043" duration="23335000" />
-      <workItem from="1629271792727" duration="1383000" />
+      <workItem from="1629271792727" duration="27895000" />
+      <workItem from="1629449824263" duration="8085000" />
     </task>
     <servers />
   </component>

@@ -71,7 +71,9 @@ public class PagesFilter implements Filter {
                 CommandName.SHOW_TEAM,
                 CommandName.VIEW_TASKS,
                 CommandName.UPDATE_TASK,
-                CommandName.EDIT_TASK
+                CommandName.EDIT_TASK,
+                CommandName.LANGUAGE,
+                CommandName.DELETE_TASK
         );
         pagesFilter.put(Role.MANAGER, managerPages);
 
@@ -114,7 +116,9 @@ public class PagesFilter implements Filter {
                 CommandName.COMPLETE_TASK,
                 CommandName.ADDITIONAL_INFO,
                 CommandName.ADDITIONAL_INFO_PAGE,
-                CommandName.SHOW_TEAM
+                CommandName.SHOW_TEAM,
+                CommandName.DEVELOPER_TEAM,
+                CommandName.WORK_THERE
                 );
         pagesFilter.put(Role.DEVELOPER, developerPages);
 

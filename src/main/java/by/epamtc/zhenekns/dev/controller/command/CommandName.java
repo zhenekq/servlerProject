@@ -61,6 +61,10 @@ public enum CommandName {
     SHOW_TEAM,
     VIEW_TASKS,
     EDIT_TASK,
-    UPDATE_TASK
+    UPDATE_TASK,
+    LANGUAGE,
+    DEVELOPER_TEAM,
+    WORK_THERE,
+    DELETE_TASK
 
 }

@@ -23,4 +23,5 @@ public interface TeamDAO {
     void deleteTeammate(int teammateId) throws DaoException;
     List<Team> getAllTeams() throws DaoException;
     void updateTeamStatusById(int teamId, String status) throws DaoException;
+    List<Team> getTeamsByStatus(String status) throws DaoException;
 }

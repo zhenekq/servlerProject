@@ -9,9 +9,6 @@ import by.epamtc.zhenekns.dev.exception.ServiceException;
 import by.epamtc.zhenekns.dev.service.ServiceFactory;
 import by.epamtc.zhenekns.dev.service.TaskService;
 import by.epamtc.zhenekns.dev.service.TeamService;
-import by.epamtc.zhenekns.dev.status.TeamStatus;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mysql.cj.xdevapi.JsonArray;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -44,6 +41,6 @@ public class EditTaskCommandPage implements Command {
         request.getSession().setAttribute("task", task);
         request.setAttribute("task", task);
         request.setAttribute("teams", teams);
-        request.getRequestDispatcher(CommandPage.EDIT_TASK).forward(request,response);
+        request.getRequestDispatcher(CommandPage.EDIT_TASK).forward(request, response);
     }
 }

@@ -63,4 +63,13 @@ public class TaskServiceImpl implements TaskService {
             throw new ServiceException(e);
         }
     }
+
+    @Override
+    public void deleteTaskById(int taskId) throws ServiceException {
+        try {
+            taskDAO.deleteTaskById(taskId);
+        } catch (DaoException e) {
+            throw new ServiceException(e);
+        }
+    }
 }

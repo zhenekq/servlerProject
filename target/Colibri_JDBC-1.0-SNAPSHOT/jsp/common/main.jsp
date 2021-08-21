@@ -21,11 +21,112 @@
         input.find_place::placeholder {
             color: #ffffff;
         }
+        .main-item {
+            background-color: var(--black);
+            border-radius: 6px;
+            margin-bottom: 50px;
+        }
+        .command-box {
+            padding: 20px;
+        }
+        .command-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--yellow);
+            font-family: var(--font);
+            font-size: 16px;
+        }
+        .command-amount {
+            color: var(--white);
+            display: flex;
+        }
+        .command-participants:first-child {
+            padding-right: 10px;
+        }
+        .command-descr {
+            font-family: var(--font);
+            color: var(--white);
+            font-size: 17px;
+        }
+        .descr-text {
+            padding-bottom: 20px;
+        }
+        .edit-link {
+            margin-right: 25px;
+            display: inline-block;
+            padding: 10px;
+            background-color: var(--yellow);
+            color: var(--black);
+            border-radius: 6px;
+        }
+        .edit-text {
+            margin: 0;
+        }
+        .btn.active,
+        .btn:hover,
+        .btn:focus {
+            outline: none;
+        }
+        .view-box {
+            display: none;
+        }
+        .view-box.show {
+            display: block;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px;
+            background-color: transparent;
+            color: var(--grey);
+            border: 1px solid var(--grey);
+
+            font-family: var(--font);
+            color: var(--grey);
+            border-radius: 6px;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+        .view-list {
+            margin: 0 auto;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .view-item {
+            background-color: var(--grey);
+            border-radius: 6px;
+            width: 220px;
+            height: 300px;
+        }
+        .view-name {
+            padding-top: 10px;
+            display: block;
+            width: 106px;
+            margin: 0 auto;
+            color: var(--yellow);
+        }
+        .view-about {
+            padding-left: 10px;
+        }
+        .view-link {
+            display: inline-block;
+            padding: 7px;
+            background-color: transparent;
+            color: var(--grey);
+            border: 1px solid var(--black);
+            font-family: var(--font);
+            color: var(--black);
+            border-radius: 6px;
+            font-size: 15px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
 <jsp:include page="../parts/header.jsp"/>
-<main class="main">
+<main style="background-image: url(/images/bg_seri.jpg)" class="main">
     <div class="main-wrapper wrapper">
         <c:set var="role" value="${user.role}"/>
         <!--MAIN PAGE TITLE-->
@@ -120,6 +221,54 @@
 
         <c:if test="${role.equals('DEVELOPER')}">
             <h2 class="main-title">Teams</h2>
+
+            <ul style="margin-top: 40px" class="main-list list-reset">
+                <c:forEach var="team" items="${teams}">
+                    <li style="width: 800px; margin: 0 auto; margin-bottom: 50px;" class="main-item">
+                        <div class="command-box">
+                            <div class="command-title">
+                                <h3 class="command-title-text">${team.key.name}</h3>
+                                <div class="command-amount">
+                                    <p class="command-participants">Participants:</p>
+                                    <p class="command-participants">${team.key.currentTeamSize}/</p>
+                                    <p class="command-participants">${team.key.teamSize}</p>
+                                </div>
+                            </div>
+                            <div class="command-descr">
+                                <p class="descr-text">${team.key.description}</p>
+                                <a href="servlet?command=work_there&id=${team.key.id}"
+                                   class="edit-link link-reset" target="_blank">
+                                    <p class="edit-text">Work there</p>
+                                </a>
+                                <a href="servlet?command=user_profile&id=${team.key.managerId}" class="edit-link link-reset"
+                                   target="_blank">
+                                    <p class="edit-text">View manager</p>
+                                </a>
+                                <button style="cursor: pointer; margin-bottom: 0;" class="btn">View participants</button>
+                                <div class="view-box">
+                                    <ul style="padding-top: 20px" class="view-list list-reset">
+                                        <c:forEach var="user" items="${team.value}">
+                                            <li style="height: 100%; margin-bottom: 20px" class="view-item">
+                                                <h3 style="font-size: 18px" class="view-name">${user.nickname}</h3>
+                                                <div class="view-about">
+                                                    <p class="about-user">About user:</p>
+                                                    <p class="about-text">${user.userInfo.qualification}</p>
+                                                </div>
+                                                <div class="view-links">
+                                                    <a href="servlet?command=user_profile&id=${user.id}"
+                                                       class="view-link link-reset" target="_blank">
+                                                        <p class="edit-text">View profile</p>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </c:forEach>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </c:forEach>
+            </ul>
         </c:if>
 
         <c:if test="${role.equals('ADMIN')}">
@@ -193,7 +342,17 @@
 
     </div>
 </main>
-<%@include file="../parts/footer.jsp"%>
+<%@include file="../parts/footer.jsp" %>
 <script src="${pageContext.request.contextPath}/jsp/js/main.js"></script>
+<script>
+    var acc = document.getElementsByClassName("btn");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function () {
+            this.classList.toggle("active");
+            this.nextElementSibling.classList.toggle("show");
+        }
+    }
+</script>
 </body>
 </html>

@@ -32,8 +32,7 @@
         <filter-name>pageFilter</filter-name>
         <url-pattern>/servlet</url-pattern>
     </filter-mapping>
-
-
-
+    
+    <request-character-encoding>UTF-8</request-character-encoding>
 
 </web-app>

@@ -37,17 +37,6 @@
                                 <textarea class="create-input create-texterea btn-reset" name="description" cols="35"
                                           rows="8">${task.description}</textarea>
                             </li>
-                            <%--<li class="create-item">
-                                <p class="create-title">Choose a command:</p>
-                                <div class="form_radio_group">
-                                    <c:forEach var="team" items="${teams}">
-                                        <div class="form_radio_group-item">
-                                            <input id="radio-${team.id}" type="radio" name="team" value="${team.id}">
-                                            <label for="radio-${team.id}">${team.name}</label>
-                                        </div>
-                                    </c:forEach>
-                                </div>
-                            </li>--%>
                         </ul>
                         <input class="submit-input btn-reset" type="submit" value="Update">
                     </form>
