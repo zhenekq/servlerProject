@@ -105,6 +105,10 @@
             </div>
             <p class="user-role-title">Role:</p>
             <p class="user-role">${user.role}</p>
+            <div class="lang">
+                <a href="#" class="ru-lang link-reset">RU</a>
+                <a href="#" class="en-lang link-reset">EN</a>
+            </div>
         </div>
     </div>
 </header>

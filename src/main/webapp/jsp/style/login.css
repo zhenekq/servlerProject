@@ -129,3 +129,30 @@ body {
   font-family: var(--font);
   color: var(--yellow);
 }
+
+.lang {
+  margin-left: 15px;
+  font-size: 0;
+}
+.ru-lang {
+  color: var(--grey);
+  padding: 3px 5px;
+  border: 1px solid var(--grey);
+  font-size: 17px;
+}
+.en-lang {
+  font-size: 17px;
+  color: var(--grey);
+  padding: 3px 5px;
+  border: 1px solid var(--grey);
+}
+
+.ru-lang:hover{
+  color: var(--yellow);
+  transition: 0.7s;
+}
+
+.en-lang:hover{
+  color: var(--yellow);
+  transition: 0.7s;
+}
