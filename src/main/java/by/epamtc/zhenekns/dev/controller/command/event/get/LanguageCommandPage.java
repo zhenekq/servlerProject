@@ -13,8 +13,9 @@ public class LanguageCommandPage implements Command {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String language = request.getParameter("language");
+        System.out.println(language);
         if(language.equals("en") || language.equals("ru")){
-            request.getSession().setAttribute("language", language);
+            request.getSession(true).setAttribute("language", language);
             response.sendRedirect(CommandPageRedirect.AUTHORIZED_MAIN_PAGE);
         }
     }

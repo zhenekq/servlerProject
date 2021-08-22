@@ -7,9 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/jsp/style/registration.css"/>
-    <%--<style>
-        <%@include file="style/registration.css"%>
-    </style>--%>
+
     <jsp:useBean id="user" class="by.epamtc.zhenekns.dev.entity.User"/>
 </head>
 <body>

@@ -11,6 +11,37 @@
 <html>
 <head>
     <title>Title</title>
+    <style>
+        .wrapper{
+            max-width: 1400px;
+        }
+        .lang {
+            margin-left: 15px;
+            font-size: 0;
+        }
+        .ru-lang {
+            color: var(--grey);
+            padding: 3px 5px;
+            border: 1px solid var(--grey);
+            font-size: 17px;
+        }
+        .en-lang {
+            font-size: 17px;
+            color: var(--grey);
+            padding: 3px 5px;
+            border: 1px solid var(--grey);
+        }
+
+        .ru-lang:hover{
+            color: var(--yellow);
+            transition: 0.7s;
+        }
+
+        .en-lang:hover{
+            color: var(--yellow);
+            transition: 0.7s;
+        }
+    </style>
 </head>
 <body>
 <header class="header">
@@ -106,8 +137,8 @@
             <p class="user-role-title">Role:</p>
             <p class="user-role">${user.role}</p>
             <div class="lang">
-                <a href="#" class="ru-lang link-reset">RU</a>
-                <a href="#" class="en-lang link-reset">EN</a>
+                <a href="?command=language&language=ru" class="ru-lang link-reset">RU</a>
+                <a href="?command=language&language=en" class="en-lang link-reset">EN</a>
             </div>
         </div>
     </div>

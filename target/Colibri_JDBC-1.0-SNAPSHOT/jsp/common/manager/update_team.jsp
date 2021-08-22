@@ -12,10 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../style/create_new_team.css">
-    <style>
-        <%@include file="../../style/create_new_team.css"%>
-    </style>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/jsp/style/create_new_team.css">
     <title>Update team</title>
 </head>
 

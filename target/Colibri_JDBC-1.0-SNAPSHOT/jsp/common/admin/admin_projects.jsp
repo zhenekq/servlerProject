@@ -12,9 +12,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All projects</title>
-    <style>
-        <%@include file="../../style/main.css"%>
-    </style>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/jsp/style/main.css">
+
 </head>
 <body>
 <jsp:include page="../../parts/header.jsp"/>

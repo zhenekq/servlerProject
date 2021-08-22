@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/jsp/style/style.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/jsp/style/style.css"/>
     <title>Welcome!</title>
 </head>
 <body>
@@ -120,10 +120,6 @@
         </div>
         <p class="footer-subtitle">©Yauheny Vozny - 2021</p>
     </div>
-    <%--<div class="right-header">
-      <button class="footer-login header-btn btn-reset"><a class="header-btn-link">Login</a></button>
-      <button class="footer-sign-up header-btn btn-reset"><a class="header-btn-link">Sign-up</a></button>
-    </div>--%>
 </footer>
 </body>
 </html>

@@ -13,9 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/jsp/style/new_task.css">
     <title>Edit task</title>
-    <%--<style>
-        <%@include file="../../style/create_new_team.css"%>
-    </style>--%>
 </head>
 <body>
 <%@include file="../../parts/header.jsp" %>

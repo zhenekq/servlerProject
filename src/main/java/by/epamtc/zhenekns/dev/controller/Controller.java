@@ -30,14 +30,12 @@ public class Controller extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         process(request, response);
-        System.out.println("GET REQUEST");
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println(request.getSession(true).getAttribute("language"));
         process(request, response);
-        System.out.println("POST REQUEST");
-
     }
 
     private static void process(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {

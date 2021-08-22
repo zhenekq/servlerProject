@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/team.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/jsp/style/team.css">
     <title>Team info</title>
     <style>
         <%@include file="../style/team.css"%>

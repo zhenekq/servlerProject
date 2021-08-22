@@ -12,11 +12,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../style/complete_task.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/jsp/style/complete_task.css">
     <title>Hand over the task</title>
-    <style>
-        <%@include file="../../style/complete_task.css"%>
-    </style>
 </head>
 
 <body>

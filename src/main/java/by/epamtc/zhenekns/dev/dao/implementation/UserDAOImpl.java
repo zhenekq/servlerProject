@@ -232,7 +232,6 @@ public class UserDAOImpl implements UserDAO {
                 user.setPassword(resultSet.getString("user_password"));
                 user.setId(userId);
                 user.setUserInfo(userInfo);
-                //System.out.println(user);
                 users.add(user);
             }
         } catch (SQLException e) {

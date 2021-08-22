@@ -10,11 +10,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../style/main.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/jsp/style/main.css">
     <title>Project responses</title>
-    <style>
-        <%@include file="../../style/main.css"%>
-    </style>
+
 </head>
 <body>
 <%@include file="../../parts/header.jsp" %>

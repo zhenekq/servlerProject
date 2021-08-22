@@ -94,6 +94,6 @@
     </div>
 </main>
 <jsp:include page="../parts/footer.jsp"/>
-<script src="${pageContext.request.contextPath}/jsp/js/main.js"></script>
+<script src="${pageContext.request.contextPath}/WEB-INF/jsp/js/main.js"></script>
 </body>
 </html>

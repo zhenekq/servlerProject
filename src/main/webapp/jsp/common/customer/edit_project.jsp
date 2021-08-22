@@ -12,10 +12,7 @@
     <title>Edit project</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/new_project.css">
-    <style>
-        <%@include file="../../style/new_project.css"%>
-    </style>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/jsp/style/new_project.css">>
 </head>
 <body>
 <jsp:include page="../../parts/header.jsp"/>

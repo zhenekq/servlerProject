@@ -16,11 +16,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/user_profile.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/jsp/style/user_profile.css">
     <title>User profile</title>
-    <style>
-        <%@include file="../style/user_profile.css"%>
-    </style>
 </head>
 <body>
 <jsp:include page="../parts/header.jsp"/>
@@ -107,7 +104,7 @@
         </div>
     </div>
 </footer>
-<script src="/jsp/js/project_form.js"></script>
+<script src="${pageContext.request.contextPath}/jsp/js/project_form.js"></script>
 </body>
 </html>
 </body>

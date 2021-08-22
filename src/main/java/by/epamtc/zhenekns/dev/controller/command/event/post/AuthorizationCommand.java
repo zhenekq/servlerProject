@@ -32,7 +32,6 @@ public class AuthorizationCommand implements Command {
                 UserInfo userInfo = userService.getAllInfoAboutUserById(user.getId());
                 user.setUserInfo(userInfo);
                 request.getSession().setAttribute("user", user);
-                System.out.println(user);
                 response.sendRedirect(request.getContextPath() + "?command=authorized_main_page");
             } else {
                 request.setAttribute("error_message_login", "User not found, check your input data please!");

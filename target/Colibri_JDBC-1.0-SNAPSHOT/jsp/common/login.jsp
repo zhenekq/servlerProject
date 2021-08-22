@@ -6,9 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="${pageContext.request.contextPath}/jsp/style/login.css"/>
   <title>Login</title>
-  <style>
-    <%@include file='../style/login.css'%>
-  </style>
 </head>
 <body>
   <main class="main">

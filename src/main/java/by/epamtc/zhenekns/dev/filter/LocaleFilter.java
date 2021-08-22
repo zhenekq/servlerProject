@@ -23,12 +23,10 @@ public class LocaleFilter implements Filter {
         String localeLanguage = (String) request.getSession().getAttribute(LOCALE);
 
         if(localeLanguage == null){
-            request.getSession().setAttribute("locale", ENGLISH);
+            request.getSession().setAttribute(LOCALE, ENGLISH);
         }
-        String changedLanguage = request.getParameter(LOCALE);
-        if(changedLanguage != null){
-            request.getSession().setAttribute(LOCALE, changedLanguage);
-
+        if(localeLanguage.equals("en")){
+            request.getSession().setAttribute(LOCALE, localeLanguage);
         }
 
 
