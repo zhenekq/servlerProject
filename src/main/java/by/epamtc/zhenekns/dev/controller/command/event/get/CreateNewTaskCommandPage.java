@@ -7,6 +7,7 @@ import by.epamtc.zhenekns.dev.entity.User;
 import by.epamtc.zhenekns.dev.exception.ServiceException;
 import by.epamtc.zhenekns.dev.service.ServiceFactory;
 import by.epamtc.zhenekns.dev.service.TeamService;
+import by.epamtc.zhenekns.dev.util.RequestAttributes;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -24,7 +25,7 @@ public class CreateNewTaskCommandPage implements Command {
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        User user = (User) request.getSession().getAttribute("user");
+        User user = (User) request.getSession().getAttribute(RequestAttributes.USER);
         int userId = user.getId();
         List<Team> teams = null;
         try {
@@ -32,7 +33,7 @@ public class CreateNewTaskCommandPage implements Command {
         } catch (ServiceException e) {
             logger.log(Level.ERROR,e.getMessage());
         }
-        request.setAttribute("teams", teams);
+        request.setAttribute(RequestAttributes.TEAMS, teams);
         request.getRequestDispatcher(CommandPage.CREATE_NEW_TASK).forward(request, response);
     }
 }

@@ -27,7 +27,6 @@ public class UnblockUserCommand implements Command {
         int userId = Integer.parseInt(request.getParameter("id"));
         try {
             UserInfo userInfo = userService.getAllInfoAboutUserById(userId);
-            System.out.println(userInfo.getUserId());
             userService.updateUserStatusById(userInfo.getUserId(), UserStatus.USER_STATUS_FREE);
         } catch (ServiceException e) {
             logger.log(Level.ERROR, e.getMessage());

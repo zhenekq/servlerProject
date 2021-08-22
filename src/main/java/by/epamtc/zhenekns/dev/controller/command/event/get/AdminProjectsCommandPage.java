@@ -7,6 +7,7 @@ import by.epamtc.zhenekns.dev.entity.User;
 import by.epamtc.zhenekns.dev.exception.ServiceException;
 import by.epamtc.zhenekns.dev.service.ProjectService;
 import by.epamtc.zhenekns.dev.service.ServiceFactory;
+import by.epamtc.zhenekns.dev.util.RequestAttributes;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -30,7 +31,7 @@ public class AdminProjectsCommandPage implements Command {
         } catch (ServiceException e) {
             logger.log(Level.ERROR, e.getMessage());
         }
-        request.setAttribute("projects", projects);
+        request.setAttribute(RequestAttributes.PROJECTS, projects);
         request.getRequestDispatcher(CommandPage.ADMIN_PROJECTS).forward(request,response);
     }
 }

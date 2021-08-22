@@ -6,6 +6,7 @@ import by.epamtc.zhenekns.dev.entity.Task;
 import by.epamtc.zhenekns.dev.exception.ServiceException;
 import by.epamtc.zhenekns.dev.service.ServiceFactory;
 import by.epamtc.zhenekns.dev.service.TaskService;
+import by.epamtc.zhenekns.dev.util.RequestAttributes;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -22,14 +23,14 @@ public class CompleteTaskCommandPage implements Command {
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        int taskId = Integer.parseInt(request.getParameter("id"));
+        int taskId = Integer.parseInt(request.getParameter(RequestAttributes.ID));
         Task task = null;
         try {
             task = taskService.getTaskById(taskId);
         } catch (ServiceException e) {
             logger.log(Level.ERROR, e.getMessage());
         }
-        request.getSession().setAttribute("task", task);
+        request.getSession().setAttribute(RequestAttributes.TASK, task);
         request.getRequestDispatcher(CommandPage.COMPLETE_TASK_PAGE).forward(request, response);
     }
 }

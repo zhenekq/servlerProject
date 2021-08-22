@@ -8,6 +8,7 @@ import by.epamtc.zhenekns.dev.exception.ServiceException;
 import by.epamtc.zhenekns.dev.service.ServiceFactory;
 import by.epamtc.zhenekns.dev.service.TeamService;
 import by.epamtc.zhenekns.dev.service.UserService;
+import by.epamtc.zhenekns.dev.util.RequestAttributes;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -26,9 +27,9 @@ public class AddToTeamCommandPage implements Command {
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        User user = (User) request.getSession().getAttribute("user");
+        User user = (User) request.getSession().getAttribute(RequestAttributes.USER);
         User developer = null;
-        int userIdDeveloper = Integer.parseInt(request.getParameter("id"));
+        int userIdDeveloper = Integer.parseInt(request.getParameter(RequestAttributes.ID));
         int userId = user.getId();
         List<Team> teams = null;
         try {
@@ -38,8 +39,8 @@ public class AddToTeamCommandPage implements Command {
         } catch (ServiceException e) {
             logger.log(Level.ERROR, e.getMessage());
         }
-        request.getSession().setAttribute("developer", developer);
-        request.setAttribute("teams", teams);
+        request.getSession().setAttribute(RequestAttributes.DEVELOPER, developer);
+        request.setAttribute(RequestAttributes.TEAMS, teams);
         request.getRequestDispatcher(CommandPage.ADD_TO_TEAM_PAGE).forward(request, response);
     }
 

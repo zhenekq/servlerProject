@@ -16,8 +16,6 @@ public class UserServiceImpl implements UserService {
     private static final DAOFactory daoFactory = DAOFactory.getInstance();
     private static final UserDAO userDAO = daoFactory.getUserDAO();
 
-    //REFACTORED------------------------------------------------------------------------------
-
     @Override
     public User getUserById(int id) throws ServiceException {
         try {

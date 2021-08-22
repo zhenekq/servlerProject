@@ -44,7 +44,6 @@ public class RegistrationCommand implements Command {
         try {
             if (!userService.checkUser(username, email)) {
                 user = new User(userId, email, password, username, role);
-                System.out.println(user);
                 userService.authorizationUser(user);
                 request.getSession().setAttribute("user", user);
                 response.sendRedirect(request.getContextPath() + CommandPageRedirect.ADDITIONAL_INFO_PAGE);

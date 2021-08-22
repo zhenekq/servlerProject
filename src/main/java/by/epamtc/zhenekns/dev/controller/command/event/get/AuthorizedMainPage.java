@@ -10,6 +10,8 @@ import by.epamtc.zhenekns.dev.service.TeamService;
 import by.epamtc.zhenekns.dev.service.UserService;
 import by.epamtc.zhenekns.dev.status.ProjectStatus;
 import by.epamtc.zhenekns.dev.status.TeamStatus;
+import by.epamtc.zhenekns.dev.util.RequestAttributes;
+import by.epamtc.zhenekns.dev.util.RoleAttributes;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -31,18 +33,18 @@ public class AuthorizedMainPage implements Command {
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        User user = (User) request.getSession().getAttribute("user");
+        User user = (User) request.getSession().getAttribute(RequestAttributes.USER);
 
-        request.setAttribute("user", user);
-        if (user.getRole().equals("MANAGER")) {
+        request.setAttribute(RequestAttributes.USER, user);
+        if (user.getRole().equals(RoleAttributes.MANAGER)) {
             Map<Project, User> projects = null;
             try {
                 projects = projectService.getAllProjectsByStatus(ProjectStatus.OPEN_FOR_REQUESTS);
             } catch (ServiceException e) {
                 logger.log(Level.ERROR, e.getMessage());
             }
-            request.setAttribute("projects", projects);
-        } else if (user.getRole().equals("CUSTOMER")) {
+            request.setAttribute(RequestAttributes.PROJECTS, projects);
+        } else if (user.getRole().equals(RoleAttributes.CUSTOMER)) {
             List<User> managers = null;
             try {
                 managers = userService.getAllUsersByRole(Role.MANAGER);
@@ -58,25 +60,25 @@ public class AuthorizedMainPage implements Command {
                 }
                 manager.setUserInfo(userInfo);
             }
-            request.setAttribute("managers", managers);
-        } else if (user.getRole().equals("ADMIN")) {
+            request.setAttribute(RequestAttributes.MANAGERS, managers);
+        } else if (user.getRole().equals(RoleAttributes.ADMIN)) {
             List<User> users = null;
-            if (request.getParameter("tag") == null || request.getParameter("tag").isEmpty()) {
+            if (request.getParameter(RequestAttributes.TAG) == null || request.getParameter(RequestAttributes.TAG).isEmpty()) {
                 try {
                     users = userService.getAllUsers();
                 } catch (ServiceException e) {
                     logger.log(Level.ERROR, e.getMessage());
                 }
             } else {
-                String tag = request.getParameter("tag");
+                String tag = request.getParameter(RequestAttributes.TAG);
                 try {
                     users = userService.getUsersByTag(tag);
                 } catch (ServiceException e) {
                     logger.log(Level.ERROR, e.getMessage());
                 }
             }
-            request.setAttribute("users", users);
-        } else if (user.getRole().equals("DEVELOPER")) {
+            request.setAttribute(RequestAttributes.USERS, users);
+        } else if (user.getRole().equals(RoleAttributes.DEVELOPER)) {
             List<Team> teams = null;
             try {
                 teams = teamService.getTeamsByStatus(TeamStatus.HIRING);
@@ -95,7 +97,7 @@ public class AuthorizedMainPage implements Command {
                 }
                 teamListMap.put(team, userList);
             }
-            request.setAttribute("teams", teamListMap);
+            request.setAttribute(RequestAttributes.TEAMS, teamListMap);
         }
         request.getRequestDispatcher(CommandPage.AUTHORIZED_MAIN_PAGE_JSP)
                 .forward(request, response);

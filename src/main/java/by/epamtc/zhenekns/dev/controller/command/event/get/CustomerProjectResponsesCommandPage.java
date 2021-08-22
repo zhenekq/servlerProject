@@ -7,6 +7,7 @@ import by.epamtc.zhenekns.dev.entity.User;
 import by.epamtc.zhenekns.dev.exception.ServiceException;
 import by.epamtc.zhenekns.dev.service.ProjectResponseService;
 import by.epamtc.zhenekns.dev.service.ServiceFactory;
+import by.epamtc.zhenekns.dev.util.RequestAttributes;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -25,7 +26,7 @@ public class CustomerProjectResponsesCommandPage implements Command {
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        User user = (User) request.getSession().getAttribute("user");
+        User user = (User) request.getSession().getAttribute(RequestAttributes.USER);
         List<ProjectResponse> projectResponses = null;
         try {
             projectResponses =
@@ -33,8 +34,7 @@ public class CustomerProjectResponsesCommandPage implements Command {
         } catch (ServiceException e) {
             logger.log(Level.ERROR, e.getMessage());
         }
-        System.out.println(projectResponses);
-        request.setAttribute("projectResponses", projectResponses);
+        request.setAttribute(RequestAttributes.PROJECT_RESPONSES, projectResponses);
         request.getRequestDispatcher(CommandPage.CUSTOMER_PROJECT_REQUESTS_PAGE).forward(request, response);
     }
 }

@@ -8,6 +8,8 @@ import by.epamtc.zhenekns.dev.entity.UserInfo;
 import by.epamtc.zhenekns.dev.exception.ServiceException;
 import by.epamtc.zhenekns.dev.service.ServiceFactory;
 import by.epamtc.zhenekns.dev.service.UserService;
+import by.epamtc.zhenekns.dev.status.UserStatus;
+import by.epamtc.zhenekns.dev.util.RequestAttributes;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -41,11 +43,11 @@ public class FindDeveloperCommandPage implements Command {
                 logger.log(Level.ERROR, e.getMessage());
             }
             developer.setUserInfo(userInfo);
-            if(developer.getUserInfo().getStatus().equals("FREE")){
+            if(developer.getUserInfo().getStatus().equals(UserStatus.USER_STATUS_FREE)){
                 developers.add(developer);
             }
         }
-        request.setAttribute("developers", developers);
+        request.setAttribute(RequestAttributes.DEVELOPERS, developers);
         request.getRequestDispatcher(CommandPage.FIND_DEVELOPER).forward(request, response);
     }
 }

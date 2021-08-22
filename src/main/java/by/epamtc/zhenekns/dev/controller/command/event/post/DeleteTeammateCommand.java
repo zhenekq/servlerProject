@@ -23,7 +23,6 @@ public class DeleteTeammateCommand implements Command {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         int teammateId = Integer.parseInt(request.getParameter("id"));
-        System.out.println("DELETE");
         try {
             teamService.deleteTeammate(teammateId);
         } catch (ServiceException e) {

@@ -7,6 +7,7 @@ import by.epamtc.zhenekns.dev.entity.User;
 import by.epamtc.zhenekns.dev.exception.ServiceException;
 import by.epamtc.zhenekns.dev.service.ProjectService;
 import by.epamtc.zhenekns.dev.service.ServiceFactory;
+import by.epamtc.zhenekns.dev.util.RequestAttributes;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,7 +24,7 @@ public class ProjectInfoCommandPage implements Command {
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        int projectId = Integer.parseInt(request.getParameter("id"));
+        int projectId = Integer.parseInt(request.getParameter(RequestAttributes.ID));
         Project project = null;
         try {
             project = projectService.getProjectById(projectId);
@@ -31,7 +32,7 @@ public class ProjectInfoCommandPage implements Command {
             logger.log(Level.ERROR,e.getMessage());
         }
 
-        request.setAttribute("project", project);
+        request.setAttribute(RequestAttributes.PROJECT, project);
         request.getRequestDispatcher(CommandPage.PROJECT_INFO_PAGE).forward(request,response);
     }
 }

@@ -27,7 +27,6 @@ public class AddNewProjectCommand implements Command {
         String title = request.getParameter("title");
         String description = request.getParameter("description");
         String qualification = request.getParameter("qualification");
-        //try
         int teamSize = Integer.parseInt(request.getParameter("teamSize"));
         int cost = Integer.parseInt(request.getParameter("cost"));
         String deadline = request.getParameter("deadline");

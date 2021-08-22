@@ -33,7 +33,6 @@ public class ApproveProjectRequestCommand implements Command {
         try {
             ProjectResponse projectResponse = projectResponseService.getProjectResponseById(id);
             int projectId = projectResponse.getProjectId();
-            System.out.println(projectId);
             projectResponseService.updateProjectResponseStatusById(ProjectResponseStatus.APPROVED, id);
             projectService.updateProjectStatusById(ProjectStatus.CLOSED_FOR_REQUESTS, projectId);
 

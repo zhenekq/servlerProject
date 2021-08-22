@@ -7,6 +7,7 @@ import by.epamtc.zhenekns.dev.entity.User;
 import by.epamtc.zhenekns.dev.exception.ServiceException;
 import by.epamtc.zhenekns.dev.service.ServiceFactory;
 import by.epamtc.zhenekns.dev.service.TeamService;
+import by.epamtc.zhenekns.dev.util.RequestAttributes;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -27,7 +28,7 @@ public class ShowManagerTeamsCommandPage implements Command {
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        User user = (User) request.getSession().getAttribute("user");
+        User user = (User) request.getSession().getAttribute(RequestAttributes.USER);
         int managerId = user.getId();
         List<Team> teams = null;
         try {
@@ -46,7 +47,7 @@ public class ShowManagerTeamsCommandPage implements Command {
             }
             teamListMap.put(team, userList);
         }
-        request.setAttribute("teams", teamListMap);
+        request.setAttribute(RequestAttributes.TEAMS, teamListMap);
         request.getRequestDispatcher(CommandPage.MANAGER_TEAMS_PAGE).forward(request, response);
     }
 }

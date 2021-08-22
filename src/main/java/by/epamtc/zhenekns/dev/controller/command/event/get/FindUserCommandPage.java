@@ -6,6 +6,7 @@ import by.epamtc.zhenekns.dev.entity.User;
 import by.epamtc.zhenekns.dev.exception.ServiceException;
 import by.epamtc.zhenekns.dev.service.ServiceFactory;
 import by.epamtc.zhenekns.dev.service.UserService;
+import by.epamtc.zhenekns.dev.util.RequestAttributes;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,14 +24,14 @@ public class FindUserCommandPage implements Command {
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        String tag = request.getParameter("tag");
+        String tag = request.getParameter(RequestAttributes.TAG);
         List<User> users = null;
         try {
             users = userService.getUsersByTag(tag);
         } catch (ServiceException e) {
             logger.log(Level.ERROR, e.getMessage());
         }
-        request.setAttribute("users", users);
+        request.setAttribute(RequestAttributes.USERS, users);
         request.getRequestDispatcher(CommandPage.FIND_USER).forward(request, response);
     }
 }

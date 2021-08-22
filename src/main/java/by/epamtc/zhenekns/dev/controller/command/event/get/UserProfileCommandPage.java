@@ -8,6 +8,7 @@ import by.epamtc.zhenekns.dev.exception.ServiceException;
 import by.epamtc.zhenekns.dev.service.ServiceFactory;
 import by.epamtc.zhenekns.dev.service.UserService;
 import by.epamtc.zhenekns.dev.service.implementation.UserServiceImpl;
+import by.epamtc.zhenekns.dev.util.RequestAttributes;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -24,7 +25,7 @@ public class UserProfileCommandPage implements Command {
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        int userId = Integer.parseInt(request.getParameter("id"));
+        int userId = Integer.parseInt(request.getParameter(RequestAttributes.ID));
         UserService userService = new UserServiceImpl();
         UserInfo userInfo = null;
         try {
@@ -38,8 +39,8 @@ public class UserProfileCommandPage implements Command {
         } catch (ServiceException e) {
             logger.log(Level.ERROR, e.getMessage());
         }
-        request.setAttribute("userBasics", user);
-        request.setAttribute("userInfo", userInfo);
+        request.setAttribute(RequestAttributes.USER_BASICS, user);
+        request.setAttribute(RequestAttributes.USER_INFO, userInfo);
         request.getRequestDispatcher(CommandPage.USER_PROFILE_JSP).forward(request, response);
     }
 }

@@ -9,6 +9,7 @@ import by.epamtc.zhenekns.dev.entity.User;
 import by.epamtc.zhenekns.dev.exception.ServiceException;
 import by.epamtc.zhenekns.dev.service.ProjectService;
 import by.epamtc.zhenekns.dev.service.ServiceFactory;
+import by.epamtc.zhenekns.dev.util.RequestAttributes;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -26,16 +27,15 @@ public class EditProjectCommandPage implements Command {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
-        int projectId = Integer.parseInt(request.getParameter("id"));
-        User user = (User) request.getSession().getAttribute("user");
+        int projectId = Integer.parseInt(request.getParameter(RequestAttributes.ID));
+        User user = (User) request.getSession().getAttribute(RequestAttributes.USER);
         Project project = null;
-
         try {
             int ownerId = projectService.getProjectById(projectId).getUser_id();
             if (ownerId == user.getId() || user.getRole().equals(Role.ADMIN.toString())) {
                 project = projectService.getProjectById(projectId);
-                request.setAttribute("project", project);
-                request.getSession().setAttribute("editProject", project);
+                request.setAttribute(RequestAttributes.PROJECT, project);
+                request.getSession().setAttribute(RequestAttributes.EDIT_PROJECT, project);
                 request.getRequestDispatcher(CommandPage.EDIT_PROJECT_PAGE).forward(request, response);
             } else {
                 response.sendRedirect(CommandPageRedirect.AUTHORIZED_MAIN_PAGE);

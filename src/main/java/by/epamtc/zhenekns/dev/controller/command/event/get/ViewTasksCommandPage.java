@@ -6,6 +6,7 @@ import by.epamtc.zhenekns.dev.entity.Task;
 import by.epamtc.zhenekns.dev.exception.ServiceException;
 import by.epamtc.zhenekns.dev.service.ServiceFactory;
 import by.epamtc.zhenekns.dev.service.TaskService;
+import by.epamtc.zhenekns.dev.util.RequestAttributes;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,14 +24,14 @@ public class ViewTasksCommandPage implements Command {
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        int teamId = Integer.parseInt(request.getParameter("id"));
+        int teamId = Integer.parseInt(request.getParameter(RequestAttributes.ID));
         List<Task> tasks = null;
         try {
             tasks = taskService.getTasksByTeamId(teamId);
         } catch (ServiceException e) {
             logger.log(Level.ERROR, e.getMessage());
         }
-        request.setAttribute("tasks", tasks);
+        request.setAttribute(RequestAttributes.TASKS, tasks);
         request.getRequestDispatcher(CommandPage.VIEW_TASKS).forward(request,response);
     }
 }

@@ -9,6 +9,7 @@ import by.epamtc.zhenekns.dev.exception.ServiceException;
 import by.epamtc.zhenekns.dev.service.ServiceFactory;
 import by.epamtc.zhenekns.dev.service.TaskService;
 import by.epamtc.zhenekns.dev.service.TeamService;
+import by.epamtc.zhenekns.dev.util.RequestAttributes;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -28,7 +29,7 @@ public class DeveloperTasksCommandPage implements Command {
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        User user = (User) request.getSession().getAttribute("user");
+        User user = (User) request.getSession().getAttribute(RequestAttributes.USER);
         int userId = user.getId();
         List<Task> tasks = new ArrayList<>();
         try {
@@ -38,7 +39,7 @@ public class DeveloperTasksCommandPage implements Command {
         } catch (ServiceException e) {
             logger.log(Level.ERROR, e.getMessage());
         }
-        request.setAttribute("tasks", tasks);
+        request.setAttribute(RequestAttributes.TASKS, tasks);
         request.getRequestDispatcher(CommandPage.DEVELOPER_TASKS).forward(request, response);
     }
 }

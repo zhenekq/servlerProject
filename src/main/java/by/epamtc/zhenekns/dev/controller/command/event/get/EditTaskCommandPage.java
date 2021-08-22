@@ -9,6 +9,7 @@ import by.epamtc.zhenekns.dev.exception.ServiceException;
 import by.epamtc.zhenekns.dev.service.ServiceFactory;
 import by.epamtc.zhenekns.dev.service.TaskService;
 import by.epamtc.zhenekns.dev.service.TeamService;
+import by.epamtc.zhenekns.dev.util.RequestAttributes;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -27,8 +28,8 @@ public class EditTaskCommandPage implements Command {
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        int taskId = Integer.parseInt(request.getParameter("id"));
-        User user = (User) request.getSession().getAttribute("user");
+        int taskId = Integer.parseInt(request.getParameter(RequestAttributes.ID));
+        User user = (User) request.getSession().getAttribute(RequestAttributes.USER);
         int userId = user.getId();
         List<Team> teams = null;
         Task task = null;
@@ -38,9 +39,9 @@ public class EditTaskCommandPage implements Command {
         } catch (ServiceException e) {
             logger.log(Level.ERROR, e.getMessage());
         }
-        request.getSession().setAttribute("task", task);
-        request.setAttribute("task", task);
-        request.setAttribute("teams", teams);
+        request.getSession().setAttribute(RequestAttributes.TASK, task);
+        request.setAttribute(RequestAttributes.TASK, task);
+        request.setAttribute(RequestAttributes.TEAMS, teams);
         request.getRequestDispatcher(CommandPage.EDIT_TASK).forward(request, response);
     }
 }
