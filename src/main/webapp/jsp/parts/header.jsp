@@ -1,49 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: user
-  Date: 25.07.2021
-  Time: 15:34
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-    <style>
-        .wrapper{
-            max-width: 1400px;
-        }
-        .lang {
-            margin-left: 15px;
-            font-size: 0;
-        }
-        .ru-lang {
-            color: var(--grey);
-            padding: 3px 5px;
-            border: 1px solid var(--grey);
-            font-size: 17px;
-        }
-        .en-lang {
-            font-size: 17px;
-            color: var(--grey);
-            padding: 3px 5px;
-            border: 1px solid var(--grey);
-        }
-
-        .ru-lang:hover{
-            color: var(--yellow);
-            transition: 0.7s;
-        }
-
-        .en-lang:hover{
-            color: var(--yellow);
-            transition: 0.7s;
-        }
-    </style>
-</head>
-<body>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <header class="header">
     <div class="header-wrapper wrapper">
         <div class="left-header">
@@ -72,30 +29,36 @@
                 <%--<li class="headerLinks-item"><a href="#" class="link-reset link-header">Managers</a></li>
                 <li class="headerLinks-item"><a href="#" class="link-reset link-header">My projects</a></li>
                 <li class="headerLinks-item"><a href="?command=add_new_project_page" class="link-reset link-header">Create new project</a></li>--%>
-
                 <!--MANAGER HEADER-->
+                <fmt:setBundle basename="local"/>
                 <c:set var="role" value="${user.role}"/>
                 <c:if test="${role.equals('MANAGER')}">
                     <li class="headerLinks-item"><a href="?command=authorized_main_page" class="link-reset link-header">
-                        Projects
+                        <fmt:message key="local.projects"/>
                     </a>
                     </li>
-                    <li class="headerLinks-item"><a href="?command=find_developer" class="link-reset link-header">Find
-                        developer</a></li>
-                    <li class="headerLinks-item"><a href="?command=managed_projects" class="link-reset link-header">My
-                        projects</a></li>
-                    <li class="headerLinks-item"><a href="?command=manager_teams"
-                                                    class="link-reset link-header">Team</a></li>
-                    <li class="headerLinks-item"><a href="?command=project_requests" class="link-reset link-header">Requests
-                        for projects</a></li>
-                    <li class="headerLinks-item"><a href="?command=create_new_task" class="link-reset link-header">New
-                        Task</a></li>
+                    <li class="headerLinks-item"><a href="?command=find_developer" class="link-reset link-header">
+                        <fmt:message key="local.find-developer"/>
+                    </a></li>
+                    <li class="headerLinks-item"><a href="?command=managed_projects" class="link-reset link-header">
+                        <fmt:message key="local.my-projects"/>
+                    </a></li>
+                    <li class="headerLinks-item"><a href="?command=manager_teams" class="link-reset link-header">
+                        <fmt:message key="local.team"/>
+                    </a></li>
+                    <li class="headerLinks-item"><a href="?command=project_requests" class="link-reset link-header">
+                        <fmt:message key="local.request-for-project"/>
+                    </a></li>
+                    <li class="headerLinks-item"><a href="?command=create_new_task" class="link-reset link-header">
+                        <fmt:message key="local.new-task"/>
+                    </a></li>
                 </c:if>
                 <!--DEVELOPER HEADER HEADER-->
                 <c:if test="${role.equals('DEVELOPER')}">
                     <li class="headerLinks-item"><a href="?command=authorized_main_page" class="link-reset link-header">Find
                         team</a></li>
-                    <li class="headerLinks-item"><a href="?command=developer_team" class="link-reset link-header">Team</a></li>
+                    <li class="headerLinks-item"><a href="?command=developer_team"
+                                                    class="link-reset link-header">Team</a></li>
                     <li class="headerLinks-item"><a href="?command=developer_tasks"
                                                     class="link-reset link-header">Tasks</a></li>
                 </c:if>
@@ -130,11 +93,15 @@
             <div class="dropdown">
                 <button onclick="myFunction()" class="dropbtn btn-reset"></button>
                 <div id="myDropdown" class="dropdown-content">
-                    <a class="navigation-item" href="?command=profile">Profile</a>
-                    <a class="navigation-item" href="?command=logout_page">Logout</a>
+                    <a class="navigation-item" href="?command=profile">
+                        <fmt:message key="local.profile"/>
+                    </a>
+                    <a class="navigation-item" href="?command=logout_page">
+                        <fmt:message key="local.logout"/>
+                    </a>
                 </div>
             </div>
-            <p class="user-role-title">Role:</p>
+            <p class="user-role-title"><fmt:message key="local.role"/>:</p>
             <p class="user-role">${user.role}</p>
             <div class="lang">
                 <a href="?command=language&language=ru" class="ru-lang link-reset">RU</a>
@@ -144,5 +111,3 @@
     </div>
 </header>
 <script src="${pageContext.request.contextPath}/jsp/js/main.js"></script>
-</body>
-</html>

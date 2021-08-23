@@ -34,7 +34,6 @@ public class AuthorizedMainPage implements Command {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         User user = (User) request.getSession().getAttribute(RequestAttributes.USER);
-
         request.setAttribute(RequestAttributes.USER, user);
         if (user.getRole().equals(RoleAttributes.MANAGER)) {
             Map<Project, User> projects = null;

@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%--
   Created by IntelliJ IDEA.
   User: user
@@ -10,24 +11,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <fmt:setLocale value="${language}" scope="session"/>
+    <fmt:setBundle basename="local" var="loc"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Main page</title>
+    <title><fmt:message bundle="${loc}" key="local.main-page"/> </title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/jsp/style/main.css">
+    <link rel="icon" href="httр://mysite.ru/myicon.ico">
     <style>
         input.find_place::placeholder {
             color: #ffffff;
         }
+
         .main-item {
             background-color: var(--black);
             border-radius: 6px;
             margin-bottom: 50px;
         }
+
         .command-box {
             padding: 20px;
         }
+
         .command-title {
             display: flex;
             align-items: center;
@@ -36,21 +43,26 @@
             font-family: var(--font);
             font-size: 16px;
         }
+
         .command-amount {
             color: var(--white);
             display: flex;
         }
+
         .command-participants:first-child {
             padding-right: 10px;
         }
+
         .command-descr {
             font-family: var(--font);
             color: var(--white);
             font-size: 17px;
         }
+
         .descr-text {
             padding-bottom: 20px;
         }
+
         .edit-link {
             margin-right: 25px;
             display: inline-block;
@@ -59,20 +71,25 @@
             color: var(--black);
             border-radius: 6px;
         }
+
         .edit-text {
             margin: 0;
         }
+
         .btn.active,
         .btn:hover,
         .btn:focus {
             outline: none;
         }
+
         .view-box {
             display: none;
         }
+
         .view-box.show {
             display: block;
         }
+
         .btn {
             display: inline-block;
             padding: 10px;
@@ -86,18 +103,21 @@
             font-size: 17px;
             margin-bottom: 30px;
         }
+
         .view-list {
             margin: 0 auto;
             display: grid;
             gap: 20px;
             grid-template-columns: repeat(3, 1fr);
         }
+
         .view-item {
             background-color: var(--grey);
             border-radius: 6px;
             width: 220px;
             height: 300px;
         }
+
         .view-name {
             padding-top: 10px;
             display: block;
@@ -105,9 +125,11 @@
             margin: 0 auto;
             color: var(--yellow);
         }
+
         .view-about {
             padding-left: 10px;
         }
+
         .view-link {
             display: inline-block;
             padding: 7px;
@@ -130,7 +152,9 @@
         <c:set var="role" value="${user.role}"/>
         <!--MAIN PAGE TITLE-->
         <c:if test="${role.equals('MANAGER')}">
-            <h2 class="main-title">Projects</h2>
+            <h2 class="main-title">
+                <fmt:message bundle="${loc}" key="local.projects"/>
+            </h2>
             <ul id="main-order-list" class="main-order-list list-reset">
                 <c:forEach var="project" items="${projects}">
                     <li class="order-item">
@@ -143,7 +167,9 @@
                         </button>
                         <div class="order-info">
                             <div class="name-of-customer">
-                                <p class="name-text main-text">Name of customer: </p>
+                                <p class="name-text main-text">
+                                    <fmt:message bundle="${loc}" key="local.name-customer"/>:
+                                </p>
                                 <h3 class="name">
                                     <a class="link-reset" href="?command=user_profile&id=${project.value.id}"
                                        target="_blank">
@@ -152,19 +178,29 @@
                                 </h3>
                             </div>
                             <div class="technologies">
-                                <p class="technologies-text main-text">Technologies stack: </p>
+                                <p class="technologies-text main-text">
+                                    <fmt:message bundle="${loc}" key="local.technologies-stack"/>:
+                                </p>
                                 <p class="technologies-stack"><c:out value="${project.key.qualification}"/></p>
                             </div>
                             <div class="comand">
-                                <p class="comand-text main-text">Size of command: </p>
+                                <p class="comand-text main-text">
+                                    <fmt:message bundle="${loc}" key="local.team-size"/>:
+                                </p>
                                 <p class="size-of-comand"><c:out value="${project.key.teamSize}"/></p>
                             </div>
                             <div class="deadline">
-                                <p class="deadline-text main-text">Deadline: </p>
-                                <p class="deadline-date"><c:out value="${project.key.deadline}"/></p>
+                                <p class="deadline-text main-text">
+                                    <fmt:message bundle="${loc}" key="local.deadline"/>:
+                                </p>
+                                <p class="deadline-date">
+                                    <c:out value="${project.key.deadline}"/>
+                                </p>
                             </div>
                             <a class="respond-btn link-reset" href="?command=show_project&id=${project.key.id}">
-                                <p class="respond-text">Respond</p>
+                                <p class="respond-text">
+                                    <fmt:message bundle="${loc}" key="local.respond"/>
+                                </p>
                             </a>
                         </div>
                     </li>
@@ -239,11 +275,13 @@
                                    class="edit-link link-reset" target="_blank">
                                     <p class="edit-text">Work there</p>
                                 </a>
-                                <a href="servlet?command=user_profile&id=${team.key.managerId}" class="edit-link link-reset"
+                                <a href="servlet?command=user_profile&id=${team.key.managerId}"
+                                   class="edit-link link-reset"
                                    target="_blank">
                                     <p class="edit-text">View manager</p>
                                 </a>
-                                <button style="cursor: pointer; margin-bottom: 0;" class="btn">View participants</button>
+                                <button style="cursor: pointer; margin-bottom: 0;" class="btn">View participants
+                                </button>
                                 <div class="view-box">
                                     <ul style="padding-top: 20px" class="view-list list-reset">
                                         <c:forEach var="user" items="${team.value}">

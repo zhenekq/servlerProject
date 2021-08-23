@@ -9,7 +9,6 @@ public interface EntityValidation<Entity> {
     boolean createValidation(Entity entity);
     boolean updateValidation(Entity entity);
 
-
     default boolean isValidString(String string, String patternRegex){
         boolean isValid = false;
         if(string != null){
