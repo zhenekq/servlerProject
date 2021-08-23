@@ -99,7 +99,8 @@ public class PagesFilter implements Filter {
                 CommandName.EDIT_PROJECT,
                 CommandName.CLOSE_REQUESTS_FOR_PROJECT,
                 CommandName.UPDATE_PROJECT,
-                CommandName.SHOW_TEAM
+                CommandName.SHOW_TEAM,
+                CommandName.LANGUAGE
         );
         pagesFilter.put(Role.CUSTOMER, customerPages);
 
@@ -118,7 +119,8 @@ public class PagesFilter implements Filter {
                 CommandName.ADDITIONAL_INFO_PAGE,
                 CommandName.SHOW_TEAM,
                 CommandName.DEVELOPER_TEAM,
-                CommandName.WORK_THERE
+                CommandName.WORK_THERE,
+                CommandName.LANGUAGE
                 );
         pagesFilter.put(Role.DEVELOPER, developerPages);
 
@@ -147,7 +149,8 @@ public class PagesFilter implements Filter {
                 CommandName.UPDATE_PROJECT,
                 CommandName.FIND_USER,
                 CommandName.SHOW_TEAM,
-                CommandName.VIEW_TASKS
+                CommandName.VIEW_TASKS,
+                CommandName.LANGUAGE
         );
 
         pagesFilter.put(Role.ADMIN, adminPages);

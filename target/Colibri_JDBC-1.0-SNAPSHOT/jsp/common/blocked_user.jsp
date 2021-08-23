@@ -13,9 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/jsp/style/blocked.css">
     <title>Blocked</title>
-    <style>
-        <%@include file="../style/blocked.css"%>
-    </style>
 </head>
 
 <body>
@@ -26,9 +23,7 @@
             <div class="create-box">
                 <div class="create-content">
                     <div class="blocked-text-box">
-                        <p class="blocked-text">Text like you were blocked blah blah blah text like you were blocked
-                            blah blah blah text like
-                            you were blocked blah blah blah</p>
+                        <p class="blocked-text">You have been blocked by admin!</p>
                     </div>
                     <ul class="nav-list list-reset">
                         <li class="nav-text">

@@ -152,14 +152,14 @@ body {
     display: block;
 }
 .main {
-    min-height: 69vh;
+    min-height: 80vh;
     background-image: url(/images/1616028019_38-p-sero-zheltii-fon-44.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 .bg-box {
-    min-height: 69vh;
+    min-height: 80vh;
     padding-bottom: 50px;
     position: relative;
     background-color: rgba(0, 0, 0, 0.438);

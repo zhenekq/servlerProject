@@ -64,7 +64,9 @@
                 </c:if>
                 <!--CUSTOMER HEADER HEADER-->
                 <c:if test="${role.equals('CUSTOMER')}">
-                    <li class="headerLinks-item"><a href="?command=authorized_main_page" class="link-reset link-header">Managers</a>
+                    <li class="headerLinks-item"><a href="?command=authorized_main_page" class="link-reset link-header">
+                        <fmt:message key="local.managers"/>
+                    </a>
                     </li>
                     <li class="headerLinks-item"><a href="?command=show_my_projects" class="link-reset link-header">My
                         projects</a></li>

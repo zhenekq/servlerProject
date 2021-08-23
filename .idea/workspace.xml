@@ -7,43 +7,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bcdf4f8-750a-447a-8f35-872c5aacb208" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/util/RegexProperty.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/get/AuthorizedMainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/get/AuthorizedMainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/get/LanguageCommandPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/controller/command/event/get/LanguageCommandPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/filter/LocaleFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/validation/EntityValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/service/validation/EntityValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/filter/PagesFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epamtc/zhenekns/dev/filter/PagesFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/local_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/local_ru.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local_ru.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/add_to_team.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/add_to_team.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/find_developer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/find_developer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/manager_managed_projects.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/manager_managed_projects.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/team_manager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/team_manager.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/project_info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/project_info.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/user_profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/user_profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/blocked_user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/blocked_user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/create_new_task.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/create_new_task.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/edit_project_request.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/edit_project_request.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/edit_task.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/edit_task.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/manager_tasks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/manager_tasks.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/project.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/project.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/project_request.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/project_request.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/update_team.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/manager/update_team.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/team.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/team.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/parts/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/parts/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/style/blocked.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/style/blocked.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AuthorizedMainPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AuthorizedMainPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/LanguageCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/controller/command/event/get/LanguageCommandPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/filter/LocaleFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/validation/EntityValidation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/service/validation/EntityValidation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/filter/PagesFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/by/epamtc/zhenekns/dev/filter/PagesFilter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/local_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/local_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/local_ru.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/WEB-INF/classes/local_ru.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/manager/add_to_team.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/manager/add_to_team.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/manager/find_developer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/manager/find_developer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/manager/manager_managed_projects.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/manager/manager_managed_projects.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/project_info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/project_info.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/user_profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/user_profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/manager/create_new_task.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/manager/create_new_task.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/manager/edit_project_request.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/manager/edit_project_request.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/manager/edit_task.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/manager/edit_task.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/manager/manager_tasks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/manager/manager_tasks.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/manager/project.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/manager/project.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/manager/project_request.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/manager/project_request.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/manager/update_team.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/manager/update_team.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/team.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/common/team.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/parts/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Colibri_JDBC-1.0-SNAPSHOT/jsp/parts/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AuthorizedMainPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/AuthorizedMainPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/LanguageCommandPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/controller/command/event/get/LanguageCommandPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/filter/LocaleFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/validation/EntityValidation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/service/validation/EntityValidation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/filter/PagesFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/epamtc/zhenekns/dev/filter/PagesFilter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/local_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/local_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/local_ru.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/local_ru.properties" afterDir="false" />
     </list>
@@ -519,7 +511,7 @@
       <workItem from="1628963146312" duration="52125000" />
       <workItem from="1629187046043" duration="23335000" />
       <workItem from="1629271792727" duration="27895000" />
-      <workItem from="1629449824263" duration="46565000" />
+      <workItem from="1629449824263" duration="52896000" />
     </task>
     <servers />
   </component>
