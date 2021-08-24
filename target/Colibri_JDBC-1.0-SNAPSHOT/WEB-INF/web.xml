@@ -10,7 +10,7 @@
     </welcome-file-list>
 
     <error-page>
-        <location>/404.html</location>
+        <location>/page404.jsp</location>
     </error-page>
     
     <servlet>

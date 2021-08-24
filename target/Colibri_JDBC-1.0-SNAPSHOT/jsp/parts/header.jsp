@@ -55,12 +55,17 @@
                 </c:if>
                 <!--DEVELOPER HEADER HEADER-->
                 <c:if test="${role.equals('DEVELOPER')}">
-                    <li class="headerLinks-item"><a href="?command=authorized_main_page" class="link-reset link-header">Find
-                        team</a></li>
+                    <li class="headerLinks-item"><a href="?command=authorized_main_page" class="link-reset link-header">
+                        <fmt:message key="local.find-team"/>
+                    </a></li>
                     <li class="headerLinks-item"><a href="?command=developer_team"
-                                                    class="link-reset link-header">Team</a></li>
+                                                    class="link-reset link-header">
+                        <fmt:message key="local.team"/>
+                    </a></li>
                     <li class="headerLinks-item"><a href="?command=developer_tasks"
-                                                    class="link-reset link-header">Tasks</a></li>
+                                                    class="link-reset link-header">
+                        <fmt:message key="local.tasks"/>
+                    </a></li>
                 </c:if>
                 <!--CUSTOMER HEADER HEADER-->
                 <c:if test="${role.equals('CUSTOMER')}">
@@ -68,12 +73,16 @@
                         <fmt:message key="local.managers"/>
                     </a>
                     </li>
-                    <li class="headerLinks-item"><a href="?command=show_my_projects" class="link-reset link-header">My
-                        projects</a></li>
+                    <li class="headerLinks-item"><a href="?command=show_my_projects" class="link-reset link-header">
+                        <fmt:message key="local.my-projects"/>
+                    </a></li>
                     <li class="headerLinks-item"><a href="?command=customer_project_responses"
-                                                    class="link-reset link-header">Project responses</a></li>
-                    <li class="headerLinks-item"><a href="?command=add_new_project_page" class="link-reset link-header">New
-                        project</a></li>
+                                                    class="link-reset link-header">
+                        <fmt:message key="local.request-for-project"/>
+                    </a></li>
+                    <li class="headerLinks-item"><a href="?command=add_new_project_page" class="link-reset link-header">
+                        <fmt:message key="local.new-project"/>
+                    </a></li>
                 </c:if>
                 <!--ADMIN HEADER HEADER-->
                 <c:if test="${role.equals('ADMIN')}">

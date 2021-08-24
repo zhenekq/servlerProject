@@ -28,7 +28,10 @@ public class PagesFilter implements Filter {
                 CommandName.REGISTRATION,
                 CommandName.REGISTRATION_PAGE,
                 CommandName.MAIN_PAGE,
-                CommandName.LOGOUT_PAGE
+                CommandName.LOGOUT_PAGE,
+                CommandName.LANGUAGE,
+                CommandName.ADDITIONAL_INFO_PAGE,
+                CommandName.ADDITIONAL_INFO
         );
         pagesFilter.put(Role.USER, guestPages);
 

@@ -9,6 +9,9 @@ import by.epamtc.zhenekns.dev.service.UserService;
 import by.epamtc.zhenekns.dev.controller.command.Command;
 import by.epamtc.zhenekns.dev.controller.command.CommandPage;
 import by.epamtc.zhenekns.dev.controller.command.CommandPageRedirect;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -17,8 +20,8 @@ import java.io.IOException;
 
 public class RegistrationCommand implements Command {
 
-    private static final ServiceFactory serviceFactory = ServiceFactory.getInstance();
-    private static UserService userService = serviceFactory.getUserService();
+    private static UserService userService = ServiceFactory.getInstance().getUserService();
+    private final Logger logger = LogManager.getLogger();
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -46,13 +49,13 @@ public class RegistrationCommand implements Command {
                 user = new User(userId, email, password, username, role);
                 userService.authorizationUser(user);
                 request.getSession().setAttribute("user", user);
-                response.sendRedirect(request.getContextPath() + CommandPageRedirect.ADDITIONAL_INFO_PAGE);
+                response.sendRedirect(CommandPageRedirect.ADDITIONAL_INFO_PAGE);
             } else {
                 request.setAttribute("error_message", "Data is incorrect!");
                 request.getRequestDispatcher(CommandPage.REGISTRATION_PAGE_JSP).forward(request, response);
             }
         } catch (ServiceException e) {
-            e.printStackTrace();
+            logger.log(Level.ERROR, e.getMessage());
         }
     }
 }

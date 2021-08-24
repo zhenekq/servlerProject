@@ -209,7 +209,7 @@
         </c:if>
 
         <c:if test="${role.equals('CUSTOMER')}">
-            <h2 class="main-title">Managers</h2>
+            <h2 class="main-title"><fmt:message bundle="${loc}" key="local.managers"/> </h2>
             <ul id="main-order-list" class="main-order-list list-reset">
                 <c:forEach var="manager" items="${managers}">
                     <li class="order-item">
@@ -218,11 +218,11 @@
                                 <h3 class="order-title"><c:out value="${manager.nickname}"/></h3>
                                 <p class="order-price"><c:out value="${manager.userInfo.city}"/></p>
                             </div>
-                            <p class="order-dscr"><%--<c:out value="${manager.userInfo.qualification}"/>--%></p>
+                            <p class="order-dscr"></p>
                         </button>
                         <div class="order-info">
                             <div class="name-of-customer">
-                                <p class="name-text main-text">Manager: </p>
+                                <p class="name-text main-text"><fmt:message bundle="${loc}" key="local.manager"/>: </p>
                                 <h3 class="name">
                                     <a class="link-reset" href="?command=user_profile&id=${manager.id}" target="_blank">
                                         <c:out value="${manager.nickname}"/>
@@ -230,15 +230,15 @@
                                 </h3>
                             </div>
                             <div class="technologies">
-                                <p class="technologies-text main-text">Technologies stack: </p>
+                                <p class="technologies-text main-text"><fmt:message bundle="${loc}" key="local.technologies-stack"/>: </p>
                                 <p class="technologies-stack"><c:out value="${manager.userInfo.qualification}"/></p>
                             </div>
                             <div class="comand">
-                                <p class="comand-text main-text">Country: </p>
+                                <p class="comand-text main-text"><fmt:message bundle="${loc}" key="local.country"/>: </p>
                                 <p class="size-of-comand"><c:out value="${manager.userInfo.country}"/></p>
                             </div>
                             <div class="deadline">
-                                <p class="deadline-text main-text">Contact me there: </p>
+                                <p class="deadline-text main-text"><fmt:message bundle="${loc}" key="local.contact-me"/>: </p>
                                 <p class="deadline-date">
                                     <a class="link-reset" href="${manager.userInfo.socialLink}">
                                         <c:out value="${manager.userInfo.socialLink}"/>
@@ -246,7 +246,7 @@
                                 </p>
                             </div>
                             <a class="respond-btn link-reset" href="?command=show_project&id=${manager.id}">
-                                <p class="respond-text">Respond</p>
+                                <p class="respond-text"><fmt:message bundle="${loc}" key="local.respond"/></p>
                             </a>
                         </div>
                     </li>
@@ -255,7 +255,9 @@
         </c:if>
 
         <c:if test="${role.equals('DEVELOPER')}">
-            <h2 class="main-title">Teams</h2>
+            <h2 class="main-title">
+                <fmt:message bundle="${loc}" key="local.teams"/>
+            </h2>
 
             <ul style="margin-top: 40px" class="main-list list-reset">
                 <c:forEach var="team" items="${teams}">
@@ -264,7 +266,9 @@
                             <div class="command-title">
                                 <h3 class="command-title-text">${team.key.name}</h3>
                                 <div class="command-amount">
-                                    <p class="command-participants">Participants:</p>
+                                    <p class="command-participants">
+                                        <fmt:message bundle="${loc}" key="local.participants"/>:
+                                    </p>
                                     <p class="command-participants">${team.key.currentTeamSize}/</p>
                                     <p class="command-participants">${team.key.teamSize}</p>
                                 </div>
@@ -273,14 +277,19 @@
                                 <p class="descr-text">${team.key.description}</p>
                                 <a href="servlet?command=work_there&id=${team.key.id}"
                                    class="edit-link link-reset" target="_blank">
-                                    <p class="edit-text">Work there</p>
+                                    <p class="edit-text">
+                                        <fmt:message bundle="${loc}" key="local.work-there"/>
+                                    </p>
                                 </a>
                                 <a href="servlet?command=user_profile&id=${team.key.managerId}"
                                    class="edit-link link-reset"
                                    target="_blank">
-                                    <p class="edit-text">View manager</p>
+                                    <p class="edit-text">
+                                        <fmt:message bundle="${loc}" key="local.check-manager-info"/>
+                                    </p>
                                 </a>
-                                <button style="cursor: pointer; margin-bottom: 0;" class="btn">View participants
+                                <button style="cursor: pointer; margin-bottom: 0;" class="btn">
+                                    <fmt:message bundle="${loc}" key="local.view-participants"/>
                                 </button>
                                 <div class="view-box">
                                     <ul style="padding-top: 20px" class="view-list list-reset">
@@ -288,13 +297,17 @@
                                             <li style="height: 100%; margin-bottom: 20px" class="view-item">
                                                 <h3 style="font-size: 18px" class="view-name">${user.nickname}</h3>
                                                 <div class="view-about">
-                                                    <p class="about-user">About user:</p>
+                                                    <p class="about-user">
+                                                        <fmt:message bundle="${loc}" key="local.user-about"/>:
+                                                    </p>
                                                     <p class="about-text">${user.userInfo.qualification}</p>
                                                 </div>
                                                 <div class="view-links">
                                                     <a href="servlet?command=user_profile&id=${user.id}"
                                                        class="view-link link-reset" target="_blank">
-                                                        <p class="edit-text">View profile</p>
+                                                        <p class="edit-text">
+                                                            <fmt:message bundle="${loc}" key="local.view-profile"/>
+                                                        </p>
                                                     </a>
                                                 </div>
                                             </li>

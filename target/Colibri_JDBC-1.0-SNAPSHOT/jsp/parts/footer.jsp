@@ -7,8 +7,12 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="ctg" uri="freelance/tag" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <footer class="footer">
+    <fmt:setBundle basename="local"/>
     <div class="footer-wrapper wrapper">
         <div class="left-header">
             <div class="header-logo">
@@ -38,7 +42,9 @@
         </div>
 
         <div class="right-header">
-            <button class="footer-logout btn-reset"><a style="text-decoration: none; color: #aaaaaa" class="header-btn-link" href="servlet?command=logout_page">Logout</a></button>
+            <button class="footer-logout btn-reset"><a style="text-decoration: none; color: #aaaaaa" class="header-btn-link" href="servlet?command=logout_page">
+                <fmt:message key="local.logout"/>
+            </a></button>
         </div>
     </div>
 </footer>

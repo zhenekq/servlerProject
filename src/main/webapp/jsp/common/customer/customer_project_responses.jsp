@@ -6,56 +6,59 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
+    <fmt:setLocale value="${language}" scope="session"/>
+    <fmt:setBundle basename="local"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/jsp/style/main.css">
-    <title>Project responses</title>
+    <title><fmt:message key="local.project-responses"/> </title>
 
 </head>
 <body>
 <%@include file="../../parts/header.jsp" %>
 <main class="main">
     <div class="main-wrapper wrapper">
-        <h2 class="main-title" style="width: 340px">Responses for my projects</h2>
+        <h2 class="main-title" style="width: 340px"><fmt:message key="local.project-responses"/></h2>
         <ul id="main-order-list" class="main-order-list list-reset">
             <c:forEach var="response" items="${projectResponses}">
                 <li class="order-item">
                     <button type="button" class="order-box order-btn btn-reset">
                         <div class="order-title-box">
-                            <h3 class="order-title"><%--<c:out value="${response.ownerId}"/><--%>Project response</h3>
+                            <h3 class="order-title"><fmt:message key="local.project-resp"/></h3>
                             <p class="order-price"><c:out value="${response.status}"/></p>
                         </div>
-                            <%--<p class="order-dscr"><c:out value="${response.projectId}"/></p>--%>
                     </button>
                     <div class="order-info">
                         <div class="name-of-customer">
-                            <p class="name-text main-text">Manager: </p>
+                            <p class="name-text main-text"><fmt:message key="local.manager"/>: </p>
                             <h3 class="name">
                                 <a class="link-reset" href="?command=user_profile&id=${response.responsibleId}" target="_blank">
-                                    Check manager info
+                                    <fmt:message key="local.check-manager-info"/>
                                 </a>
                             </h3>
                         </div>
                         <div class="name-of-customer">
-                            <p class="name-text main-text">Project: </p>
+                            <p class="name-text main-text"><fmt:message key="local.project"/>: </p>
                             <h3 class="name">
                                 <a class="link-reset" href="?command=project_info&id=${response.projectId}" target="_blank">
-                                    Check project
+                                    <fmt:message key="local.check-project"/>
                                 </a>
                             </h3>
                         </div>
                         <div class="technologies">
-                            <p class="technologies-text main-text">Technologies stack: </p>
+                            <p class="technologies-text main-text"><fmt:message key="local.technologies-stack"/>: </p>
                             <p class="technologies-stack"><c:out value="${response.projectDetails}"/></p>
                         </div>
                         <div class="comand">
-                            <p class="comand-text main-text">Project Cost: </p>
+                            <p class="comand-text main-text"><fmt:message key="local.project-cost"/>: </p>
                             <p class="size-of-comand"><c:out value="${response.possiblePrice}"/></p>
                         </div>
                         <div class="deadline">
-                            <p class="deadline-text main-text">Deadline: </p>
+                            <p class="deadline-text main-text"><fmt:message key="local.deadline"/>: </p>
                             <p class="deadline-date"><c:out value="${response.deadline}"/></p>
                         </div>
                         <div style="display: flex">
@@ -63,11 +66,11 @@
                             <c:if test="${status.equals('WAITING_FOR_RESPONSE')}">
                                 <a class="respond-btn link-reset"
                                    href="?command=approve_project_request&id=${response.id}">
-                                    <p class="respond-text">Approve</p>
+                                    <p class="respond-text"><fmt:message key="local.approve"/></p>
                                 </a>
                                 <a class="respond-btn link-reset"
                                    href="?command=reject_project_request&id=${response.id}">
-                                    <p class="respond-text">Reject</p>
+                                    <p class="respond-text"><fmt:message key="local.reject"/></p>
                                 </a>
                             </c:if>
                         </div>

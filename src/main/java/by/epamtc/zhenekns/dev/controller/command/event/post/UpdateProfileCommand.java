@@ -7,6 +7,7 @@ import by.epamtc.zhenekns.dev.service.ServiceFactory;
 import by.epamtc.zhenekns.dev.service.UserService;
 import by.epamtc.zhenekns.dev.controller.command.Command;
 import by.epamtc.zhenekns.dev.service.implementation.UserServiceImpl;
+import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -42,7 +43,7 @@ public class UpdateProfileCommand implements Command {
         try {
             userService.updateUser(user);
         } catch (ServiceException e) {
-            e.printStackTrace();
+            logger.log(Level.ERROR, e.getMessage());
         }
         response.sendRedirect(request.getContextPath() + "?command=authorized_main_page");
     }

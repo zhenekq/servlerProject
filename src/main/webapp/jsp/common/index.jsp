@@ -1,12 +1,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <fmt:setLocale value="${language}" scope="session"/>
+    <fmt:setBundle basename="local"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/jsp/style/style.css"/>
-    <title>Welcome!</title>
+    <title><fmt:message key="local.welcome"/> </title>
 </head>
 <body>
 <header class="header">
@@ -32,18 +35,16 @@
                         d="m21.479 12.649h-6.318c-1.393 0-2.523 1.13-2.523 2.523s1.13 2.523 2.523 2.523h6.318c1.393 0 2.523-1.13 2.523-2.523s-1.13-2.523-2.523-2.523z"/>
             </svg>
         </div>
-        <%--<ul class="header-list list-reset">
-            <li class="headerLinks-item"><a href="#" class="link-header">link</a></li>
-            <li class="headerLinks-item"><a href="#" class="link-header">link</a></li>
-            <li class="headerLinks-item"><a href="#" class="link-header">link</a></li>
-            <li class="headerLinks-item"><a href="#" class="link-header">link</a></li>
-        </ul>--%>
     </div>
-    <div class="right-header">
+    <div style="grid-template-columns: repeat(3, 1fr); align-items: center" class="right-header">
         <button class="login header-btn btn-reset"><a class="header-btn-link"
-                                                      href="?command=authorization_page">Login</a></button>
-        <button class="sign-up header-btn btn-reset"><a class="header-btn-link" href="?command=registration_page">Sign-up</a>
+                                                      href="?command=authorization_page"><fmt:message key="local.login"/> </a></button>
+        <button style="color: #000;" class="sign-up header-btn btn-reset"><a class="header-btn-link" href="?command=registration_page"><fmt:message key="local.sign-up"/> </a>
         </button>
+        <div class="lang">
+            <a href="?command=language&language=ru" class="ru-lang link-reset">RU</a>
+            <a href="?command=language&language=en" class="en-lang link-reset">EN</a>
+        </div>
     </div>
 </header>
 <main class="main">
@@ -52,24 +53,13 @@
     </div>
     <div class="info">
         <p class="info-text">
-            Welcome to <span>ProjectProvider inc.</span>
-            <br/>
-            Our team created this platform to <span>help you.</span>
-            <br/>
-            If you are a <span>customer</span>, you can find <span>manager</span>, who helps you
-            to make your dream project real!
-            <br/>
-            If you are a <span>developer</span>, you can find a <span>project</span>, where you
-          can show all your developer skills with your own <span>manager</span>!
-            <br/>
-            If you are a <span>manager</span>, you can <span>create team of developers</span>
-            with whom you will work on a particular project
+            <fmt:message key="local.welcome-title"/>
         </p>
     </div>
     <div class="navigation">
-        <h2 class="nav-title">How to start?</h2>
+        <h2 class="nav-title"><fmt:message key="local.how-to-start"/>?</h2>
         <ul class="nav-list list-reset">
-            <li class="nav-item"><p class="nav-text">Create your own account and choose your position</p></li>
+            <li class="nav-item"><p style="text-align: center" class="nav-text"><fmt:message key="local.first-step"/></p></li>
             <li class="nav-item-arrow">
                 <svg class="nav-arrow" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px"
                      y="0px" viewBox="0 0 490.667 490.667" style="enable-background:new 0 0 490.667 490.667;"
@@ -80,7 +70,7 @@
             	l234.667-234.667c4.171-4.16,4.179-10.914,0.019-15.085C466.231,237.794,466.225,237.788,466.219,237.781z"/>
             </svg>
             </li>
-            <li class="nav-item"><p class="nav-text">Fill an additional fields </p></li>
+            <li class="nav-item"><p style="text-align: center" class="nav-text"><fmt:message key="local.second-step"/> </p></li>
             <li class="nav-item-arrow">
                 <svg class="nav-arrow" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px"
                      y="0px" viewBox="0 0 490.667 490.667" style="enable-background:new 0 0 490.667 490.667;"
@@ -91,7 +81,7 @@
             	l234.667-234.667c4.171-4.16,4.179-10.914,0.019-15.085C466.231,237.794,466.225,237.788,466.219,237.781z"/>
             </svg>
             </li>
-            <li class="nav-item"><p class="nav-text">Get to work to your liking!</p></li>
+            <li class="nav-item"><p style="text-align: center" class="nav-text"><fmt:message key="local.third-step"/>!</p></li>
         </ul>
     </div>
 </main>

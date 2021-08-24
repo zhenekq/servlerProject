@@ -6,12 +6,16 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <fmt:setLocale value="${language}" scope="session"/>
+    <fmt:setBundle basename="local"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User information</title>
+    <title><fmt:message key="local.user-information"/> </title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/jsp/style/additional.css"/>
 
 </head>
@@ -25,24 +29,24 @@
                 <div class="user-data">
                     <div class="readonly-data">
                         <div class="readonly-box">
-                            <h3 class="readonly-subtitle subtitle">Username:</h3>
+                            <h3 class="readonly-subtitle subtitle"><fmt:message key="local.user-username"/>:</h3>
                             <input class="data-input btn-reset" type="name" placeholder="${user.nickname}" readonly>
                         </div>
                         <div class="readonly-box">
-                            <h3 class="readonly-subtitle subtitle">User email:</h3>
+                            <h3 class="readonly-subtitle subtitle"><fmt:message key="local.user-email"/>:</h3>
                             <input class="data-input btn-reset" type="email" placeholder="${user.email}" readonly>
                         </div>
                     </div>
                     <div class="place-data">
                         <div class="place-box">
-                            <h3 class="place-subtitle subtitle">Select country:</h3>
+                            <h3 class="place-subtitle subtitle"><fmt:message key="local.country"/>:</h3>
                             <select id="country" class="select-css" name="country">
                                 <option>Belarus</option>
                                 <option>Russia</option>
                             </select>
                         </div>
                         <div class="place-box">
-                            <h3 class="place-subtitle subtitle">Select city:</h3>
+                            <h3 class="place-subtitle subtitle"><fmt:message key="local.user-city"/>:</h3>
                             <select id="city" class="select-css" name="city">
                                 <option>Minsk</option>
                                 <option>Moscow</option>
@@ -52,17 +56,17 @@
                     <div class="more-info">
                         <ul class="more-input-box list-reset">
                             <li class="more-item">
-                                <h3 class="more-subtitle subtitle">Experience:</h3>
+                                <h3 class="more-subtitle subtitle"><fmt:message key="local.user-experience"/>:</h3>
                                 <input class="more-input btn-reset" name="experience" type="text"
                                        value="${userInfo.experience}">
                             </li>
                             <li class="more-item">
-                                <h3 class="more-subtitle subtitle">Link to social network:</h3>
+                                <h3 class="more-subtitle subtitle"><fmt:message key="local.user-link"/>:</h3>
                                 <input class="more-input btn-reset" name="social_link"
                                        type="url" value="${userInfo.socialLink}">
                             </li>
                             <li class="more-item">
-                                <h3 class="more-subtitle subtitle">Date of Birth:</h3>
+                                <h3 class="more-subtitle subtitle"><fmt:message key="local.user-date"/>:</h3>
                                 <input class="more-input more-date btn-reset" name="date"
                                        value="${userInfo.dateOfRegistration}"
                                        type="date">
@@ -70,11 +74,11 @@
                         </ul>
                         <div class="more-textarea-box">
                             <textarea class="textarea" name="about" cols="30" rows="10"
-                                      placeholder="Tell us about yourself">${userInfo.qualification}</textarea>
+                                      placeholder="<fmt:message key="local.tell-about-yourself"/>">${userInfo.qualification}</textarea>
                         </div>
                     </div>
                     <div class="save-input">
-                        <input class="submit-input btn-reset" type="submit" value="Save">
+                        <input class="submit-input btn-reset" type="submit" value="<fmt:message key="local.update"/>">
                     </div>
                 </div>
             </form>
