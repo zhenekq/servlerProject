@@ -7,7 +7,7 @@ public class UserValidationImpl implements EntityValidation<User> {
 
     @Override
     public boolean createValidation(User user) {
-        return false;
+        return user == null || user.getNickname() == null;
     }
 
     @Override

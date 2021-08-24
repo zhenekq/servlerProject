@@ -86,16 +86,20 @@
                 </c:if>
                 <!--ADMIN HEADER HEADER-->
                 <c:if test="${role.equals('ADMIN')}">
-                    <li class="headerLinks-item"><a href="?command=authorized_main_page" class="link-reset link-header">Users</a>
+                    <li class="headerLinks-item"><a href="?command=authorized_main_page" class="link-reset link-header">
+                        <fmt:message key="local.users"/>
+                    </a>
                     </li>
-                    <li class="headerLinks-item"><a href="?command=admin_projects" class="link-reset link-header">Projects</a>
+                    <li class="headerLinks-item"><a href="?command=admin_projects" class="link-reset link-header">
+                        <fmt:message key="local.projects"/>
+                    </a>
                     </li>
-                    <li class="headerLinks-item"><a href="?command=admin_project_responses"
+                    <%--<li class="headerLinks-item"><a href="?command=admin_project_responses"
                                                     class="link-reset link-header">Project responses</a></li>
                     <li class="headerLinks-item"><a href="?command=admin_teams" class="link-reset link-header">Teams</a>
                     </li>
                     <li class="headerLinks-item"><a href="?command=admin_tasks" class="link-reset link-header">Tasks</a>
-                    </li>
+                    </li>--%>
                 </c:if>
             </ul>
         </div>

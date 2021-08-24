@@ -36,6 +36,7 @@ public class CommandProvider {
         commands.put(CommandName.DELETE_TEAMMATE, new DeleteTeammateCommand());
         commands.put(CommandName.UPDATE_TASK, new UpdateTaskCommand());
         commands.put(CommandName.WORK_THERE, new WorkThereCommand());
+        commands.put(CommandName.EDIT_USER, new EditUserCommand());
 
         //get
         commands.put(CommandName.NO_SUCH_COMMAND, new ErrorCommand());
@@ -70,6 +71,8 @@ public class CommandProvider {
         commands.put(CommandName.LANGUAGE, new LanguageCommandPage());
         commands.put(CommandName.DEVELOPER_TEAM, new DeveloperTeamCommandPage());
         commands.put(CommandName.DELETE_TASK, new DeleteTaskCommand());
+        commands.put(CommandName.LEAVE_TEAM, new LeaveTeamCommand());
+        commands.put(CommandName.EDIT_USER_PAGE, new EditUserCommandPage());
     }
 
     public static CommandProvider getInstance() {

@@ -65,6 +65,6 @@ public enum CommandName {
     LANGUAGE,
     DEVELOPER_TEAM,
     WORK_THERE,
-    DELETE_TASK
-
+    DELETE_TASK,
+    LEAVE_TEAM
 }

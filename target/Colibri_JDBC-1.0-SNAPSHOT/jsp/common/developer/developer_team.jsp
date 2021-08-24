@@ -39,8 +39,7 @@
                             </div>
                             <div class="command-descr">
                                 <p class="descr-text">${team.description}</p>
-                                <a href="servlet?command=leave_team&id=${team.id}" class="edit-link link-reset"
-                                   target="_blank">
+                                <a href="servlet?command=leave_team" class="edit-link link-reset">
                                     <p class="edit-text"><fmt:message key="local.leave-team"/></p>
                                 </a>
                                 <button style="cursor: pointer" class="btn"><fmt:message key="local.view-participants"/></button>

@@ -123,7 +123,8 @@ public class PagesFilter implements Filter {
                 CommandName.SHOW_TEAM,
                 CommandName.DEVELOPER_TEAM,
                 CommandName.WORK_THERE,
-                CommandName.LANGUAGE
+                CommandName.LANGUAGE,
+                CommandName.LEAVE_TEAM
                 );
         pagesFilter.put(Role.DEVELOPER, developerPages);
 
@@ -153,7 +154,9 @@ public class PagesFilter implements Filter {
                 CommandName.FIND_USER,
                 CommandName.SHOW_TEAM,
                 CommandName.VIEW_TASKS,
-                CommandName.LANGUAGE
+                CommandName.LANGUAGE,
+                CommandName.EDIT_USER,
+                CommandName.EDIT_USER_PAGE
         );
 
         pagesFilter.put(Role.ADMIN, adminPages);

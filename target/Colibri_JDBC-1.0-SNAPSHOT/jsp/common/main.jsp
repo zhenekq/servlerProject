@@ -322,12 +322,12 @@
         </c:if>
 
         <c:if test="${role.equals('ADMIN')}">
-            <h2 style="padding-bottom: 30px" class="main-title">Users</h2>
+            <h2 style="padding-bottom: 30px" class="main-title"><fmt:message bundle="${loc}" key="local.users"/></h2>
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" method="get" action="servlet">
                 <input type="hidden" name="command" value="authorized_main_page">
                 <input style="color: #fdc62d;background-color: #666; width: 700px; margin: 0 auto"
                        type="search" class="form-control form-control-dark find_place"
-                       name="tag" placeholder="Enter name or another info about user!" aria-label="Search">
+                       name="tag" placeholder="<fmt:message bundle="${loc}" key="local.admin-find"/> " aria-label="Search">
             </form>
             <ul id="main-order-list" class="main-order-list list-reset">
                 <c:forEach var="user" items="${users}">
@@ -337,11 +337,11 @@
                                 <h3 class="order-title"><c:out value="${user.nickname}"/></h3>
                                 <p class="order-price"><c:out value="${user.userInfo.city}"/></p>
                             </div>
-                            <p class="order-dscr"><%--<c:out value="${manager.userInfo.qualification}"/>--%></p>
+                            <p class="order-dscr"></p>
                         </button>
                         <div class="order-info">
                             <div class="name-of-customer">
-                                <p class="name-text main-text">Manager: </p>
+                                <p class="name-text main-text"><fmt:message bundle="${loc}" key="local.user-profile"/>: </p>
                                 <h3 class="name">
                                     <a class="link-reset" href="?command=user_profile&id=${user.id}" target="_blank">
                                         <c:out value="${user.nickname}"/>
@@ -349,19 +349,19 @@
                                 </h3>
                             </div>
                             <div class="technologies">
-                                <p class="technologies-text main-text">Technologies stack: </p>
+                                <p class="technologies-text main-text"><fmt:message bundle="${loc}" key="local.technologies-stack"/>: </p>
                                 <p class="technologies-stack"><c:out value="${user.userInfo.qualification}"/></p>
                             </div>
                             <div class="comand">
-                                <p class="comand-text main-text">Country: </p>
+                                <p class="comand-text main-text"><fmt:message bundle="${loc}" key="local.country"/>: </p>
                                 <p class="size-of-comand"><c:out value="${user.userInfo.country}"/></p>
                             </div>
                             <div class="comand">
-                                <p class="comand-text main-text">Status: </p>
+                                <p class="comand-text main-text"><fmt:message bundle="${loc}" key="local.user-status"/>: </p>
                                 <p class="size-of-comand"><c:out value="${user.userInfo.status}"/></p>
                             </div>
                             <div class="deadline">
-                                <p class="deadline-text main-text">Contact me there: </p>
+                                <p class="deadline-text main-text"><fmt:message bundle="${loc}" key="local.user-link"/>: </p>
                                 <p class="deadline-date">
                                     <a class="link-reset" href="${user.userInfo.socialLink}">
                                         <c:out value="${user.userInfo.socialLink}"/>
@@ -369,18 +369,18 @@
                                 </p>
                             </div>
                             <div style="display: flex">
-                                <a class="respond-btn link-reset" href="?command=show_project&id=${user.id}">
-                                    <p class="respond-text">Edit</p>
+                                <a class="respond-btn link-reset" href="?command=edit_user_page&id=${user.id}">
+                                    <p class="respond-text"><fmt:message bundle="${loc}" key="local.edit"/></p>
                                 </a>
                                 <c:set var="status" value="${user.userInfo.status}"/>
                                 <c:if test="${!status.equals('BLOCKED')}">
-                                    <a class="respond-btn link-reset" href="?command=block_user&id=${user.id}">
-                                        <p class="respond-text">Block</p>
+                                    <a style="width: 140px" class="respond-btn link-reset" href="?command=block_user&id=${user.id}">
+                                        <p style="width: 110px" class="respond-text"><fmt:message bundle="${loc}" key="local.block"/></p>
                                     </a>
                                 </c:if>
                                 <c:if test="${status.equals('BLOCKED')}">
-                                    <a class="respond-btn link-reset" href="?command=unblock_user&id=${user.id}">
-                                        <p class="respond-text">Unblock</p>
+                                    <a style="width: 140px" class="respond-btn link-reset" href="?command=unblock_user&id=${user.id}">
+                                        <p style="width: 110px" class="respond-text"><fmt:message bundle="${loc}" key="local.unblock"/></p>
                                     </a>
                                 </c:if>
                             </div>

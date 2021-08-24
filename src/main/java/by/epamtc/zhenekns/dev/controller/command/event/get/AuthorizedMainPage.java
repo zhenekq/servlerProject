@@ -78,10 +78,11 @@ public class AuthorizedMainPage implements Command {
             }
             request.setAttribute(RequestAttributes.USERS, users);
         } else if (user.getRole().equals(RoleAttributes.DEVELOPER)) {
+            Team devTeam = null;
             List<Team> teams = null;
             try {
                 teams = teamService.getTeamsByStatus(TeamStatus.HIRING);
-
+                devTeam = teamService.getTeamByDeveloperId(user.getId());
             } catch (ServiceException e) {
                 logger.log(Level.ERROR, e.getMessage());
             }
@@ -96,7 +97,9 @@ public class AuthorizedMainPage implements Command {
                 }
                 teamListMap.put(team, userList);
             }
-            request.setAttribute(RequestAttributes.TEAMS, teamListMap);
+            if(devTeam.getId() == 0){
+                request.setAttribute(RequestAttributes.TEAMS, teamListMap);
+            }
         }
         request.getRequestDispatcher(CommandPage.AUTHORIZED_MAIN_PAGE_JSP)
                 .forward(request, response);
